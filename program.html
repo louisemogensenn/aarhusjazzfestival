@@ -11,8 +11,8 @@
 
     <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
     <section class="overskrift-links">
-        <a id="overskrift-program" href="#"><h2>Program</h2></a>
-        <a id="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
+        <a class="overskrift-program" href="#"><h2>Program</h2></a>
+        <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
     </section>
 
     <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
@@ -91,10 +91,35 @@
         
     </article>
 
-    
+    <!-- -------------------------- DETTE INDHOLD ER FOR FILTRÉR-SIDEN -------------------------- -->
 
-    <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
-    
+    <article>
+
+        <section class="overskrift-links"></section>
+            <a class="overskrift-program" href="#"><h2>Program</h2></a>
+            <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
+        </section>
+
+        <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
+
+        <figure id="soegefeltOgIkon">
+            <textarea name="soegefelt" id="soegefelt"></textarea>
+            <img src="images/soeg-ikon.webp" alt="Søgeikon">
+        </figure>
+
+        <figure id="filtreringsmuligheder">
+            <button >DATO</button>
+            <button>SPILLESTED</button>
+            <button>GENRE</button>
+            <button>PRIS</button>
+        </figure>
+
+        <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
+
+        <section></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier -->
+
+    </article>
+
 </body>
 </html>
 
@@ -104,7 +129,11 @@
     :root {
         --primaerFarve:#EDE1D0; /* Bruges som baggrundsfarve */
         --sekundaerFarve: #313F88; /* Bruges til tekst og elementer som linjer, ikoner, mm.*/
+        --knapfarve: rgb(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
+
     }
+
+    /* ------------------------------------- GENEREL STYLING ------------------------------------- */
 
     * {
         font-family: 'Heebo', 'Times New Roman', Times, serif;
@@ -137,6 +166,8 @@
         height: 2px; /* Angiver højden på linjen */
         border: none; /* Fjerner skyggerne omkring linjen */
     }
+
+    /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
 
     #program p {
         font-size: 15px; /* Skriftstørrelsen på kunstnernavnet, der står under billedet */
@@ -171,6 +202,41 @@
         width: 210px;
         height: 210px;
     }
+
+    /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
+
+    #soegefeltOgIkon {
+        
+    }
+    
+    #filtreringsmuligheder {
+        display: flex;
+        justify-content: space-between; /* Sikrer, at knapperne er placeret med lige stor afstand til hinanden*/
+        margin: 47px 277px;
+    }
+
+    #filtreringsmuligheder button {
+        flex: 1; /* Sørger for, at knapperne fylder lige meget */
+        margin: 10px; /* Tilføjer en lille afstand mellem knapperne */
+        text-align: center; /* Centrerer teksten i knappen */
+        height: 67px;
+        width: 219px;
+        background-color: var(--knapfarve);
+        font-size: 20px;
+        border: none;
+    }
+
+    #filtreringsmuligheder button p {
+        margin: 26px auto; /* Sikrer, at afstanden mellem tekst og top/bund af knap er 26px */
+    }
+
+    #angivSoegekriterierTekst {
+        text-align: center;
+        margin: 247px 0 358px;
+    }
+
+
+
 
     
 </style>
