@@ -9,15 +9,85 @@
 </head>
 <body>
 
+    <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
     <section class="overskrift-links">
-        <h2>Program</h2>
-        <h2>Filtrér efter behov</h2>
+        <a id="overskrift-program" href="#"><h2>Program</h2></a>
+        <a id="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
     </section>
 
-    <hr>
+    <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
 
+    <aside id="datoer-for-koncerterne">
+        <i class="pil-tilbage-ikon"></i> <!-- https://www.w3schools.com/icons/ -->
+        <h2>11. juli</h2>
+        <h2>12. juli</h2>
+        <h2>13. juli</h2>
+        <i class="pil-frem-ikon"></i>
+    </aside>
 
+    <!-- Det er tiltænkt, at nedstående er vertikale bokse, der indeholder billeder af koncerternes kunstnere. Disse billeder skiftes me JavaScript, når man trykker på pilen -->
+    <article id="program">
+        <figure class="kunstnere-for-datoen" id="koncerter-venstre"> <!-- De koncerter, der står i venstre side -->
+            <img src="images/carloDayyaniTrio.webp" alt="Billede af Carlo Dayyani Trio">
+            <p class="kunstner-navn">Carlo Dayyani Trio</p>
+            <i class="pil-frem-ikon"></i>
 
+            <img src="images/oscarPloyart.webp" alt="Billede af Oscar Pluyart">
+            <p class="kunstner-navn">Oscar Pluyart</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/antoniaDayyaniAndFriends.webp" alt="Billede af Antonio Dayyani And Friends">
+            <p class="kunstner-navn">Antonio Dayyani And Friends</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/kalpi.webp" alt="Billede af Kalpi">
+            <p class="kunstner-navn">Kalpi</p>
+            <i class="pil-frem-ikon"></i>
+
+        </figure>
+
+        <figure class="kunstnere-for-datoen" id="koncerter-midt"> <!-- De koncerter, der står i midten -->
+            
+            <img src="images/emmaPilgaardTrio.webp" alt="Billede af Emma Pilgaard Trio">
+            <p class="kunstner-navn">Emma Pilgaard Trio</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/modouTraore .webp" alt="Billede af Modou Traore">
+            <p class="kunstner-navn">Modou Traore</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/erlingsJazzJam.webp" alt="Billede af Erlings Jazz Jam">
+            <p class="kunstner-navn">Erlings Jazz Jam</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/jamesLoveless.webp" alt="Billede af James Loveless">
+            <p class="kunstner-navn">James Loveless</p>
+            <i class="pil-frem-ikon"></i>
+
+        </figure>
+        
+        <figure class="kunstnere-for-datoen" id="koncerter-højre"> <!-- De koncerter, der står i højre side -->
+            
+            <img src="images/lazosDCuba.webp" alt="Billede af Lazos D' Cuba">
+            <p class="kunstner-navn">Lazos D' Cuba</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/musvit.webp" alt="Billede af Musvit">
+            <p class="kunstner-navn">Musvit</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/moerch.webp" alt="Billede af Mørch">
+            <p class="kunstner-navn">Mørch</p>
+            <i class="pil-frem-ikon"></i>
+
+            <img src="images/leftUpRight.webp" alt="Billede af Left Up Right">
+            <p class="kunstner-navn">Left Up Right</p>
+            <i class="pil-frem-ikon"></i>
+
+        </figure>
+    </article>
+
+    <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
     
 </body>
 </html>
@@ -25,12 +95,78 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
     
+    :root {
+        --primaerFarve:#EDE1D0; /* Bruges som baggrundsfarve */
+        --sekundaerFarve: #313F88; /* Bruges til tekst og elementer som linjer, ikoner, mm.*/
+    }
+
     * {
         font-family: 'Heebo', 'Times New Roman', Times, serif;
+        color: var(--sekundaerFarve);
+        background-color: var(--primaerFarve);
     }
-    
-    </style>
 
-<script>
+    h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
+        font-weight: 300;
+        font-size: 35px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .overskrift-links {
+        display: flex;
+        justify-content: center;
+        margin-top: 358px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+    }
+
+    .overskrift-links h2 {
+        margin: 0 49px;
+    }
+
+    hr {
+        margin: 47px 277px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
+        background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
+        height: 2px; /* Angiver højden på linjen */
+        border: none; /* Fjerner skyggerne omkring linjen */
+    }
+
+    #program p {
+        font-size: 15px; /* Skriftstørrelsen på kunstnernavnet, der står under billedet */
+        font-weight: 300; /* Vægten på fonten */
+    }
+
+    #datoer-for-koncerterne {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #program {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #koncerter-venstre, #koncerter-midt, #koncerter-højre {
+        display: flex;
+        flex-direction: column;
+        margin-top: 64px;
+    }
+
+    #koncerter-højre {
+        margin: 64px 277px 64px 0;
+    }
+
+    #koncerter-venstre {
+        margin: 64px 0 64px 277px;
+    }
+
+    #program img {
+        width: 210px;
+        height: 210px;
+    }
+
+    
+</style>
 
 </script>
