@@ -1,4 +1,11 @@
 
-/* Heri samles al styling til sidst
+/* Heri samles al styling til sidst */
 
-/* Husk at give det tydelige overskrifter for, hvilken side det styler (se eksempel i interaktiv-storytelling)
+/* Husk at give det tydelige overskrifter for, hvilken side det styler (se eksempel i interaktiv-storytelling) */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+    
+* {
+   font-family: 'Heebo', 'Times New Roman', Times, serif;
+}
+
