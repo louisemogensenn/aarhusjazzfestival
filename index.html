@@ -37,7 +37,14 @@
                         <li><a href="praktisk.html">Til arrangører</a></li>
                     </ul>
                 </li>
-                <li><a href="reportager.html">Reportager</a></li>
+
+                <li>
+                    <a href="reportager.html">Reportager</a>
+                    <ul class="drop-down">
+                        <li><a href="#">Fra festivalen</a></li>
+                        <li><a href="#">Fra arkivet</a></li>
+                    </ul>
+                </li>
             </ul>
           <aside class="burgermenu">
             <img src="images/burgermenu-ikon.webp" alt="Burgermenu-ikon">
@@ -104,7 +111,7 @@
  /* GENERELT - HEADER */
     header {
     display: flex; /*Sikrer placeringen af elementerne*/
-    justify-content: space-between;
+    justify-content: space-between; /* Placerer logo og navigation med plads imellem */
     }
 
 /* GENERELT - NAVIGATIONSBAR */
@@ -117,11 +124,16 @@
     /* Styling af ul */
     .navigationsbar {
     display: flex; /*Sikrer placeringen af elementerne*/
-    list-style: none; /*Fjerner punkter*/
+    list-style: none; /*Fjerner standard for punktopstilling */
     gap: 70px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
     margin: 0; /* Fjerner standard margin på ul */
     padding: 20px 30px; /*Placerer navigationsbarens punkter, på linje med logo i venstre side af skærmen*/
     }
+
+    /* Styling af li - i navigationsbar*/
+    .navigationsbar > li {
+    position: relative; /* Gør det muligt at positionere undermenuer */
+    }  
 
     /*Styling af a */
     .navigationsbar a {
@@ -138,47 +150,67 @@
     font-weight: bold; /* Gør fonten federe, ved hover*/
     }
 
+
+/* GENERELT - DROP-DOWN MENUER*/
+
+    /* Styling af dropdown-elementer */
+    .drop-down {
+    display: none; /* Skjuler undermenuer som standard */
+    position: absolute; /* Placerer undermenuerne */
+    background-color: #EDE1D0; 
+    padding: 10px; /* Tilføjer lidt afstand omkring drop-down indholdet */
+    list-style: none; /* Fjerner standard punktopstilling */
+    z-index: 1; /* Placerer undermenuen oven på hovednavigation */
+    }
+
+    /* Styling af dropdown*/
+    .drop-down li {
+    margin-bottom: 5px; /* Tilføjer lidt afstand mellem undermenupunkter */
+    }
+    /* Stuling af dropdown a */
+    .drop-down li a {
+    display: block; /* Gør undermenulinks klikbare på hele bredden */
+    white-space: nowrap; /* Forhindrer at links bryder over flere linjer */
+    }
+
+
 /* GENERELT - BURGERMENU */
     /* Styler burger ikon */
     .burgermenu img{
         max-width: 30px; /*Definerer størrelsen på burger-ikon*/
     } 
   
+    /* Stilarter til burgermenu-ikon */
+    .burgermenu {
+    display: none; /* Skjuler burgermenu-ikonet som standard */
+    cursor: pointer; /* Giver markøren et "klikbart" udseende */
+    }
 
 
 /* RESPONSIVITET - NAV TIL BURGER*/
     /* Skjuler alm. nav., når burgermenu er aktiv */
-    @media (max-width: 768px) {
-    .navigationsbar {
-        display: none; /*Skjuler nav*/
-    }
-    .logo-navigationsbar img {
-        max-width: 200px; /*Max dimentionering, som angivet på prototypen i figma*/
-        padding: 60px 15px 15px; /*Luft fra logoet til top*/
+@media (max-width: 768px) {
+  .navigationsbar {
+    display: none; /* Skjuler nav i mobil-visning */
+  }
+  
+  .logo-navigationsbar img {
+    max-width: 200px; /*Max dimentionering, som angivet på prototypen i figma*/
+    padding: 60px 15px 15px; /*Luft fra logoet til top*/
     }
 
-    }
+  .burgermenu {
+    display: block; /* Viser burgermenu-ikonet i mobil-visning */
+    padding: 60px 25px 15px; /*Luft fra logoet til top*/
+  }
+}
 
-/* RESPONSIVT - BURGERMENU TIL NAV */
-    /* Skjuler burgermenu, når alm. nav. er aktiv */
-    .burgermenu {
-    display: none; /*Skjuler burger-ikon*/
-    }
-    /*Viser burgermenu, når skærmdimensionen er mobil-størrelse*/
-    @media (max-width: 768px) {
-    .burgermenu {
-        display: block; /* Fastlåser burger-ikon */
-        padding: 60px 25px 15px; /*Luft fra logoet til top*/
-    }
-    }
+
     
 </style>
 
 <script>
-    const burgerMenu = document.querySelector('.burgermenu');
-    const navLinks = document.querySelector('.navigationsbar');
+    
 
-    burgerMenu.addEventListener('click', () => {
-    navLinks.classList.toggle('show');
-    });
+    
 </script>
