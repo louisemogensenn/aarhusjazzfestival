@@ -171,6 +171,8 @@
     .drop-down li a {
     display: block; /* Gør undermenulinks klikbare på hele bredden */
     white-space: nowrap; /* Forhindrer at links bryder over flere linjer */
+    font-size: 20px;
+    font-weight: 300;
     }
 
 
@@ -189,28 +191,83 @@
 
 /* RESPONSIVITET - NAV TIL BURGER*/
     /* Skjuler alm. nav., når burgermenu er aktiv */
-@media (max-width: 768px) {
-  .navigationsbar {
-    display: none; /* Skjuler nav i mobil-visning */
-  }
-  
-  .logo-navigationsbar img {
-    max-width: 200px; /*Max dimentionering, som angivet på prototypen i figma*/
-    padding: 60px 15px 15px; /*Luft fra logoet til top*/
+    @media (max-width: 768px) {
+    .navigationsbar {
+        display: none; /* Skjuler nav i mobil-visning */
     }
 
-  .burgermenu {
-    display: block; /* Viser burgermenu-ikonet i mobil-visning */
-    padding: 60px 25px 15px; /*Luft fra logoet til top*/
-  }
-}
+    .logo-navigationsbar img {
+        max-width: 200px; /*Max dimentionering, som angivet på prototypen i figma*/
+        padding: 60px 15px 15px; /*Luft fra logoet til top*/
+    }
+
+    .burgermenu {
+        display: block; /* Viser burgermenu-ikonet i mobil-visning */
+        padding: 60px 25px 15px; /*Luft fra logoet til top*/
+    }
+
+    .navigationsbar.show {
+        display: flex; /* Vis navigationsbar, når den har klassen "show" */
+        flex-direction: column; /* Visningen sættes til en vertikal kolonne i mobil-visning */
+        align-items: start; /* Justering til venstre */
+    }
+
+    .navigationsbar.show > li {
+        margin-bottom: 10px; /* Lidt afstand mellem menupunkter i mobil-visning */
+    }
+
+    .drop-down {
+        position: static; /* Gør undermenuer til direkte børn af menupunkter i mobil-visning */
+        display: none; /* Skjul undermenuer som standard i mobil-visning */
+    }
+
+    .drop-down.show {
+        display: block; /* Vis undermenu, når den har klassen "show" */
+    }
+    }
+
 
 
     
 </style>
 
 <script>
-    
+   // Venter på at DOM-strukturen er færdig indlæst
+    document.addEventListener('DOMContentLoaded', () => {
+    // Finder alle de overordnede menupunkter (li-elementer i navigationsbarren)
+    const mainNavLinks = document.querySelectorAll('.navigationsbar > li');
 
-    
+    // Gennemgår hver af de overordnede menupunkter
+    mainNavLinks.forEach(link => {
+        // Tilføjer en "mouseover"-event-lytter til hvert menupunkt
+        link.addEventListener('mouseover', () => {
+        // Når musen går hen over et menupunkt, så vis den underordnede menu
+        link.querySelector('.drop-down').style.display = 'block';
+        });
+
+        // Tilføjer en "mouseout"-event-lytter til hvert menupunkt
+        link.addEventListener('mouseout', () => {
+        // Når musen forlader et menupunkt, så skjul den underordnede menu igen
+        link.querySelector('.drop-down').style.display = 'none';
+        });
+        });
+    });
+
+    // Hent burgermenu-ikonet og den overordnede navigationsbar
+    const burgerMenu = document.querySelector('.burgermenu');
+    const mainNav = document.querySelector('.navigationsbar');
+
+    // Tilføjer en "click"-event-lytter til burgermenu-ikonet
+    burgerMenu.addEventListener('click', () => {
+    // Når der klikkes på burgermenu-ikonet, så skift CSS-klassen "show" på den overordnede navigationsbar
+    // Dette gør, at navigationsbarren enten vises eller skjules, afhængigt af om den har klassen "show" eller ej
+    mainNav.classList.toggle('show');
+
+    // Vis/skjul også undermenuer, når navigationsbar vises/skjules
+    const dropdowns = document.querySelectorAll('.navigationsbar.show .drop-down');
+    dropdowns.forEach(dropdown => {
+        dropdown.classList.toggle('show');
+    });
+    });
+
 </script>
