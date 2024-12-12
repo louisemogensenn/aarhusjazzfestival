@@ -90,7 +90,7 @@ header {
 }
 
 .logo-navigationsbar img {
-  max-width: 100px;
+  max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
 }
 
 /* Styles til desktop-visning */
@@ -131,8 +131,8 @@ header {
 </style>
 
 <script>
-    const burgerMenu = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const burgerMenu = document.querySelector('.burgermenu');
+    const navLinks = document.querySelector('.navigationsbar');
 
     burgerMenu.addEventListener('click', () => {
     navLinks.classList.toggle('show');
