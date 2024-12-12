@@ -62,21 +62,22 @@ footer {
    cursor: pointer;
  }
  
- .container {
+ .beholder {
    display: flex; /* Gør containeren til en flex-container */
 }
 
-.venstre-section {
+.venstre-sektion {
    flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
 }
 
-.hojre-section {
+.hojre-sektion {
    flex: 2; /* Giver denne sektion mere plads i forhold til venstre sektion */
    display: flex; /* Gør højre sektion til en flex-container */
    justify-content: space-between; /* Fordeler indholdet jævnt */
+   margin-left: 0%;
 }
 
-.section-container {
+.sektion-beholder {
    flex: 1; /* Giver denne sektion mulighed for at vokse i højre sektion */
 }
 
@@ -105,14 +106,14 @@ footer {
    margin-bottom: 10px;
  }
 
- .bottom-container { /* Ny container for at holde de to sektioner */
+ .bund-beholder { /* Ny container for at holde de to sektioner */
    display: flex;
    justify-content: space-between; /* Placerer dem på hver sin side */
    margin-top: 40px; /* Tilføj margin for afstand */
    width: 100%; /* Sørg for at containeren strækker sig over hele bredden */
 }
 
-.bottom-section { /* instillinger for privatlivspolitik */
+.bund-sektion { /* instillinger for privatlivspolitik */
    text-align: right; /* Justerer tekst til højre */
    margin-top: 40px;
    font-size: 14px;
@@ -120,7 +121,7 @@ footer {
    color: #313F88;
 }
 
-.bottom-section-socials { /* instillinger for sociale medier link */
+.bund-sektion-socials { /* instillinger for sociale medier link */
    text-align: left; /* Justerer tekst til venstre */
    margin-top: 40px;
    font-size: 14px;
@@ -128,7 +129,7 @@ footer {
    color: #313F88;
 }
 
-.bottom-section-socials a { /* Tilføj margin mellem sociale links */
+.bund-sektion-socials a { /* Tilføj margin mellem sociale links */
    margin-right: 40px; /* Juster værdien for at ændre afstanden */
 }
 
