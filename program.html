@@ -93,7 +93,7 @@
 
     <!-- -------------------------- DETTE INDHOLD ER FOR FILTRÉR-SIDEN -------------------------- -->
 
-    <article>
+    <article id="filtrerEfterBehov">
 
         <section class="overskrift-links"></section>
             <a class="overskrift-program" href="#"><h2>Program</h2></a>
@@ -130,7 +130,6 @@
         --primaerFarve:#EDE1D0; /* Bruges som baggrundsfarve */
         --sekundaerFarve: #313F88; /* Bruges til tekst og elementer som linjer, ikoner, mm.*/
         --knapfarve: rgb(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
-
     }
 
     /* ------------------------------------- GENEREL STYLING ------------------------------------- */
@@ -205,6 +204,10 @@
 
     /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
 
+    #filtrerEfterBehov {
+        display: none;
+    }
+    
     #soegefeltOgIkon { /* style mig mere :)*/
         display: block;
     }
@@ -234,13 +237,17 @@
         text-align: center;
         margin: 247px 0 358px;
     }
-
-
-
-
     
 </style>
 
 <script>
+    /*
+
+    const kunstnerbilleder = []; // Heri gemmes billederne af hver kunstner
+
+    const kunstnernavne = [];
+
+    const kunstnerinfo = {billede: kunstnerbilleder[0], navn: kunstnernavne[0]}; //der kaldes på billedet i arrayet
+    */
     
 </script>
