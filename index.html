@@ -81,52 +81,53 @@
 </html>
 
 <style>
- /* Generelle styles */
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-}
 
-.logo-navigationsbar img {
-  max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
-}
+ /* GENERELT - HEADER */
+    header {
+    display: flex; /*Sikrer placeringen af elementerne*/
+    justify-content: space-between;
+    padding: 20px; /*Luft omkring elementer i navigationsbaren + logo*/
+    }
 
-/* Styles til desktop-visning */
-.navigationsbar {
-  display: flex;
-  list-style: none;
-  gap: 20px;
-}
+/* GENERELT - NAVIGATIONSBAR */
+    /* Stling af logo */
+    .logo-navigationsbar img {
+    max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
+    }
 
-.navigationsbar a {
-  text-decoration: none;
-  color: #313F88;
-}
+    /* Styling af ul */
+    .navigationsbar {
+    display: flex; /*Sikrer placeringen af elementerne*/
+    list-style: none; /*Fjerner punkter*/
+    gap: 20px; /*Laver mellemrum mellem de enkelte navigationspunkter*/
+    }
+    /*Styling af a */
+    .navigationsbar a {
+    text-decoration: none; /*Fjerner understregninger*/
+    color: #313F88; /*Definerer farven på fonten*/
+    font-size: 25px; /*Definerer sørrelsen på fonten*/
 
-/* Styling af mobil-visning */
-@media (max-width: 768px) {
-  .navigationsbar {
-    display: none;
-  }
+    }
 
-  .burgermenu {
-    display: block;
-    cursor: pointer;
-  }
-}
+/* RESPONSIVITET - NAV TIL BURGER*/
+    /* Skjuler alm. nav., når burgermenu er aktiv */
+    @media (max-width: 768px) {
+    .navigationsbar {
+        display: none; /*Skjuler nav*/
+    }
+    }
 
-/* Skjuler burgermenu-ikonet på desktop*/
-.burgermenu {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .burgermenu {
-    display: block;
-  }
-}
+/* RESPONSIVT - BURGERMENU TIL NAV */
+    /* Skjuler burgermenu, når alm. nav. er aktiv */
+    .burgermenu {
+    display: none; /*Skjuler burger-ikon*/
+    }
+    /*Viser burgermenu, når skærmdimensionen er mobil-størrelse*/
+    @media (max-width: 768px) {
+    .burgermenu {
+        display: block; /* Fastlåser burger-ikon */
+    }
+    }
     
 </style>
 
