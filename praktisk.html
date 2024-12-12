@@ -6,16 +6,185 @@
     <title>Praktisk</title>
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
     <script src="script.js/" defer></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
+    <div class="faq-container">
+        <h1 class="faq-header">Ofte Stillede Spørgsmål</h1>
+        
+        <div class="faq-item">
+            <div class="faq-question">Hvad er parkeringsmulighederne?</div>
+            <div class="faq-answer">
+                Klik på knappen nedenfor for at komme direkte til vores CO2-beregner og få et detaljeret overblik over din AI-användnings miljøpåvirkning.
+                <div class="action-container" style="text-align: center; margin-top: 15px;">
+                    <a href="forklaring.html" class="calculate-button" style="
+                        display: inline-block;
+                        background-color: var(--primary-color);
+                        color: white;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        font-weight: 600;
+                        transition: background-color 0.3s ease;
+                    ">Læs mere</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
+<footer></footer>
+    <div class="footer-indhold">
+      <div class="venstre-section">
+        <h1>Tilmeld dig vores nyhedsbrev</h1>
+        <form>
+          <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" />
+          <button id="tilmeld-knap" type="submit">Tilmeld</button>
+        </form>
+      </div>
+      <div class="hojre-section">
+        <div class="section-container">
+          <h3>Program</h3>
+          <ul>
+            <li><a href="program.html" class="fjern-link">program</a></li>
+            <li><a href="program.html" class="fjern-link">filtrer efter behov</a></li>
+          </ul>
+        </div>
+        <div class="section-container">
+          <h3>Praktisk</h3>
+          <ul>
+            <li><a href="praktisk.html" class="fjern-link">til publikum</a></li>
+            <li><a href="praktisk.html" class="fjern-link">til arrangører</a></li>
+            <li><a href="praktisk.html" class="fjern-link">til musiker</a></li>
+          </ul>
+        </div>
+        <div class="section-container">
+          <h3>Reportager</h3>
+          <ul>
+            <li><a href="reportager.html" class="fjern-link">fra festivalen</a></li>
+            <li><a href="reportager.html" class="fjern-link">arkiv</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="bottom-container">
+      <div class="bottom-section-socials">
+        <a href="https://www.instagram.com" target="_blank" class="fjern-link">Instagram</a>
+        <a href="https://www.facebook.com" target="_blank" class="fjern-link">Facebook</a>
+        <a href="https://www.youtube.com" target="_blank" class="fjern-link">Youtube</a>
+        <a href="https://www.spotify.com" target="_blank" class="fjern-link">Spotify</a>
+      </div>
+      <div class="bottom-section">
+        <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
+      </div>
+    </div>
+  </footer>
 </html>
 
 <style>
+        :root {
+            --primary-color: #0803D3;
+            --background-color: #f8fafc;
+        }
 
+        .faq-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item {
+            background-color: white;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: white;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-question.active::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 20px;
+            background-color: #f9f9f9;
+            transition: all 0.3s ease;
+            opacity: 0;
+        }
+
+        .faq-answer.show {
+            max-height: 1000px;
+            padding: 15px 20px;
+            opacity: 1;
+        }
+
+        @media (max-width: 768px) {
+            .faq-container {
+                padding: 0 10px;
+            }
+        }
+        <style>
+    .faq-answer {
+        line-height: 1.6;
+        color: #333;
+        text-align: left;
+        hyphens: auto;
+        word-wrap: break-word;
+        padding: 15px 20px;
+        background-color: #f9f9f9;
+    }
 </style>
 
 <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const faqItems = document.querySelectorAll('.faq-item');
 
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+
+                question.addEventListener('click', () => {
+                    // Close all other open answers
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.querySelector('.faq-question').classList.remove('active');
+                            otherItem.querySelector('.faq-answer').classList.remove('show');
+                        }
+                    });
+
+                    // Toggle current item
+                    question.classList.toggle('active');
+                    answer.classList.toggle('show');
+                });
+            });
+        });
 </script>

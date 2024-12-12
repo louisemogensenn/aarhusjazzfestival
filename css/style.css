@@ -1,4 +1,3 @@
-
 /* Heri samles al styling til sidst */
 
 /* Husk at give det tydelige overskrifter for, hvilken side det styler (se eksempel i interaktiv-storytelling) */
@@ -9,3 +8,139 @@
    font-family: 'Heebo', 'Times New Roman', Times, serif;
 }
 
+footer {
+   background-color: #EDE1D0; /*Genereller regler for footer*/
+   padding: 40px 20px;
+   font-family: Arial, sans-serif;
+ }
+ 
+ .footer-indhold { /*Overodnet sektion til hele footer indhold*/
+   max-width: 1200px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .email-tilmeld { /*Instillinger for udseende af input felt til email tildmelding*/
+   background-color: #EDE1D0;
+   padding: 2% 12%;
+   text-align: center;
+   font-size: 80%;
+   color: #313F88;
+   border-color: #313F88;
+ }
+
+ @media (max-width: 768px) { /*Instillinger for udseende af input felt til email tildmelding når skærmstørrelsen er mindre*/
+ .email-tilmeld { 
+   background-color: #EDE1D0;
+   padding: 2% 5%;
+   text-align: center;
+   font-size: 80%;
+   color: #313F88;
+   border-color: #313F88;
+ }
+}
+
+ #tilmeld-knap { /*Instillinger for email tilmeld knap*/
+   background-color: #EDE1D0;
+   padding: 2% 2%;
+   text-align: center;
+   font-size: 80%;
+   color: #313F88;
+   border-color: #313F88;
+   cursor: pointer;
+ }
+
+ #tilmeld-knap:hover { /*Hover effekt til email tilmeld knap*/
+   background-color: #EDE1D0;
+   padding: 2% 2%;
+   text-align: center;
+   font-size: 80%;
+   font-weight: bold;
+   color: #313F88;
+   border-color: #313F88;
+   cursor: pointer;
+ }
+ 
+ .container {
+   display: flex; /* Gør containeren til en flex-container */
+}
+
+.venstre-section {
+   flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
+}
+
+.hojre-section {
+   flex: 2; /* Giver denne sektion mere plads i forhold til venstre sektion */
+   display: flex; /* Gør højre sektion til en flex-container */
+   justify-content: space-between; /* Fordeler indholdet jævnt */
+}
+
+.section-container {
+   flex: 1; /* Giver denne sektion mulighed for at vokse i højre sektion */
+}
+
+
+ h1{
+   color: #313F88;
+ }
+
+ @media (max-width: 768px) { /* Juster fontstørrelse for skærme mindre end 768px */
+   h1 {
+      font-size: 1.5em; /* Mindre fontstørrelse for mindre skærme */
+   }
+}
+ h3 { /**/
+   font-size: 18px;
+   margin-bottom: 20px;
+   color: #313F88;
+ }
+ 
+ ul { /**/
+   list-style-type: none;
+   padding: 0;
+ }
+ 
+ li {
+   margin-bottom: 10px;
+ }
+
+ .bottom-container { /* Ny container for at holde de to sektioner */
+   display: flex;
+   justify-content: space-between; /* Placerer dem på hver sin side */
+   margin-top: 40px; /* Tilføj margin for afstand */
+   width: 100%; /* Sørg for at containeren strækker sig over hele bredden */
+}
+
+.bottom-section { /* instillinger for privatlivspolitik */
+   text-align: right; /* Justerer tekst til højre */
+   margin-top: 40px;
+   font-size: 14px;
+   flex: 1; /* Giver sektionen plads til at fylde */
+   color: #313F88;
+}
+
+.bottom-section-socials { /* instillinger for sociale medier link */
+   text-align: left; /* Justerer tekst til venstre */
+   margin-top: 40px;
+   font-size: 14px;
+   flex: 1; /* Giver sektionen plads til at fylde */
+   color: #313F88;
+}
+
+.bottom-section-socials a { /* Tilføj margin mellem sociale links */
+   margin-right: 40px; /* Juster værdien for at ændre afstanden */
+}
+
+ .fjern-link { /**/
+   color: #313F88; 
+   text-decoration: none; /* fjerner underlinje */
+   cursor: pointer; /* ændrer mus til pointer */
+}
+
+.fjern-link:hover {
+   color: #313F88; 
+   text-decoration: none; /* fjerner underlinje */
+   font-weight: bold;
+   cursor: pointer; /* ændrer mus til pointer */
+}
