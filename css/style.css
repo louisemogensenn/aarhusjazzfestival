@@ -15,7 +15,7 @@ footer {
  }
  
  .footer-indhold { /*Overodnet sektion til hele footer indhold*/
-   max-width: 1200px;
+   max-width: 1400px;
    margin: 0 auto;
    display: flex;
    justify-content: space-between;
@@ -71,15 +71,10 @@ footer {
 }
 
 .hojre-sektion {
-   flex: 2; /* Giver denne sektion mere plads i forhold til venstre sektion */
+   flex: 1; /* Giver denne sektion mere plads i forhold til venstre sektion */
    display: flex; /* Gør højre sektion til en flex-container */
    justify-content: space-between; /* Fordeler indholdet jævnt */
-   margin-left: 0%;
-}
-
-.sektion-beholder {
-   flex: 1; /* Giver denne sektion mulighed for at vokse i højre sektion */
-}
+  }
 
 
  h1{
@@ -92,10 +87,20 @@ footer {
    }
 }
  h3 { /**/
-   font-size: 18px;
+   font-size: 25px;
    margin-bottom: 20px;
    color: #313F88;
+   font-weight: normal;
  }
+
+ @media (max-width: 1000px) { /* Juster fontstørrelse for skærme mindre end 1000px */
+  h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #313F88;
+    font-weight: normal;
+  }
+}
  
  ul { /**/
    list-style-type: none;
@@ -138,6 +143,16 @@ footer {
    text-decoration: none; /* fjerner underlinje */
    cursor: pointer; /* ændrer mus til pointer */
 }
+
+@media (max-width: 1000px) { /* Juster fontstørrelse for skærme mindre end 1000px */
+  .fjern-link { /**/
+    color: #313F88; 
+    text-decoration: none; /* fjerner underlinje */
+    cursor: pointer; /* ændrer mus til pointer */
+    font-size: 12px;
+ }
+}
+
 
 .fjern-link:hover {
    color: #313F88; 
