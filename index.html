@@ -86,28 +86,41 @@
     header {
     display: flex; /*Sikrer placeringen af elementerne*/
     justify-content: space-between;
-    padding: 20px; /*Luft omkring elementer i navigationsbaren + logo*/
     }
 
 /* GENERELT - NAVIGATIONSBAR */
     /* Stling af logo */
     .logo-navigationsbar img {
     max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
+    padding: 30px; /*Luft omkring logoet*/
     }
 
     /* Styling af ul */
     .navigationsbar {
     display: flex; /*Sikrer placeringen af elementerne*/
     list-style: none; /*Fjerner punkter*/
-    gap: 20px; /*Laver mellemrum mellem de enkelte navigationspunkter*/
+    gap: 20px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
+    margin: 0; /* Fjerner standard margin på ul */
+    padding: 20px 30px; /*Placerer navigationsbarens punkter, på linje med logo i venstre side af skærmen*/
     }
+
     /*Styling af a */
     .navigationsbar a {
     text-decoration: none; /*Fjerner understregninger*/
     color: #313F88; /*Definerer farven på fonten*/
     font-size: 25px; /*Definerer sørrelsen på fonten*/
-
+    transition: font-weight 0.2s;
     }
+    
+    /* Styling - ved hover*/
+    .navigationsbar a:hover,
+    .navigationsbar a.active {
+    font-weight: bold; /* Gør fonten federe, ved hover*/
+    }
+
+
+
+
 
 /* RESPONSIVITET - NAV TIL BURGER*/
     /* Skjuler alm. nav., når burgermenu er aktiv */
@@ -126,6 +139,8 @@
     @media (max-width: 768px) {
     .burgermenu {
         display: block; /* Fastlåser burger-ikon */
+        padding: 30px; /*Luft omkring logoet*/
+        max-width: ;
     }
     }
     
