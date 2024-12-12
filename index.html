@@ -21,9 +21,9 @@
 
         <nav>
             <ul class="navigationsbar">
-                <li><a href="#">Program</a></li>
-                <li><a href="#">Praktisk</a></li>
-                <li><a href="#">Reportager</a></li>
+                <li><a href="praktisk.html">Program</a></li>
+                <li><a href="praktisk.html">Praktisk</a></li>
+                <li><a href="reportager.html">Reportager</a></li>
             </ul>
           <aside class="burgermenu">
             <img src="images/burgermenu-ikon.webp" alt="Burgermenu-ikon">
@@ -114,6 +114,7 @@
     text-decoration: none; /*Fjerner understregninger*/
     color: #313F88; /*Definerer farven på fonten*/
     font-size: 25px; /*Definerer sørrelsen på fonten*/
+    font-weight: 350; /*Definerer tykkelsen på fonten*/
     transition: font-weight 0.2s;
     }
     
@@ -123,7 +124,12 @@
     font-weight: bold; /* Gør fonten federe, ved hover*/
     }
 
-
+/* GENERELT - BURGERMENU */
+    /* Styler burger ikon */
+    .burgermenu img{
+        max-width: 30px; /*Definerer størrelsen på burger-ikon*/
+    } 
+  
 
 
 /* RESPONSIVITET - NAV TIL BURGER*/
@@ -132,6 +138,11 @@
     .navigationsbar {
         display: none; /*Skjuler nav*/
     }
+    .logo-navigationsbar img {
+        max-width: 200px; /*Max dimentionering, som angivet på prototypen i figma*/
+        padding: 60px 15px 15px; /*Luft fra logoet til top*/
+    }
+
     }
 
 /* RESPONSIVT - BURGERMENU TIL NAV */
@@ -143,8 +154,7 @@
     @media (max-width: 768px) {
     .burgermenu {
         display: block; /* Fastlåser burger-ikon */
-        padding: 30px; /*Luft omkring logoet*/
-        max-width: ;
+        padding: 60px 25px 15px; /*Luft fra logoet til top*/
     }
     }
     
