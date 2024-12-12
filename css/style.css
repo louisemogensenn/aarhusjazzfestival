@@ -7,6 +7,10 @@
 * {
    font-family: 'Heebo', 'Times New Roman', Times, serif;
 }
+html {
+  background-color: #EDE1D0; /*Bagrundsfarve for hele html, indtil rigtige baggrundsbilleder er indsat*/
+}
+
 
 footer {
    background-color: #EDE1D0; /*Genereller regler for footer*/
