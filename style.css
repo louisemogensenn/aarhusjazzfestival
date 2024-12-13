@@ -1,0 +1,371 @@
+/* Heri samles al styling til sidst */
+
+/* Husk at give det tydelige overskrifter for, hvilken side det styler (se eksempel i interaktiv-storytelling) */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+    
+* {
+   font-family: 'Heebo', 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #EDE1D0;
+}
+
+footer {
+   background-color: #EDE1D0; /*Genereller regler for footer*/
+   padding: 40px 20px;
+   font-family: Arial, sans-serif;
+ }
+ 
+ .footer-indhold { /*Overodnet sektion til hele footer indhold*/
+   max-width: 1400px;
+   margin: 0 auto;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .email-tilmeld { /*Instillinger for udseende af input felt til email tildmelding*/
+   background-color: #EDE1D0;
+   padding: 2% 12%;
+   text-align: center;
+   font-size: 80%;
+   border: solid #313F88;
+ }
+
+ @media (max-width: 768px) { /*Instillinger for udseende af input felt til email tildmelding når skærmstørrelsen er mindre*/
+ .email-tilmeld { 
+   background-color: #EDE1D0;
+   padding: 2% 5%;
+   text-align: center;
+   font-size: 80%;
+   color: #313F88;
+   border: solid #313F88;
+ }
+}
+
+ #tilmeld-knap { /*Instillinger for email tilmeld knap*/
+   background-color: #EDE1D0;
+   padding: 2% 2%;
+   text-align: center;
+   font-size: 80%;
+   color: #313F88;
+   border: solid #313F88;
+   cursor: pointer;
+ }
+
+ #tilmeld-knap:hover { /*Hover effekt til email tilmeld knap*/
+   background-color: #EDE1D0;
+   padding: 2% 2%;
+   text-align: center;
+   font-size: 80%;
+   font-weight: bold;
+   color: #313F88;
+   border-color: #313F88;
+   cursor: pointer;
+ }
+ 
+ .beholder {
+   display: flex; /* Gør containeren til en flex-container */
+}
+
+.venstre-sektion {
+   flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
+}
+
+.hojre-sektion {
+   flex: 1; /* Giver denne sektion mere plads i forhold til venstre sektion */
+   display: flex; /* Gør højre sektion til en flex-container */
+   justify-content: space-between; /* Fordeler indholdet jævnt */
+  }
+
+/* Skal ændres - overruler andre stylings og skal være mere specifik */
+ h1{
+   color: #313F88;
+ }
+
+ @media (max-width: 768px) { /* Juster fontstørrelse for skærme mindre end 768px */
+   h1 {
+      font-size: 1.5em; /* Mindre fontstørrelse for mindre skærme */
+   }
+}
+/* Skal ændres - overruler andre stylings og skal være mere specifik */ h3 { /**/
+   font-size: 25px;
+   margin-bottom: 20px;
+   color: #313F88;
+   font-weight: normal;
+ }
+
+ @media (max-width: 1000px) { /* Juster fontstørrelse for skærme mindre end 1000px */
+  h3 {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: #313F88;
+    font-weight: normal;
+  }
+}
+ 
+/* Skal ændres - overruler andre stylings og skal være mere specifik */
+ ul { /**/
+   list-style-type: none;
+   padding: 0;
+ }
+ 
+/* Skal ændres - overruler andre stylings og skal være mere specifik */
+ li {
+   margin-bottom: 10px;
+ }
+
+ .bund-beholder { /* Ny container for at holde de to sektioner */
+   display: flex;
+   justify-content: space-between; /* Placerer dem på hver sin side */
+   margin-top: 40px; /* Tilføj margin for afstand */
+   width: 100%; /* Sørg for at containeren strækker sig over hele bredden */
+}
+
+.bund-sektion { /* instillinger for privatlivspolitik */
+   text-align: right; /* Justerer tekst til højre */
+   margin-top: 40px;
+   font-size: 14px;
+   flex: 1; /* Giver sektionen plads til at fylde */
+   color: #313F88;
+}
+
+.bund-sektion-socials { /* instillinger for sociale medier link */
+   text-align: left; /* Justerer tekst til venstre */
+   margin-top: 40px;
+   font-size: 14px;
+   flex: 1; /* Giver sektionen plads til at fylde */
+   color: #313F88;
+}
+
+.bund-sektion-socials a { /* Tilføj margin mellem sociale links */
+   margin-right: 40px; /* Juster værdien for at ændre afstanden */
+}
+
+ .fjern-link { /**/
+   color: #313F88; 
+   text-decoration: none; /* fjerner underlinje */
+   cursor: pointer; /* ændrer mus til pointer */
+}
+
+@media (max-width: 1000px) { /* Juster fontstørrelse for skærme mindre end 1000px */
+  .fjern-link { /**/
+    color: #313F88; 
+    text-decoration: none; /* fjerner underlinje */
+    cursor: pointer; /* ændrer mus til pointer */
+    font-size: 12px;
+ }
+}
+
+.fjern-link:hover {
+   color: #313F88; 
+   text-decoration: none; /* fjerner underlinje */
+   font-weight: bold;
+   cursor: pointer; /* ændrer mus til pointer */
+}
+
+/* Sponser slide */
+
+.sliding-title {
+  overflow: hidden; /* fjerner alle former for scrool bare, så man ikke kan følge med hvor sliden begynder */
+  white-space: nowrap; /* sørger logo ikke går ned på næste linje, men holder sig på linje */ 
+  width: 100%; /* så det kører over hele skærmens bredde */
+}
+
+.title-container {
+  display: inline-block;
+  padding-left: 100%; /* så at sliden begynder udefra skærmen, fremfor at begynde inde på skærmen */
+  animation: slide 20s linear infinite; /* hastighed for hvor hurtig sliden kører, infinite er tilføjet så det kører i loop */
+}
+
+.title-item {
+  display: inline-block; /* så logoerne kommer efter hinanden */
+}
+
+.sliding-image {
+  max-height: 40px; /* justere størrelsen på logoerne  */
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); } /* definere hvor henne slide stater på skærmen. Fordi den er sat til 0 gør at de starter i begyndelsen af skærmen fremfor ude af skærmen */
+  100% { transform: translateX(-100%); } /* definere hvornår loopet begynder, i dette tilfælde begynder det således at den stater over når sidste logo er forsvundet ud af skærmen til venstre */
+}
+
+
+
+
+
+
+
+
+ /* ------------ GENERELT - HEADER --------------------*/
+ header {
+  display: flex; /*Sikrer placeringen af elementerne*/
+  justify-content: space-between; /* Placerer logo og navigation med plads imellem */
+  }
+
+/* ------------- GENERELT - NAVIGATIONSBAR -------------*/
+  /* Stling af logo */
+  .logo-navigationsbar img {
+  max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
+  padding: 30px; /*Luft omkring logoet*/
+  }
+
+  /* Styling af ul */
+  .navigationsbar {
+  display: flex; /*Sikrer placeringen af elementerne*/
+  list-style: none; /*Fjerner standard for punktopstilling */
+  gap: 70px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
+  margin: 0; /* Fjerner standard margin på ul */
+  padding: 20px 30px; /*Placerer navigationsbarens punkter, på linje med logo i venstre side af skærmen*/
+  }
+
+  /* Styling af li - i navigationsbar*/
+  .navigationsbar > li {
+  position: relative; /* Gør det muligt at positionere undermenuer */
+  }  
+
+  /*Styling af a */
+  .navigationsbar a {
+  text-decoration: none; /*Fjerner understregninger*/
+  color: #313F88; /*Definerer farven på fonten*/
+  font-size: 25px; /*Definerer sørrelsen på fonten*/
+  font-weight: 350; /*Definerer tykkelsen på fonten*/
+  transition: font-weight 0.2s;
+  }
+  
+  /* Styling - ved hover*/
+  .navigationsbar a:hover,
+  .navigationsbar a.active {
+  font-weight: bold; /* Gør fonten federe, ved hover*/
+  }
+
+
+/* ------------- GENERELT - DROP-DOWN MENUER--------------*/
+  /* Styling af dropdown-elementer */
+  .drop-down {
+  display: none; /* Skjuler undermenuer som standard */
+  position: absolute; /* Placerer undermenuerne */
+  left: 0; /* Venstrejuster i forhold til hovedmenupunktet */
+  top: 100%; /* Placér lige under hovedmenupunktet */
+  background-color: #EDE1D0; 
+  padding-top: 15px; /* Tilføjer lidt afstand mellem drop-down indholdet */
+  list-style: none; /* Fjerner standard punktopstilling */
+  z-index: 1; /* Placerer undermenuen oven på hovednavigation */
+  }
+
+  /* Styling af dropdown*/
+  .drop-down li {
+  margin-bottom: 5px; /* Tilføjer lidt afstand mellem undermenupunkter */
+  }
+  /* Stuling af dropdown a */
+  .drop-down li a {
+  display: block; /* Gør undermenulinks klikbare på hele bredden */
+  white-space: nowrap; /* Forhindrer at links bryder over flere linjer */
+  font-size: 20px;
+  font-weight: 300;
+  }
+
+
+/* -------------- GENERELT - BURGERMENU -------------- */
+  /* Styler burger ikon */
+  .burgermenu img{
+      max-width: 30px; /*Definerer størrelsen på burger-ikon*/
+  } 
+
+  /* Stilarter til burgermenu-ikon */
+  .burgermenu {
+  display: none; /* Skjuler burgermenu-ikonet som standard */
+  cursor: pointer; /* Giver markøren et "klikbart" udseende */
+  }
+
+  .burgermenu img.open {
+  content: url('images/luk-burger-ikon.webp'); /* Skifter burger-ikon til kryds */
+  max-width: 30px; /* Juster størrelsen om nødvendigt */
+  }
+ 
+
+/* ------------- RESPONSIVT - sikrer dropdown ved hover på desktop -----------*/
+  @media (min-width: 769px) {
+      .navigationsbar > li:hover .drop-down {
+          display: block;
+      }
+  }
+
+/* -------------- RESPONSIVITET - NAV TIL BURGER ----------------*/
+  /* Skjuler alm. nav., når burgermenu er aktiv */
+  @media (max-width: 768px) {
+  .burgermenu {
+      position: fixed; /* Fastgør burgermenu-ikonet i højre hjørne */
+      top: 60px; /* Juster efter behov for placering */
+      right: 25px; /* Placerer ikonet i højre side */
+      z-index: 1000; /* Sikrer at ikonet altid er øverst */
+      display: block; /* Viser burgermenu-ikonet i mobil-visning */
+  }
+
+  /*Styling af logo - i mobil-version*/
+  .logo-navigationsbar img {
+      max-width: 200px; /*Max dimentionering, som angivet på prototypen i figma*/
+      padding: 60px 15px 15px; /*Luft fra logoet til top*/
+      }
+
+  .navigationsbar {
+      position: fixed; /* Placerer menuen over alle andre elementer */
+      top: 0;
+      left: 0;
+      width: 100%; /* Fuld bredde */
+      height: 100%; /* Fuld højde */
+      background-color: #EDE1D0; /* Baggrundsfarve for menuen */
+      display: none; /* Skjult som standard */
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 999; /* Ligger lige under burgermenu-ikonet */
+      padding: 0; /* Fjern eksisterende padding */
+  }
+
+  /* Styling af burgermenu */
+  .navigationsbar.show {
+      display: flex; /* Vis navigationsbar, når den har klassen "show" */
+      flex-direction: column; /* Visningen sættes til en vertikal kolonne i mobil-visning */
+      align-items: start; /* Justering til venstre */
+      padding: 20px; /* Tilføj lidt afstand rundt om menupunkter */
+  }
+
+  .navigationsbar > li {
+      margin-bottom: 15px; /* Mere plads mellem menupunkter */
+      text-align: left; /* Venstrestiller teksten */
+  }
+
+  /*Styling af a - i mobil-version*/
+  .navigationsbar a {
+      font-size: 25px; /* Større tekststørrelse i mobil-version */
+  }
+
+  /*Styling af dropdown - i mobil-version*/
+  .drop-down {
+      position: static; /* Ændrer position for undermenuer */
+      display: none; /* Skjuler undermenuer som standard */
+      background-color: transparent;
+      margin-top: 12px; /*Afstand til ovenforstående element*/
+      text-align: left; /*Venstrestiller teksten i mobil-version*/
+  }
+
+  .navigationsbar.show .drop-down.show {
+      display: block; /* Vis undermenu, når den har klassen "show" */
+      padding: 0; /* Fjern padding rundt om undermenuer */
+  }
+
+  /*Styling af li - i mobil-version*/
+  .drop-down li {
+      margin-bottom: 8px; /*Afstand mellem linjerne*/
+  }
+}
+
+
+/*--------------------------------------------------------------------*/
+
+
+
+  

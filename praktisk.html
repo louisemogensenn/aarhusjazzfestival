@@ -6,9 +6,51 @@
     <title>Praktisk</title>
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header> <!-- NAVIGATION -->
+        <aside class="logo-navigationsbar">
+            <a href="index.html"> <!--Linker til forsiden, når der klikkes på logo-->
+                <img src="images/aarhus-jazz-festival-logo.svg" alt="Logo">
+            </a>
+        </aside>
+
+        <nav>
+            <ul class="navigationsbar">
+                <li>
+                    <a href="program.html">Program</a>
+                    <ul class="drop-down">
+                        <li><a href="program.html">Program</a></li>
+                        <li><a href="program.html">Filtrer efter behov</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="praktisk.html">Praktisk</a>
+                    <ul class="drop-down">
+                        <li><a href="praktisk.html">Publikum</a></li>
+                        <li><a href="praktisk.html">Musikere</a></li>
+                        <li><a href="praktisk.html">Arrangører</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="reportager.html">Reportager</a>
+                    <ul class="drop-down">
+                        <li><a href="#">Festivalen</a></li>
+                        <li><a href="#">Arkivet</a></li>
+                    </ul>
+                </li>
+            </ul>
+          <aside class="burgermenu">
+            <img src="images/burgermenu-ikon.webp" alt="Burgermenu-ikon">
+          </aside>
+        </nav>
+    </header>  
+
+
+
   <div class="kategori-navigation">
     <button class="kategori-knap aktiv" data-kategori="publikum">Publikum</button>
     <button class="kategori-knap" data-kategori="arrangør">Arrangør</button>
