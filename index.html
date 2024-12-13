@@ -32,17 +32,17 @@
                 <li>
                     <a href="praktisk.html">Praktisk</a>
                     <ul class="drop-down">
-                        <li><a href="praktisk.html">Til publikum</a></li>
-                        <li><a href="praktisk.html">Til musikere</a></li>
-                        <li><a href="praktisk.html">Til arrangører</a></li>
+                        <li><a href="praktisk.html">Publikum</a></li>
+                        <li><a href="praktisk.html">Musikere</a></li>
+                        <li><a href="praktisk.html">Arrangører</a></li>
                     </ul>
                 </li>
 
                 <li>
                     <a href="reportager.html">Reportager</a>
                     <ul class="drop-down">
-                        <li><a href="#">Fra festivalen</a></li>
-                        <li><a href="#">Fra arkivet</a></li>
+                        <li><a href="#">Festivalen</a></li>
+                        <li><a href="#">Arkivet</a></li>
                     </ul>
                 </li>
             </ul>
@@ -190,16 +190,18 @@
 
 
 /* GENERELT - DROP-DOWN MENUER*/
-
     /* Styling af dropdown-elementer */
     .drop-down {
     display: none; /* Skjuler undermenuer som standard */
     position: absolute; /* Placerer undermenuerne */
+    left: 0; /* Venstrejuster i forhold til hovedmenupunktet */
+    top: 100%; /* Placér lige under hovedmenupunktet */
     background-color: #EDE1D0; 
-    padding: 10px; /* Tilføjer lidt afstand omkring drop-down indholdet */
+    padding-top: 15px; /* Tilføjer lidt afstand mellem drop-down indholdet */
     list-style: none; /* Fjerner standard punktopstilling */
     z-index: 1; /* Placerer undermenuen oven på hovednavigation */
     }
+
 
     /* Styling af dropdown*/
     .drop-down li {
@@ -231,6 +233,13 @@
     max-width: 30px; /* Juster størrelsen om nødvendigt */
     }
    
+
+/* RESPONSIVT - sikrer dropdown ved hover på desktop */
+    @media (min-width: 769px) {
+        .navigationsbar > li:hover .drop-down {
+            display: block;
+        }
+    }
 
 /* RESPONSIVITET - NAV TIL BURGER*/
     /* Skjuler alm. nav., når burgermenu er aktiv */
