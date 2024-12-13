@@ -241,25 +241,20 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         arrangør: [
             // Spørgsmål og svar for arrangør kategorien
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
-            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvad koster et medlemskab?", "B-medlemskab: 1.500 kr. + moms A-medlemskab: 2.700 kr. + moms"],
+            ["Hvad får jeg med et B-medlemskab?", "Som B-medlem får du dine koncerter inkluderet i det trykte program, der udgives i maj, samt på festivalens hjemmeside. Dine koncerter vil også blive optaget i kalenderapps som Live Jazz Danmark og AarhusGuiden. Derudover bliver du en del af festivalens omfattende markedsføring og PR-arbejde, som inkluderer annoncering i medier, sociale medier og meget mere."],
+            ["Hvad får jeg ekstra med et A-medlemskab?", "A-medlemskabet inkluderer alle fordelene fra B-medlemskabet, men giver også mulighed for at søge om underskudsgaranti eller tilskud til koncerter. Dette gælder primært for koncerter med entré, hvor musikerne får minimum den tarif, der er fastsat af Dansk Musikerforbund."],
+            ["Hvornår er centrale datoer?", "Den 25. januar afholdes info- og arrangørmødet. - Den 19. februar er deadline for ansøgning om underskudsgaranti. - Den 23. februar finder bestyrelsesmødet sted, hvor der uddeles garantier. - Den 18. marts er der generalforsamling. - Den 3. april er deadline for indsendelse af programmet. - aAarhus Jazz Festival finder sted fra den 13. til den 20. juli."],
+            ["Hvordan søger jeg underskudsgaranti?", "Ansøgning om underskudsgaranti kan kun ske af A-medlemmer. Fristen for ansøgning er den 19. februar, og støtten gives primært til koncerter med entré, hvor musikerne skal have minimum den tarif, der er fastsat af Dansk Musikerforbund."],
+            ["Hvordan bliver jeg medlem?", "Du kan blive medlem ved at kontakte jazzsekretariatet via e-mail på info@jazzfest.dk eller telefonisk på 19 19 19 19."],
         ],
         musiker: [
             // Spørgsmål og svar for musiker kategorien
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
-            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde på Aarhus Jazz Festival?", "For at optræde på festivalen skal du kontakte de enkelte arrangører direkte. Aarhus Jazz Festival er en paraplyorganisation med 40-45 arrangørmedlemmer, som booker deres egne koncerter."],
+            ["Hvem skal jeg kontakte for at blive booket?", "Du skal kontakte de relevante arrangører direkte. Information om arrangører og spillesteder kan findes på festivalens i linket."],
+            ["Booker festivalsekretariatet koncerter?", "Aarhus Jazz Festivals sekretariat booker kun enkelte koncerter og særlige projekter. De kan dog give generel vejledning om festivalen."],
+            ["Hvornår skal jeg kontakte arrangørerne?", "Mange arrangører tager beslutninger om booking i slutningen af året inden næste festival og frem til starten af april. Nogle større venues booker dog længere tid i forvejen."],
+            ["Hvad er deadline for at blive inkluderet i det trykte program?", "Deadline for det trykte program ligger typisk i starten af april."],
         ]
     };
 
@@ -365,7 +360,15 @@ if (spoergsmaal === "Må man medbringe dyr?") {
     });
     svarElement.appendChild(viderstilKnap);
 }
-
+if (spoergsmaal === "Hvem skal jeg kontakte for at blive booket?") {
+    const viderstilKnap = document.createElement('button');
+    viderstilKnap.textContent = 'Spillesteders - arrangører';
+    viderstilKnap.classList.add('praktisk-action-knap');
+    viderstilKnap.addEventListener('click', () => {
+        window.open('404.html', '_blank');
+    });
+    svarElement.appendChild(viderstilKnap);
+}
 // Tilføjer artikel til beholder
 beholder.appendChild(artikel);
 
