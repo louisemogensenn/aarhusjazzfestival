@@ -14,7 +14,9 @@
 
     <main>
 
-
+        <section class="overskrifter"></section>
+            <h2>Læs mere om kunstneren</h2>
+        </section>
         
         <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
 
@@ -24,12 +26,12 @@
             </figure>
 
             <section class="koncertInformation">
-                <h2 id="kunstnernavnKoncert">Carlo Dayyani</h2>
-                <h3 id="genreKoncert">Genre</h3>
-                <h3 id="spillestedKoncert">Spillested</h3>
-                <h3 id="datoKoncert">Dato</h3>
-                <h3 id="adresseKoncert">Adresse</h3>
-                <h3 id="prisKoncert">Pris</h3>
+                <h2>Carlo Dayyani</h2>
+                <h3>Genre</h3>
+                <h3>Spillested</h3>
+                <h3>Dato</h3>
+                <h3>Adresse</h3>
+                <h3>Pris</h3>
             </section>
 
         </article>
@@ -93,13 +95,23 @@
 
 <style>
 
-    .billedeOgInfoKoncert img {
-        margin-left: 333px; /* Afstanden til venstre kant */
-        height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
+    .overskrifter {
+        display: flex;
+        justify-content: center;
+        margin-top: 246px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+    }
+
+    .overskrifter h2 {
+        margin: 0 49px;
     }
 
     .billedeOgInfoKoncert {
         display: flex;
+    }
+
+    .billedeOgInfoKoncert img {
+        margin-left: 333px; /* Afstanden til venstre kant */
+        height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
     }
 
     .koncertInformation {
@@ -111,19 +123,5 @@
 </style>
 
 <script>
-
-    const kunstnernavnKoncert = document.getElementById('kunstnernavnKoncert');
-
-    const genreKoncert = document.getElementById('genreKoncert');
-
-    const spillestedKoncert = document.getElementById('spillestedKoncert');
-
-    const datoKoncert = document.getElementById('datoKoncert');
-
-    const adresseKoncert = document.getElementById('adresseKoncert');
-
-    const prisKoncert = document.getElementById('prisKoncert');
-
-
 
 </script>

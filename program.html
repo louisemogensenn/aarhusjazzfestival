@@ -15,9 +15,9 @@
     <main>
 
         <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
-        <section class="overskrift-links">
-            <a class="overskrift-program" href="#"><h2>Program</h2></a>
-            <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
+        <section class="overskrifter">
+            <a class="overskrift-program" href="#"><h2>Program</h2></a> <!-- Der er brugt class, da den også bruges på filtreringssiden -->
+            <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a> <!-- Der er brugt class, da den også bruges på filtreringssiden -->
         </section>
 
         <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
@@ -168,7 +168,7 @@
 
         <article id="filtrerEfterBehov">
 
-            <section class="overskrift-links"></section>
+            <section class="overskrifter"></section>
                 <a class="overskrift-program" href="#"><h2>Program</h2></a>
                 <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
             </section>
@@ -274,13 +274,13 @@
         text-decoration: none;
     }
 
-    .overskrift-links {
+    .overskrifter {
         display: flex;
         justify-content: center;
         margin-top: 246px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
     }
 
-    .overskrift-links h2 {
+    .overskrifter h2 {
         margin: 0 49px;
     }
 

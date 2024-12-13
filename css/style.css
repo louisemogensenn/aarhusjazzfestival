@@ -79,7 +79,7 @@ footer {
    justify-content: space-between; /* Fordeler indholdet jævnt */
   }
 
-
+/* Skal ændres */
  h1{
    color: #313F88;
  }
@@ -89,6 +89,7 @@ footer {
       font-size: 1.5em; /* Mindre fontstørrelse for mindre skærme */
    }
 }
+/* Skal ændres */
  h3 { /**/
    font-size: 25px;
    margin-bottom: 20px;
@@ -105,11 +106,13 @@ footer {
   }
 }
  
+/* Skal ændres */
  ul { /**/
    list-style-type: none;
    padding: 0;
  }
  
+ /* Skal ændres */
  li {
    margin-bottom: 10px;
  }
@@ -155,7 +158,6 @@ footer {
     font-size: 12px;
  }
 }
-
 
 .fjern-link:hover {
    color: #313F88; 
