@@ -23,73 +23,142 @@
         <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
 
         <aside id="datoer-for-koncerterne">
-            <i class="pil-tilbage-ikon"><img src="images/forrige-ikon.webp" alt=""></i> <!-- https://www.w3schools.com/icons/ -->
-            <h2>11. juli</h2>
-            <h2>12. juli</h2>
-            <h2>13. juli</h2>
-            <i class="pil-frem-ikon"><img src="images/naeste-ikon.webp" alt=""></i>
+
+            <img class="pil-tilbage-ikon" src="images/forrige-ikon.webp" alt="">
+            <h2 id="datoVenstre"></h2>
+            <h2 id="datoMidt"></h2>
+            <h2 id="datoHoejre"></h2>
+            <img class="pil-frem-ikon" src="images/naeste-ikon.webp" alt="">
+
         </aside>
 
         <!-- Det er tiltænkt, at nedstående er vertikale bokse, der indeholder billeder af koncerternes kunstnere. Disse billeder skiftes med JavaScript, når man trykker på pilen -->
         <article id="program-foerste-side">
 
-            <figure id="program">
-                <section class="kunstnere-for-datoen" id="koncerter-venstre"> <!-- De koncerter, der står i venstre side -->
+            <figure class="program">
+                <section class="kunstnere-for-datoen koncerter-venstre"> <!-- De koncerter, der står i venstre side -->
                     <img src="images/carloDayyani.webp" alt="Billede af Carlo Dayyani Trio">
                     <p class="kunstner-navn">Carlo Dayyani Trio</p>
-                    <a href="omKunstner.html"><i class="pil-frem-ikon"></i></a>
+                    <!-- Tilføj pil -->
         
                     <img src="images/oscarPloyart.webp" alt="Billede af Oscar Pluyart">
                     <p class="kunstner-navn">Oscar Pluyart</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
+
         
                     <img src="images/antonioDayyani.webp" alt="Billede af Antonio Dayyani And Friends">
                     <p class="kunstner-navn">Antonio Dayyani And Friends</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/kalpi.webp" alt="Billede af Kalpi">
                     <p class="kunstner-navn">Kalpi</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                 </section>
         
-                <section class="kunstnere-for-datoen" id="koncerter-midt"> <!-- De koncerter, der står i midten -->
+                <section class="kunstnere-for-datoen koncerter-midt"> <!-- De koncerter, der står i midten -->
                     
                     <img src="images/emmaPilgaardTrio.webp" alt="Billede af Emma Pilgaard Trio">
                     <p class="kunstner-navn">Emma Pilgaard Trio</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/modouTraore.webp" alt="Billede af Modou Traore">
                     <p class="kunstner-navn">Modou Traore</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/erlingsJazzJam.webp" alt="Billede af Erlings Jazz Jam">
                     <p class="kunstner-navn">Erlings Jazz Jam</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/jamesLoveless.webp" alt="Billede af James Loveless">
                     <p class="kunstner-navn">James Loveless</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                 </section>
                 
-                <section class="kunstnere-for-datoen" id="koncerter-højre"> <!-- De koncerter, der står i højre side -->
+                <section class="kunstnere-for-datoen koncerter-hoejre"> <!-- De koncerter, der står i højre side -->
                     
                     <img src="images/lazosDCuba.webp" alt="Billede af Lazos D' Cuba">
                     <p class="kunstner-navn">Lazos D' Cuba</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/musvit.webp" alt="Billede af Musvit">
                     <p class="kunstner-navn">Musvit</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/moerch.webp" alt="Billede af Mørch">
                     <p class="kunstner-navn">Mørch</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
         
                     <img src="images/leftUpRight.webp" alt="Billede af Left Up Right">
                     <p class="kunstner-navn">Left Up Right</p>
-                    <i class="pil-frem-ikon"></i>
+                    <!-- Tilføj pil -->
+        
+                </section>
+            </figure>
+            
+        </article>
+
+        <article id="program-anden-side">
+
+            <figure class="program">
+                <section class="kunstnere-for-datoen koncerter-venstre"> <!-- De koncerter, der står i venstre side -->
+                    
+                    <img src="images/emmaPilgaardTrio.webp" alt="Billede af Emma Pilgaard Trio">
+                    <p class="kunstner-navn">Emma Pilgaard Trio</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/modouTraore.webp" alt="Billede af Modou Traore">
+                    <p class="kunstner-navn">Modou Traore</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/erlingsJazzJam.webp" alt="Billede af Erlings Jazz Jam">
+                    <p class="kunstner-navn">Erlings Jazz Jam</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/jamesLoveless.webp" alt="Billede af James Loveless">
+                    <p class="kunstner-navn">James Loveless</p>
+                    <!-- Tilføj pil -->
+        
+                </section>
+        
+                <section class="kunstnere-for-datoen koncerter-midt"> <!-- De koncerter, der står i midten -->
+
+                    <img src="images/lazosDCuba.webp" alt="Billede af Lazos D' Cuba">
+                    <p class="kunstner-navn">Lazos D' Cuba</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/musvit.webp" alt="Billede af Musvit">
+                    <p class="kunstner-navn">Musvit</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/moerch.webp" alt="Billede af Mørch">
+                    <p class="kunstner-navn">Mørch</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/leftUpRight.webp" alt="Billede af Left Up Right">
+                    <p class="kunstner-navn">Left Up Right</p>
+                    <!-- Tilføj pil -->
+        
+                </section>
+                
+                <section class="kunstnere-for-datoen koncerter-hoejre"> <!-- De koncerter, der står i højre side -->
+                    
+                    <img src="images/carloDayyani.webp" alt="Billede af Carlo Dayyani Trio">
+                    <p class="kunstner-navn">Carlo Dayyani Trio</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/oscarPloyart.webp" alt="Billede af Oscar Pluyart">
+                    <p class="kunstner-navn">Oscar Pluyart</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/antonioDayyani.webp" alt="Billede af Antonio Dayyani And Friends">
+                    <p class="kunstner-navn">Antonio Dayyani And Friends</p>
+                    <!-- Tilføj pil -->
+        
+                    <img src="images/kalpi.webp" alt="Billede af Kalpi">
+                    <p class="kunstner-navn">Kalpi</p>
+                    <!-- Tilføj pil -->
         
                 </section>
             </figure>
@@ -113,7 +182,7 @@
             </figure>
 
             <figure id="filtreringsmuligheder">
-                <button >DATO</button>
+                <button>DATO</button>
                 <button>SPILLESTED</button>
                 <button>GENRE</button>
                 <button>PRIS</button>
@@ -205,7 +274,7 @@
     .overskrift-links {
         display: flex;
         justify-content: center;
-        margin-top: 358px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+        margin-top: 246px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
     }
 
     .overskrift-links h2 {
@@ -221,7 +290,7 @@
 
     /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
 
-    #program p {
+    .program p {
         font-size: 15px; /* Skriftstørrelsen på kunstnernavnet, der står under billedet */
         font-weight: 300; /* Vægten på fonten */
     }
@@ -231,26 +300,26 @@
         justify-content: space-around;
     }
 
-    #program {
+    .program {
         display: flex;
         justify-content: space-around;
     }
 
-    #koncerter-venstre, #koncerter-midt, #koncerter-højre {
+    .koncerter-venstre, .koncerter-midt, .koncerter-hoejre {
         display: flex;
         flex-direction: column;
         margin-top: 64px;
     }
 
-    #koncerter-højre {
+    .koncerter-hoejre {
         margin: 64px 277px 64px 0;
     }
 
-    #koncerter-venstre {
+    .koncerter-venstre {
         margin: 64px 0 64px 277px;
     }
 
-    #program img {
+    .program img {
         width: 210px;
         height: 210px;
     }
@@ -295,11 +364,53 @@
 
 <script>
 
-    const kunstnerbilleder = []; // Heri gemmes billederne af hver kunstner
+    // Initialiser datoerne ved sidens indlæsning
+    datoVenstre.innerHTML = datoer[0];
+    datoMidt.innerHTML = datoer[1];
+    datoHoejre.innerHTML = datoer[2];
 
-    const kunstnernavne = [];
 
-    const kunstnerinfo = {billede: kunstnerbilleder[0], navn: kunstnernavne[0], dato: "", spillested: "", }; //der kaldes på billedet i arrayet
-    
+    const programFoersteSide = document.getElementById('program-foerste-side');
+
+    const programAndenSide = document.getElementById('program-anden-side');
+
+    const pilFremIkon = document.querySelector('.pil-frem-ikon');
+
+    const pilTilbageIkon = document.querySelector('.pil-tilbage-ikon');
+
+    const datoVenstre = document.getElementById('datoVenstre');
+
+    const datoMidt = document.getElementById('datoMidt');
+
+    const datoHoejre = document.getElementById('datoHoejre');
+
+
+    programAndenSide.style.display = 'none';
+
+    const datoer = ["11. juli", "12. juli", "13. juli", "14. juli", "15. juli", "16. juli"];
+
+    pilFremIkon.addEventListener ('click', () => {
+        programFoersteSide.style.display = 'none';
+        programAndenSide.style.display = 'block';
+
+        datoVenstre.innerHTML = datoer[3];
+        datoMidt.innerHTML = datoer[4];
+        datoHoejre.innerHTML = datoer[5];
+    });
+
+    pilTilbageIkon.addEventListener ('click', () => {
+        programFoersteSide.style.display = 'block';
+        programAndenSide.style.display = 'none';
+
+        datoVenstre.innerHTML = datoer[0];
+        datoMidt.innerHTML = datoer[1];
+        datoHoejre.innerHTML = datoer[2];
+
+        const soegefelt = document.getElementById('soegefelt');
+        soegefelt.addEventListener('input', () => {
+        console.log(soegefelt.value); // Her kan du filtrere elementer baseret på input
+});
+
+    });
     
 </script>
