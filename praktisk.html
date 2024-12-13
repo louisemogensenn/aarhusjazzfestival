@@ -1,194 +1,353 @@
 <!DOCTYPE html>
-<html lang="da"> <!-- sprogkode dansk-->
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praktisk</title>
-    <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
-    <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
-    <script src="script.js/" defer></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="faq-container">
-        <h1 class="faq-header">Ofte Stillede Spørgsmål</h1>
-        
-        <div class="faq-item">
-            <div class="faq-question">Hvad er parkeringsmulighederne?</div>
-            <div class="faq-answer">
-                Klik på knappen nedenfor for at komme direkte til vores CO2-beregner og få et detaljeret overblik over din AI-användnings miljøpåvirkning.
-                <div class="action-container" style="text-align: center; margin-top: 15px;">
-                    <a href="forklaring.html" class="calculate-button" style="
-                        display: inline-block;
-                        background-color: var(--primary-color);
-                        color: white;
-                        padding: 10px 20px;
-                        text-decoration: none;
-                        border-radius: 5px;
-                        font-weight: 600;
-                        transition: background-color 0.3s ease;
-                    ">Læs mere</a>
-                </div>
-            </div>
-        </div>
-    </div>
+  <div class="kategori-navigation">
+    <button class="kategori-knap aktiv" data-kategori="publikum">Publikum</button>
+    <button class="kategori-knap" data-kategori="arrangør">Arrangør</button>
+    <button class="kategori-knap" data-kategori="musiker">Musiker</button>
 </div>
 
-<footer>
-    <div class="footer-indhold">
-        <div class="venstre-sektion">
-            <h1>Tilmeld dig vores nyhedsbrev</h1>
-            <form aria-label="Nyhedsbrev tilmelding">
-                <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" required />
-                <button id="tilmeld-knap" type="submit">Tilmeld</button>
-            </form>
-        </div>
-        <div class="hojre-sektion">
-            <nav class="sektion-beholder">
-                <h3>Program</h3>
-                <ul>
-                    <li><a href="program.html" class="fjern-link">Program</a></li>
-                    <li><a href="program.html" class="fjern-link">Filtrer efter behov</a></li>
-                </ul>
-            </nav>
-            <nav class="sektion-beholder">
-                <h3>Praktisk</h3>
-                <ul>
-                    <li><a href="praktisk.html" class="fjern-link">Publikum</a></li>
-                    <li><a href="praktisk.html" class="fjern-link">Arrangører</a></li>
-                    <li><a href="praktisk.html" class="fjern-link">Musikere</a></li>
-                </ul>
-            </nav>
-            <nav class="sektion-beholder">
-                <h3>Reportager</h3>
-                <ul>
-                    <li><a href="reportager.html" class="fjern-link">Festivalen</a></li>
-                    <li><a href="reportager.html" class="fjern-link">Arkiv</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="bund-beholder">
-        <div class="bund-sektion-socials">
-            <a href="https://www.instagram.com" target="_blank" class="fjern-link">Instagram</a>
-            <a href="https://www.facebook.com" target="_blank" class="fjern-link">Facebook</a>
-            <a href="https://www.youtube.com" target="_blank" class="fjern-link">YouTube</a>
-            <a href="https://www.spotify.com" target="_blank" class="fjern-link">Spotify</a>
-        </div>
-        <div class="bund-sektion">
-            <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
-        </div>
-    </div>
-  </footer>
-
+<div id="faq-sektion">
+</div>
 </body>
-
+<footer>
+  <div class="footer-indhold">
+      <div class="venstre-sektion">
+          <h1>Tilmeld dig vores nyhedsbrev</h1>
+          <form aria-label="Nyhedsbrev tilmelding">
+              <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" required />
+              <button id="tilmeld-knap" type="submit">Tilmeld</button>
+          </form>
+      </div>
+      <div class="hojre-sektion">
+          <nav class="sektion-beholder">
+              <h3>Program</h3>
+              <ul>
+                  <li><a href="program.html" class="fjern-link">Program</a></li>
+                  <li><a href="program.html" class="fjern-link">Filtrer efter behov</a></li>
+              </ul>
+          </nav>
+          <nav class="sektion-beholder">
+            <h3>Praktisk</h3>
+            <ul>
+                <li><a href="praktisk.html" class="fjern-link">Publikum</a></li>
+                <li><a href="praktisk.html" class="fjern-link">Arrangører</a></li>
+                <li><a href="praktisk.html" class="fjern-link">Musikere</a></li>
+            </ul>
+        </nav>
+          <nav class="sektion-beholder">
+              <h3>Reportager</h3>
+              <ul>
+                  <li><a href="reportager.html" class="fjern-link">Festivalen</a></li>
+                  <li><a href="reportager.html" class="fjern-link">Arkiv</a></li>
+              </ul>
+          </nav>
+      </div>
+  </div>
+  <div class="bund-beholder">
+      <div class="bund-sektion-socials">
+          <a href="https://www.instagram.com" target="_blank" class="fjern-link">Instagram</a>
+          <a href="https://www.facebook.com" target="_blank" class="fjern-link">Facebook</a>
+          <a href="https://www.youtube.com" target="_blank" class="fjern-link">YouTube</a>
+          <a href="https://www.spotify.com" target="_blank" class="fjern-link">Spotify</a>
+      </div>
+      <div class="bund-sektion">
+          <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
+      </div>
+  </div>
+</footer>
 </html>
 
 <style>
-        :root {
-            --primary-color: #0803D3;
-            --background-color: #f8fafc;
-        }
+/* Styling af navigationsbjælken med kategorier */
+.kategori-navigation {
+    display: flex; /* Placerer knapper i samme linje */
+    justify-content: center; /* Centrerer knapper horisontalt */
+    margin-bottom: 2rem; /* Tilføjer mellemrum under navigationen */
+    gap: 20px; /* Skaber mellemrum mellem knapperne */
+}
 
-        .faq-container {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
+/* Grundlæggende styling for kategori-knapper */
+.kategori-knap {
+    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
+    border: none; /* Fjerner kantlinjer */
+    font-size: 160%; /* Relativt stor skriftstørrelse */
+    color: #313F88; /* Mørkeblå tekstfarve */
+    padding: 10px 20px; /* Indvendig padding */
+    cursor: pointer; /* Ændrer markør ved hover */
+    font-weight: normal; /* Normal skrifttykkelse */
+}
 
-        .faq-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            color: var(--primary-color);
-        }
+/* Styling for den aktive kategori-knap */
+.kategori-knap.aktiv {
+    border-bottom-color: #313F88; /* Bundlinje i mørkeblå */
+    font-weight: bold; /* Fed skrifttype */
+}
 
-        .faq-item {
-            background-color: white;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: all 0.3s ease;
-        }
+/* Container til hver FAQ-sektion */
+.praktisk-beholder {
+    max-width: 800px; /* Maksimal bredde */
+    margin: 1rem auto; /* Centreret med margin */
+    padding: 0 20px; /* Indvendig padding */
+    border-top: solid #313F88; /* Øverste kant i mørkeblå */
+}
 
-        .faq-question {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: white;
-            cursor: pointer;
-            font-weight: 600;
-            color: var(--primary-color);
-            position: relative;
-        }
+/* Styling for spørgsmål */
+.praktisk-sporgsmål {
+    display: flex; /* Fleksibel visning */
+    font-size: 120%; /* Lidt større skrift */
+    justify-content: space-between; /* Fordeler indhold */
+    align-items: center; /* Centrerer vertikalt */
+    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
+    cursor: pointer; /* Ændrer markør ved hover */
+    position: relative; /* Til positionering af '+'/'-' tegn */
+}
 
-        .faq-question::after {
-            content: '+';
-            font-size: 24px;
-            transition: transform 0.3s ease;
-        }
+/* Tilføjer '+' tegn efter hvert spørgsmål */
+.praktisk-sporgsmål::after {
+    content: '+'; /* Viser '+' tegn */
+    font-size: 24px; /* Stor skriftstørrelse */
+    transition: transform 0.3s ease; /* Blød overgang ved animation */
+}
 
-        .faq-question.active::after {
-            content: '−';
-            transform: rotate(180deg);
-        }
+/* Ændrer '+' til '-' når spørgsmål er aktivt */
+.praktisk-sporgsmål.active::after {
+    content: '−'; /* Viser '-' tegn */
+    transform: rotate(180deg); /* Roterer tegnet */
+}
 
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            padding: 0 20px;
-            background-color: #f9f9f9;
-            transition: all 0.3s ease;
-            opacity: 0;
-        }
+/* Styling for svar-sektionen */
+.praktisk-svar {
+    max-height: 0; /* Skjuler svar som standard */
+    overflow: hidden; /* Gemmer indhold der overskrider højden */
+    padding: 0 20px; /* Indvendig padding */
+    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
+    transition: all 0.3s ease; /* Blød overgang ved ændringer */
+    opacity: 0; /* Fuld gennemsigtighed som standard */
+    line-height: 1.6; /* Øget linjeafstand */
+    color: #333; /* Mørkegrå tekstfarve */
+    text-align: left; /* Venstrestillet tekst */
+    hyphens: auto; /* Automatisk orddeling */
+    word-wrap: break-word; /* Bryder lange ord */
+}
 
-        .faq-answer.show {
-            max-height: 1000px;
-            padding: 15px 20px;
-            opacity: 1;
-        }
+/* Styling når svar vises */
+.praktisk-svar.show {
+    max-height: 1000px; /* Tillader fuld visning */
+    padding: 15px 20px; /* Indvendig padding */
+    opacity: 1; /* Fuld synlighed */
+}
 
-        @media (max-width: 768px) {
-            .faq-container {
-                padding: 0 10px;
-            }
-        }
-        
-    .faq-answer {
-        line-height: 1.6;
-        color: #333;
-        text-align: left;
-        hyphens: auto;
-        word-wrap: break-word;
-        padding: 15px 20px;
-        background-color: #f9f9f9;
+/* Responsivt design til mindre skærme */
+@media (max-width: 768px) {
+    .praktisk-beholder {
+        padding: 0 10px; /* Reduceret padding på små skærme */
     }
+}
+
+/* Margin for hele FAQ-sektionen */
+#faq-sektion {
+    margin-bottom: 4rem; /* Tilføjer plads efter sektionen */
+}
+
+.praktisk-action-knap {
+    background-color: #EDE1D0;
+    color: #313F88;
+    border: solid #313F88;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+.praktisk-action-knap:hover {
+    background-color: #F0D1A5;
+    transition: 0.3s;
+    font-weight: bold;
+    color: #313F88;
+    border: solid #313F88;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
 </style>
 
 <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const faqItems = document.querySelectorAll('.faq-item');
+// Venter på at hele dokumentet er indlæst før JavaScript eksekveres
+document.addEventListener('DOMContentLoaded', () => {
+    // Definerer FAQ data som et objekt med forskellige kategorier
+    // Hver kategori indeholder arrays med spørgsmål og svar
+    const faqData = {
+        publikum: [
+            // Spørgsmål og svar for publikum kategorien
+            ["Hvad er parkeringsmulighederne?", "Du kan finde flere parkeringspladser ud fra hvor du skal høre en koncert. Vi har her en knap som kan henvise til et kort over parkingsmuligheder"],
+            ["Er der udendørs eller indendørs arrangementer?", "Det er forskelligt for hver koncert, det står enten under den pågældene koncert. Du kan også prøve at kontakte spillestedet direkte hvis du er i tvivl."],
+            ["Hvor kan jeg se spillesteder?", "Spillestederne er spredt ud over hele Aarhus. Nedenunder kan de se et kort over alle spillester."],
+            ["Er der rabatter tilknyttet festivalen?", "Ja! Aarhus Jazz Festival har en aftale med Scandic Aarhus City, hvor det er muligt at bestille værelse med festivalrabat."],
+            ["Hvor kan jeg finde praktisk information til folk med handikap?", "Der er flere parkeringsmuligheder tæt på festivalområdet. Vi tilbyder både handicapparkering og generel parkering."],
+            ["Må man medbringe dyr?", "Dette kan du læse mere om på de individuelle spillesteders hjemmeside."],
+            ["Hvordan bliver jeg frivillig?", "Du bedes sende en mail direkte til info@jazzfestival.dk. Skriv dit navn, generel kontakt information og hvorfor du gerne vil være frivillig."],
+            ["Hvad er priserne?", "Billetpriser kan varierer fra spillested og kunstner. Kig indenunder den pågældene koncert omkring billetinfo."],
+        ],
+        arrangør: [
+            // Spørgsmål og svar for arrangør kategorien
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+            ["Hvordan bliver jeg samarbejdspartner?", "Vi søger altid nye samarbejdspartnere. Send en ansøgning via vores kontaktformular med beskrivelse af jeres potentielle bidrag."],
+        ],
+        musiker: [
+            // Spørgsmål og svar for musiker kategorien
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+            ["Hvordan kan jeg optræde?", "Send en musikprøve og ansøgning via vores musikansøgningsformular senest tre måneder før festivalen."],
+        ]
+    };
 
-            faqItems.forEach(item => {
-                const question = item.querySelector('.faq-question');
-                const answer = item.querySelector('.faq-answer');
+    // Finder FAQ sektionen i HTML dokumentet
+    const faqSektion = document.getElementById('faq-sektion');
+    
+    // Finder alle kategori-knapper
+    const kategoriKnapper = document.querySelectorAll('.kategori-knap');
 
-                question.addEventListener('click', () => {
-                    // Close all other open answers
-                    faqItems.forEach(otherItem => {
-                        if (otherItem !== item) {
-                            otherItem.querySelector('.faq-question').classList.remove('active');
-                            otherItem.querySelector('.faq-answer').classList.remove('show');
-                        }
-                    });
+    // Funktion til at generere FAQ for en bestemt kategori
+    function genererFAQ(kategori) {
+        // Rydder den nuværende FAQ sektion
+        faqSektion.innerHTML = '';
 
-                    // Toggle current item
-                    question.classList.toggle('active');
-                    answer.classList.toggle('show');
-                });
+        // Gennemgår hvert spørgsmål i den valgte kategori
+        faqData[kategori].forEach(([spoergsmaal, svar]) => {
+            // Opretter containere og elementer for hvert spørgsmål
+            const beholder = document.createElement('div');
+            beholder.classList.add('praktisk-beholder');
+
+            const artikel = document.createElement('article');
+            artikel.classList.add('praktisk-ting-en');
+
+            // Opretter spørgsmåls-elementet
+            const spoergsmaalElement = document.createElement('h2');
+            spoergsmaalElement.classList.add('praktisk-sporgsmål');
+            spoergsmaalElement.textContent = spoergsmaal;
+
+            // Opretter svars-elementet
+            const svarElement = document.createElement('div');
+            svarElement.classList.add('praktisk-svar');
+
+            const svarTekst = document.createElement('p');
+            svarTekst.textContent = svar;
+            svarElement.appendChild(svarTekst);
+
+            // Tilføjer klik-event til at vise/skjule svar
+            spoergsmaalElement.addEventListener('click', () => {
+                spoergsmaalElement.classList.toggle('active');
+                svarElement.classList.toggle('show');
             });
+
+          // Sammensætter elementerne
+artikel.appendChild(spoergsmaalElement);
+artikel.appendChild(svarElement);
+
+// Tjek om spørgsmålet matcher bestemte kriterier
+if (spoergsmaal === "Hvad er parkeringsmulighederne?") {
+    // Opretter en ny knap
+    const viderstilKnap = document.createElement('button');
+    
+    // Sætter knappens tekst
+    viderstilKnap.textContent = 'Se kort over parkeringsmulighederne';
+    
+    // Tilføjer CSS-klasse til knappen
+    viderstilKnap.classList.add('praktisk-action-knap');
+    
+    // Tilføjer klik-hændelse til knappen
+    viderstilKnap.addEventListener('click', () => {
+        // Åbner et nyt tomt vindue (eller specifik side)
+        window.open('parkeringskort.html', '_blank');
+    });
+    
+    // Tilføjer knappen til svar-elementet
+    svarElement.appendChild(viderstilKnap);
+}
+
+/*Knap til spillesteder spørgsmål*/
+if (spoergsmaal === "Hvor kan jeg se spillesteder?") {
+    const viderstilKnap = document.createElement('button');
+    viderstilKnap.textContent = 'Se kort over spillesteder';
+    viderstilKnap.classList.add('praktisk-action-knap');
+    viderstilKnap.addEventListener('click', () => {
+        window.open('404.html', '_blank');
+    });
+    svarElement.appendChild(viderstilKnap);
+}
+
+if (spoergsmaal === "Hvor kan jeg finde praktisk information til folk med handikap?") {
+    const viderstilKnap = document.createElement('button');
+    viderstilKnap.textContent = 'Se mere information';
+    viderstilKnap.classList.add('praktisk-action-knap');
+    viderstilKnap.addEventListener('click', () => {
+        window.open('404.html', '_blank');
+    });
+    svarElement.appendChild(viderstilKnap);
+}
+if (spoergsmaal === "Er der rabatter tilknyttet festivalen?") {
+    const viderstilKnap = document.createElement('button');
+    viderstilKnap.textContent = 'Se mere information';
+    viderstilKnap.classList.add('praktisk-action-knap');
+    viderstilKnap.addEventListener('click', () => {
+        window.open('404.html', '_blank');
+    });
+    svarElement.appendChild(viderstilKnap);
+}
+if (spoergsmaal === "Må man medbringe dyr?") {
+    const viderstilKnap = document.createElement('button');
+    viderstilKnap.textContent = 'Spillesteders';
+    viderstilKnap.classList.add('praktisk-action-knap');
+    viderstilKnap.addEventListener('click', () => {
+        window.open('404.html', '_blank');
+    });
+    svarElement.appendChild(viderstilKnap);
+}
+
+// Tilføjer artikel til beholder
+beholder.appendChild(artikel);
+
+// Tilføjer beholder til FAQ-sektion
+faqSektion.appendChild(beholder);
         });
+    }
+
+    // Tilføjer klik-events til kategori-knapperne
+    kategoriKnapper.forEach(knap => {
+        knap.addEventListener('click', () => {
+            // Fjerner 'aktiv' klassen fra alle knapper
+            kategoriKnapper.forEach(k => k.classList.remove('aktiv'));
+            
+            // Tilføjer 'aktiv' klassen til den klikkede knap
+            knap.classList.add('aktiv');
+            
+            // Genererer FAQ for den valgte kategori
+            genererFAQ(knap.dataset.kategori);
+        });
+    });
+
+    // Viser publikum FAQ'en som standard, når siden indlæses
+    genererFAQ('publikum');
+    
+});
 </script>

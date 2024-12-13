@@ -7,10 +7,10 @@
 * {
    font-family: 'Heebo', 'Times New Roman', Times, serif;
 }
-html {
-  background-color: #EDE1D0; /*Bagrundsfarve for hele html, indtil rigtige baggrundsbilleder er indsat*/
-}
 
+body {
+  background-color: #EDE1D0;
+}
 
 footer {
    background-color: #EDE1D0; /*Genereller regler for footer*/
@@ -30,8 +30,7 @@ footer {
    padding: 2% 12%;
    text-align: center;
    font-size: 80%;
-   color: #313F88;
-   border-color: #313F88;
+   border: solid #313F88;
  }
 
  @media (max-width: 768px) { /*Instillinger for udseende af input felt til email tildmelding når skærmstørrelsen er mindre*/
@@ -41,7 +40,7 @@ footer {
    text-align: center;
    font-size: 80%;
    color: #313F88;
-   border-color: #313F88;
+   border: solid #313F88;
  }
 }
 
@@ -51,7 +50,7 @@ footer {
    text-align: center;
    font-size: 80%;
    color: #313F88;
-   border-color: #313F88;
+   border: solid #313F88;
    cursor: pointer;
  }
 
@@ -164,3 +163,4 @@ footer {
    font-weight: bold;
    cursor: pointer; /* ændrer mus til pointer */
 }
+
