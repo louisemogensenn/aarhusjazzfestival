@@ -52,7 +52,8 @@
     </header>  
     <main>
 
-        <section class="overskrifter"></section>
+        <section id="overskriftKoncertside"></section> <!-- Dette er kunstnersiden -->
+            <img id="tilbage-pil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage">
             <h2>Læs mere om kunstneren</h2>
         </section>
         
@@ -64,7 +65,7 @@
             </figure>
 
             <section class="koncertInformation">
-                <h2>Carlo Dayyani</h2>
+                <h3 id="kunstnerNavn">Carlo Dayyani</h3>
                 <h3>Genre</h3>
                 <h3>Spillested</h3>
                 <h3>Dato</h3>
@@ -74,7 +75,14 @@
 
         </article>
 
-        <p>Beskrivelse af kunstneren</p>
+        <article id="beskrivelseAfKunstner">
+
+            <p id="bekrivelseOverskrift">Ung guitarist og komponist med kunstnerisk dybde</p>
+            <p>Carlo Dayyani (f. 2003) er en ung komponist og guitarist, der holder til i Berlin, hvor han studerer på Jazz Institute Berlin. I sine kompositioner stræber han efter at finde en kunstnerisk dybde i begrænset materiale.</p>
+            <p>En fri, vilter og improvisationspræget ånd blandet med den nordiske musikers higen efter smukke og fortællende melodier giver musikken et dragende udtryk af en frem- og tilbagegåen mellem angstprovokerende kaos og bedårende, dulmende kosmos. Stemningsmæssigt bevæger kompositionerne sig i et spændingsfelt mellem dyster, smuk melankoli og mild, insisterende eufori. Alt sammen udført med et særligt dynamisk og teknisk håndelag, der kendetegner ham som instrumentalist.</p>
+            <p>I marts 2024 udgav han sit debutalbum ''Melankoli Eufori''.</p>
+            <p>Til koncerten medbringer han sin trio bestående af Gustav Hagelskjær på trommer, og Lukas Loeb på kontrabas, begge er skarpe unge profiler i det danske jazzmiljø.</p>
+        </article>
 
         <button>Reserver billet her!</button>
 
@@ -133,22 +141,55 @@
 
 <style>
 
-    .overskrifter {
+    @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+    
+    :root {
+        --primaerFarve:#EDE1D0; /* Bruges som baggrundsfarve */
+        --sekundaerFarve: #313F88; /* Bruges til tekst og elementer som linjer, ikoner, mm.*/
+        --knapfarve: rgb(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
+    }
+
+    /* ------------------------------------- GENEREL STYLING ------------------------------------- */
+
+    * {
+        font-family: 'Heebo', 'Times New Roman', Times, serif;
+        color: var(--sekundaerFarve);
+        background-color: var(--primaerFarve);
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
+        font-weight: 300;
+        font-size: 35px;
+    }
+
+    #overskriftKoncertside {
         display: flex;
         justify-content: center;
         margin-top: 246px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
     }
 
-    .overskrifter h2 {
+    .overskriftKoncertside h2 {
         margin: 0 49px;
+    }
+
+    #tilbage-pil {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        position: absolute;
+        left: 20px;
+        margin-top: 10px;
     }
 
     .billedeOgInfoKoncert {
         display: flex;
+        justify-content: center;
+        
     }
 
     .billedeOgInfoKoncert img {
-        margin-left: 333px; /* Afstanden til venstre kant */
         height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
     }
 
@@ -156,6 +197,22 @@
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+    }
+
+    #kunstnerNavn {
+        font-weight: bold;
+    }
+
+    #beskrivelseAfKunstner {
+        margin: 0 100px;
+    }
+
+    #beskrivelseAfKunstner p {
+        margin: 10px 0;
+    }
+
+    #bekrivelseOverskrift {
+        font-weight: bold;
     }
 
 </style>
