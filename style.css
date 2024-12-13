@@ -89,7 +89,8 @@ footer {
       font-size: 1.5em; /* Mindre fontstørrelse for mindre skærme */
    }
 }
-/* Skal ændres - overruler andre stylings og skal være mere specifik */ h3 { /**/
+/* Skal ændres - overruler andre stylings og skal være mere specifik */ 
+h3 { /**/
    font-size: 25px;
    margin-bottom: 20px;
    color: #313F88;
