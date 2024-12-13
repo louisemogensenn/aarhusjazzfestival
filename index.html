@@ -188,6 +188,11 @@
     cursor: pointer; /* Giver markøren et "klikbart" udseende */
     }
 
+    .burgermenu img.open {
+    content: url('images/luk-burger-ikon.webp'); /* Skifter burger-ikon til kryds */
+    max-width: 30px; /* Juster størrelsen om nødvendigt */
+    }
+   
 
 /* RESPONSIVITET - NAV TIL BURGER*/
     /* Skjuler alm. nav., når burgermenu er aktiv */
@@ -205,25 +210,35 @@
         display: block; /* Viser burgermenu-ikonet i mobil-visning */
         padding: 60px 25px 15px; /*Luft fra logoet til top*/
     }
-
+   
     .navigationsbar.show {
         display: flex; /* Vis navigationsbar, når den har klassen "show" */
         flex-direction: column; /* Visningen sættes til en vertikal kolonne i mobil-visning */
         align-items: start; /* Justering til venstre */
+        background-color: #EDE1D0; /* Sæt baggrundsfarvene her */
+        padding: 20px; /* Tilføj lidt afstand rundt om menupunkter */
     }
 
     .navigationsbar.show > li {
-        margin-bottom: 10px; /* Lidt afstand mellem menupunkter i mobil-visning */
+        margin-bottom: 15px; /* Lidt mere afstand mellem menupunkter i mobil-visning */
+    }
+
+    .drop-down.show {
+        display: block; /* Vis undermenu, når den har klassen "show" */
+        position: static; /* Lad undermenuer være direkte børn af menupunkter */
+        background-color: transparent; /* Fjern baggrundsfarverne på undermenuer */
+        padding: 0; /* Fjern padding rundt om undermenuer */
+    }
+
+    .drop-down.show li {
+        margin-left: 20px; /* Flyt undermenupunkter lidt til højre */
     }
 
     .drop-down {
         position: static; /* Gør undermenuer til direkte børn af menupunkter i mobil-visning */
         display: none; /* Skjul undermenuer som standard i mobil-visning */
     }
-
-    .drop-down.show {
-        display: block; /* Vis undermenu, når den har klassen "show" */
-    }
+   
     }
 
 
@@ -268,6 +283,15 @@
     dropdowns.forEach(dropdown => {
         dropdown.classList.toggle('show');
     });
+    });
+
+    // Hent burgermenu-ikonet
+    const burgerMenuIcon = document.querySelector('.burgermenu img');
+
+     // Tilføj event listener til burger-ikonet
+    burgerMenu.addEventListener('click', () => {
+    // Skift klasse på burger-ikonet, når burgermenu-menuen åbnes/lukkes
+    burgerMenuIcon.classList.toggle('open');
     });
 
 </script>
