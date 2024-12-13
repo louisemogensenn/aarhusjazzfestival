@@ -408,11 +408,26 @@
         datoMidt.innerHTML = datoer[1];
         datoHoejre.innerHTML = datoer[2];
 
-        const soegefelt = document.getElementById('soegefelt');
+    });
+
+    const soegefelt = document.getElementById('soegefelt');
         soegefelt.addEventListener('input', () => {
         console.log(soegefelt.value); // Her kan du filtrere elementer baseret på input
+    });
+
+    const soegefelt2 = document.getElementById('soegefelt');
+    soegefelt.addEventListener('input', () => {
+        const filter = soegefelt.value.toLowerCase();
+        const kunstnerNavne = document.querySelectorAll('.kunstner-navn');
+    
+        kunstnerNavne.forEach(kunstner => {
+            if (kunstner.textContent.toLowerCase().includes(filter)) {
+                kunstner.parentElement.style.display = 'block';
+            } else {
+                kunstner.parentElement.style.display = 'none';
+            }
+        });
 });
 
-    });
     
 </script>
