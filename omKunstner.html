@@ -52,8 +52,8 @@
     </header>  
     <main>
 
-        <section id="overskriftKoncertside"></section> <!-- Dette er kunstnersiden -->
-            <img id="tilbage-pil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage">
+        <section id="overskriftKunstnerside">
+            <a href="program.html"><img id="tilbage-pil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage"></a>
             <h2>Læs mere om kunstneren</h2>
         </section>
         
@@ -159,29 +159,32 @@
         padding: 0;
     }
 
-    h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
-        font-weight: 300;
-        font-size: 35px;
-    }
+    #overskriftKunstnerside {
+    display: flex;
+    justify-content: space-between; /* Placer pil og tekst med afstand */
+    align-items: center; /* Sørg for, at pil og tekst er lodret centreret */
+    width: 80%; /* Begræns bredden af sektionen */
+    max-width: 1200px; /* Begræns maksimal bredde */
+    margin: 200px auto; /* Centrér hele sektionen på siden */
+    position: relative; /* Forbered til absolut positionering af pilen, hvis nødvendigt */
+}
 
-    #overskriftKoncertside {
-        display: flex;
-        justify-content: center;
-        margin-top: 246px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
-    }
+#tilbage-pil {
+    width: 24px;
+    height: 24px;
+    position: absolute; /* Gør det muligt at finjustere placeringen af pilen */
+    left: 0; /* Placer pilen tættere på venstre kant */
+    margin-left: 10px; /* Juster afstand fra kanten */
+}
 
-    .overskriftKoncertside h2 {
-        margin: 0 49px;
-    }
+h2 {
+    margin: 0;
+    font-weight: 300;
+    font-size: 35px;
+    text-align: center; /* Sørg for, at teksten er centreret */
+    flex-grow: 1; /* Sørg for, at teksten optager den ledige plads */
+}
 
-    #tilbage-pil {
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-        position: absolute;
-        left: 20px;
-        margin-top: 10px;
-    }
 
     .billedeOgInfoKoncert {
         display: flex;
