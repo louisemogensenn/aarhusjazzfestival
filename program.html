@@ -253,14 +253,7 @@
 
         <!-- -------------------------- DETTE INDHOLD ER FOR FILTRÉR-SIDEN -------------------------- -->
 
-        <article id="filtrerEfterBehov">
-
-            <section class="overskrifter">
-                <a class="overskrift-program" href="#"><h2>Program</h2></a>
-                <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a>
-            </section>
-
-            <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
+        <article id="filtrerEfterBehov"> 
 
             <figure id="soegefeltOgIkon">
                 <textarea name="soegefelt" id="soegefelt"></textarea>
@@ -483,6 +476,8 @@
 
 <script>
 
+    /* SCRIPT FOR PROGRAMSIDEN OG FILTRERINGSSIDEN */
+
     const programFoersteSide = document.getElementById('program-foerste-side');
 
     const programAndenSide = document.getElementById('program-anden-side');
@@ -497,43 +492,54 @@
 
     const datoHoejre = document.getElementById('datoHoejre');
 
+    const datoerOgPile = document.getElementById('datoer-for-koncerterne');
+
     programAndenSide.style.display = 'none';
 
-    const datoer = ["11. juli", "12. juli", "13. juli", "14. juli", "15. juli", "16. juli"];
+    const datoer = ["11. juli", "12. juli", "13. juli", "14. juli", "15. juli", "16. juli"]; /* Et array af datoer, der skal bruges til at indsætte over billeder */
 
     // Initialiser datoerne ved sidens indlæsning
-    datoVenstre.innerHTML = datoer[0];
-    datoMidt.innerHTML = datoer[1];
-    datoHoejre.innerHTML = datoer[2];
+    datoVenstre.innerHTML = datoer[0]; /* Sætter datoen til index-værdien */
+    datoMidt.innerHTML = datoer[1]; /* Sætter datoen til index-værdien */
+    datoHoejre.innerHTML = datoer[2]; /* Sætter datoen til index-værdien */
 
     pilFremIkon.addEventListener ('click', () => {
-        programFoersteSide.style.display = 'none';
-        programAndenSide.style.display = 'block';
+        programFoersteSide.style.display = 'none'; /* Programmets første side skjules... */
+        programAndenSide.style.display = 'block'; /* ... og erstattes af programmets anden side */
 
-        datoVenstre.innerHTML = datoer[3];
-        datoMidt.innerHTML = datoer[4];
-        datoHoejre.innerHTML = datoer[5];
+        datoVenstre.innerHTML = datoer[3]; /* Sætter datoen til index-værdien */
+        datoMidt.innerHTML = datoer[4]; /* Sætter datoen til index-værdien */
+        datoHoejre.innerHTML = datoer[5]; /* Sætter datoen til index-værdien */
     });
 
     pilTilbageIkon.addEventListener ('click', () => {
-        programFoersteSide.style.display = 'block';
-        programAndenSide.style.display = 'none';
+        programFoersteSide.style.display = 'block'; /* Programmets første side vises */
+        programAndenSide.style.display = 'none';  /* Programmets anden side skjules */
 
-        datoVenstre.innerHTML = datoer[0];
-        datoMidt.innerHTML = datoer[1];
-        datoHoejre.innerHTML = datoer[2];
+        datoVenstre.innerHTML = datoer[0]; /* Sætter datoen til index-værdien */
+        datoMidt.innerHTML = datoer[1]; /* Sætter datoen til index-værdien */
+        datoHoejre.innerHTML = datoer[2]; /* Sætter datoen til index-værdien */
 
     });
 
-    const overskriftProgram = document.getElementsByClassName('overskrift-program');
+    const overskriftProgram = document.querySelector('.overskrift-program');
 
-    const overskriftFiltrer = document.getElementsByClassName('overskrift-filtrer');
+    const overskriftFiltrer = document.querySelector('.overskrift-filtrer');
+
+    const filtrerEfterBehov = document.getElementById('filtrerEfterBehov');
 
     overskriftFiltrer.addEventListener('click', () => {
-        overskriftProgram.innerHTML.style.opacity = 'rgb(49, 63, 136, 0.2)';
+        programFoersteSide.style.display = 'none'; /*  Programsiden skjules */
+        filtrerEfterBehov.style.display = 'block'; /* Indholdet for filtreringssiden vises */
+        datoerOgPile.style.display = 'none'; /* Pilene og datoerne, der står på linje på programsiden skjules */
     });
 
-
+    overskriftProgram.addEventListener('click', () => {
+        programFoersteSide.style.display = 'block'; /* programmets første side vises, når der trykkes fra filtrer-siden ind på program-siden*/
+        filtrerEfterBehov.style.display = 'none'; /* Filtrer-indholdet skjules */
+        datoerOgPile.style.display = 'block'; /* Pilene og datoerne vises, når man trykker tilbage til program-siden fra filtrer-siden*/
+        datoerOgPile.style.display = 'flex'; /* Sikrer, at datoerne vises på horisontal linje, når der skiftes fra filtrer-siden tilbage til program-siden*/
+    });
 
 </script>
 
