@@ -79,7 +79,7 @@ footer {
    justify-content: space-between; /* Fordeler indholdet jævnt */
   }
 
-/* Skal ændres */
+/* Skal ændres - overruler andre stylings og skal være mere specifik */
  h1{
    color: #313F88;
  }
@@ -89,8 +89,7 @@ footer {
       font-size: 1.5em; /* Mindre fontstørrelse for mindre skærme */
    }
 }
-/* Skal ændres */
- h3 { /**/
+/* Skal ændres - overruler andre stylings og skal være mere specifik */ h3 { /**/
    font-size: 25px;
    margin-bottom: 20px;
    color: #313F88;
@@ -106,13 +105,13 @@ footer {
   }
 }
  
-/* Skal ændres */
+/* Skal ændres - overruler andre stylings og skal være mere specifik */
  ul { /**/
    list-style-type: none;
    padding: 0;
  }
  
- /* Skal ændres */
+/* Skal ændres - overruler andre stylings og skal være mere specifik */
  li {
    margin-bottom: 10px;
  }
