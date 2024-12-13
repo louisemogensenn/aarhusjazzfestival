@@ -261,6 +261,8 @@
         font-family: 'Heebo', 'Times New Roman', Times, serif;
         color: var(--sekundaerFarve);
         background-color: var(--primaerFarve);
+        margin: 0;
+        padding: 0;
     }
 
     h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
@@ -287,6 +289,7 @@
         background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
         height: 2px; /* Angiver højden på linjen */
         border: none; /* Fjerner skyggerne omkring linjen */
+        width: 958px;;
     }
 
     /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
@@ -323,6 +326,7 @@
     .program img {
         width: 210px;
         height: 210px;
+        margin-right: 39px;
     }
 
     /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
@@ -365,12 +369,6 @@
 
 <script>
 
-    // Initialiser datoerne ved sidens indlæsning
-    datoVenstre.innerHTML = datoer[0];
-    datoMidt.innerHTML = datoer[1];
-    datoHoejre.innerHTML = datoer[2];
-
-
     const programFoersteSide = document.getElementById('program-foerste-side');
 
     const programAndenSide = document.getElementById('program-anden-side');
@@ -385,10 +383,14 @@
 
     const datoHoejre = document.getElementById('datoHoejre');
 
-
     programAndenSide.style.display = 'none';
 
     const datoer = ["11. juli", "12. juli", "13. juli", "14. juli", "15. juli", "16. juli"];
+
+    // Initialiser datoerne ved sidens indlæsning
+    datoVenstre.innerHTML = datoer[0];
+    datoMidt.innerHTML = datoer[1];
+    datoHoejre.innerHTML = datoer[2];
 
     pilFremIkon.addEventListener ('click', () => {
         programFoersteSide.style.display = 'none';
@@ -409,6 +411,10 @@
 
     });
 
+</script>
+
+<!-- 
+
     const soegefelt = document.getElementById('soegefelt');
         soegefelt.addEventListener('input', () => {
         console.log(soegefelt.value); // Her kan du filtrere elementer baseret på input
@@ -426,7 +432,7 @@
                 kunstner.parentElement.style.display = 'none';
             }
         });
-});
+        
+    });
 
-    
-</script>
+    -->
