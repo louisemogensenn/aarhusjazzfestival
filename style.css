@@ -3,13 +3,25 @@
 /* Husk at give det tydelige overskrifter for, hvilken side det styler (se eksempel i interaktiv-storytelling) */
 
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
+:root {
+  --primaerFarve:#EDE1D0; /* Bruges som baggrundsfarve */
+  --sekundaerFarve: #313F88; /* Bruges til tekst og elementer som linjer, ikoner, mm.*/
+  --knapfarve: rgba(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
+  --sekundaerKnapfarve: rgba(244, 185, 100, 0.4); /* Denne farve bruges, når en knap er valgt */
+}
     
 * {
    font-family: 'Heebo', 'Times New Roman', Times, serif;
+   color: var(--sekundaerFarve);
 }
 
 body {
   background-color: #EDE1D0;
+}
+
+a {
+  text-decoration: none; /* Fjerner underline fra alle links */
 }
 
 footer {
@@ -467,10 +479,16 @@ h3 { /**/
 
 
 /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
-    .overskrifterIProgram {
-      display: flex;
-      justify-content: center;
-      margin-top: 150px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+
+#overskrifterIProgram, h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
+  font-weight: 300;
+  font-size: 35px;
+}
+
+  .overskrifterIProgram {
+    display: flex;
+    justify-content: center;
+    margin-top: 150px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
   }
 
   .overskrifterIProgram h2 {
@@ -571,7 +589,7 @@ h3 { /**/
 
   #angivSoegekriterierTekst {
       text-align: center;
-      margin: 247px 0 358px;
+      margin: 50px 0 250px;
   }
 
   #soegefeltOgIkon {
