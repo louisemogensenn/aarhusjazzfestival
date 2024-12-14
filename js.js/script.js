@@ -140,11 +140,20 @@ document.addEventListener('DOMContentLoaded', () => {
         popupSoegning.style.display = 'none';
     });
 
+    /* Nedstående funktion ændrer knappens farve ved at tjekke, hvilken farve den har først */
     prisKnap.addEventListener('click', () => {
-        prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)';
+        if (prisKnap.style.backgroundColor === 'var(--sekundaerKnapfarve)') {
+            prisKnap.style.backgroundColor = 'var(--knapfarve)'
+            prisKnap.style.border = 'none';
+
+        } else {
+            prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)'
+            prisKnap.style.border = '1px solid var(--sekundaerFarve)';
+        }
+        
     });
 
-    /*drop down*/
+    /*drop down af priser */
 
     const dropdownPris = document.getElementById('dropdownPris');
 
