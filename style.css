@@ -575,7 +575,7 @@ h3 { /**/
   #filtreringsmuligheder {
       display: flex;
       justify-content: space-between; /* Sikrer, at knapperne er placeret med lige stor afstand til hinanden*/
-      margin: 47px 277px;
+      margin: 47px 277px 0;
       position: relative; /* Gør det muligt for dropdownen at placeres relativt til containeren */
 
   }
@@ -616,6 +616,7 @@ h3 { /**/
   }
 
   #nulstilFiltrer {
+    display: none; /* skal være skjult, så længe der ikke er angivet et filter*/
     text-align: left; /* Placerer elementet*/
     margin-left: 240px; /*Definerer afstanden til kant, og derned placeringen af funktionen*/
   }
@@ -648,37 +649,25 @@ h3 { /**/
       color: #555;
   }
 
-  #pris-dropdown-indhold {
-      display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
-      background-color: var(--sekundaerKnapfarve);
-      height: 181px;
-      width: 219px;
-  }
-
   /* gfcjdbvcdjkv */
   #dropdownPris {
-      position: absolute;
-      top: 100%; /* Placér dropdownen lige under knappen */
-      left: 0; /* Justér dropdownen til venstre for knappen */
-      background-color: white;
-      border: 1px solid #ccc;
-      width: 100%; /* Samme bredde som knappen */
-      text-align: center;
-      z-index: 1000;
+      background-color: var(--sekundaerKnapfarve);
+      border: 1px solid var(--sekundaerFarve);
+      text-align: left;
+      padding: 25px 40px;
   }
+
+  #pris-dropdown-indhold {
+    display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
+    background-color: var(--sekundaerKnapfarve);
+}
 
   #dropdownPris.skjulPris {
       display: none;
   }
 
-  .dropdown-optiondropdownPrisMulighed {
-      padding: 10px 0;
-      font-size: 16px;
-      cursor: pointer;
-  }
-
   .dropdownPrisMulighed:hover {
-      background-color: #f0f0f0;
+      font-weight: bolder;
   }
 
 
