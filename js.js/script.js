@@ -180,7 +180,19 @@ document.addEventListener('DOMContentLoaded', () => {
         prisKnap.style.backgroundColor = 'var(--knapfarve)';
     });
 
-    /* HUSK AT FJERNE INDHOLDER, DER VISES, HVIS MAN KLIKKER NULSTIL */
     
 
-    /*----------------------- SCRIPT FOR ...  ------------------------*/
+    /* HUSK AT FJERNE INDHOLDET, DER VISES, HVIS MAN KLIKKER NULSTIL */
+    
+
+    /*----------------------- SCRIPT FOR OM KUNSTNER  ------------------------*/
+    const reserverBilletKnap = document.getElementById('reserverBilletKnap');
+
+    const popupReserverBillet = document.getElementById('popup-reserverBillet');
+
+    reserverBilletKnap.addEventListener('click', () => {
+        popupReserverBillet.style.display = 'block';
+        setTimeout(() => { window.location.href = '404.html'; }, 2000);
+    });
+
+     /*----------------------- SCRIPT FOR ...  ------------------------*/

@@ -651,8 +651,6 @@ h3 { /**/
       cursor: pointer;
       color: #555;
   }
-
-  
   
     #dropdownPris {
       background-color: var(--sekundaerKnapfarve);
@@ -660,8 +658,13 @@ h3 { /**/
       margin: 0 287px 0 auto;
       /* margin-left: 938px;  /* Samme margin som filtreringsmuligheder */
       width: 196px;  /* Samme bredde som knapperne */
-      
       } 
+
+      @media (max-width: 1435px) {
+        #dropdownPris {
+          display: none;
+        }
+      }
 
       #pris-dropdown-indhold {
         display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
@@ -682,6 +685,75 @@ h3 { /**/
 
       .dropdownPrisMulighed:hover {
           font-weight: bolder;
+      }
+
+        /* ------------------------------------- STYLING AF OM KUNSTNER ------------------------------------- */
+
+
+      #tilbage-pil {
+          width: 24px;
+          height: 24px;
+          position: absolute; /* Gør det muligt at finjustere placeringen af pilen */
+          left: 0;
+          margin-left: 253px; /* placerer pilen på linje med linjen under sig */
+      }
+
+
+      .billedeOgInfoKoncert {
+          display: flex;
+          justify-content: space-between;
+          margin: 0 277px;
+      }
+
+      .billedeOgInfoKoncert img {
+          height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
+      }
+
+      .koncertInformation {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+      }
+
+      #kunstnerNavn, #beskrivelseAfKunstnerOverskrift {
+          font-weight: bold;
+      }
+
+      #beskrivelseAfKunstner {
+          margin: 0 277px;
+      }
+
+      #beskrivelseAfKunstner p {
+          margin: 10px 0; /* Skaber afstand mellem de individuelle p-tags, så teksten er nemmere at læse */
+      }
+
+      #reserverBilletKnap {
+          background-color: var(--sekundaerKnapfarve);
+          font-weight: bold;
+          width: 259px;
+          height: 71px;
+          font-size: 20px;
+          margin: 47px 277px 47px auto;
+          display: block; /* Sikrer at margin-left: auto virker korrekt */
+      }
+
+      #reserverBilletKnap:hover {
+          cursor: pointer;
+      }
+
+      /* Besked, der vises, når man trykker på søg-ikonet */
+      #popup-reserverBillet {
+          display: none;
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%); 
+          width: 300px;
+          padding: 60px;
+          background-color: var(--primaerFarve);
+          border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
+          z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
+          text-align: center;
       }
       
 
