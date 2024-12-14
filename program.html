@@ -264,8 +264,8 @@
                 <button>DATO</button>
                 <button>SPILLESTED</button>
                 <button>GENRE</button>
-                <div id="prisKnap">
-                    <button>PRIS</button>
+                <div id="prisIndhold">
+                    <button id="prisKnap">PRIS</button>
                     <div id="pris-dropdown-indhold">
                         <p>Gratis</p>
                         <p>Under 100 kr</p>
@@ -283,7 +283,8 @@
 
         <!-- Besked om, at søgningen ikke gav nogen resultater-->
         <aside id="popup-soegning">
-            <p>Din søgning gav ingen resultater</p>
+            <button id="lukSoegningPopUp">&times;</button>
+            <p id="indholdPopupProgram"></p>
         </aside>
 
     </main>
@@ -497,7 +498,28 @@
 
     /* Besked, der vises, når man trykker på søg-ikonet */
     #popup-soegning {
-        display: none;
+        display: none; /* Skjult som standard */
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        width: 300px;
+        padding: 60px;
+        background-color: var(--primaerFarve);
+        border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
+        z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
+        text-align: center;
+    }
+
+    #lukSoegningPopUp {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: #555;
     }
 
     #pris-dropdown-indhold {
@@ -583,14 +605,47 @@
         datoerOgPile.style.display = 'flex'; /* Sikrer, at datoerne vises på horisontal linje, når der skiftes fra filtrer-siden tilbage til program-siden*/
     });
 
+    const soegeikon = document.getElementById('soegeikon');
+
+    const popupSoegning = document.getElementById('popup-soegning');
+
+    const lukSoegningPopup = document.getElementById('lukSoegningPopUp');
+
+    const soegeFelt = document.getElementById('soegefelt');
+
+    const indholdPopupProgram = document.getElementById('indholdPopupProgram');
+
+    // Denne funktion åbnes pop-uppen, når man trukker på luppen.
+    soegeikon.addEventListener('click', () => {
+        popupSoegning.style.display = 'block'; /* Når man klikker på søgeikonet vises popup-vinduet */
+        if(soegefelt.value.trim() === '') {
+            indholdPopupProgram.innerHTML = "Angiv søgeord"; /* Hvis søgefeltet er tomt vil denne besked angives */
+        } else {
+            indholdPopupProgram.innerHTML = 'Din søgning "' + soegeFelt.value + '" gav ingen resultater'; /* Hvis søgeordet ikke matcher nogen resultater, vil denne besked komme. Der er ikke lavet funktionalitet til at søge websitets indhold igennem. */
+            soegeFelt.value = ''; /* Inholdet i søgefeltet fjernes */
+        }        
+    });
+
+    // Luk popup, når man trykker på luk-knappen
+    lukSoegningPopup.addEventListener('click', () => {
+        popupSoegning.style.display = 'none';
+    });
+    
+
     /* SCRIPT TIL FILTRER-SIDEN UNDER PROGRASIDEN */
-    const prisKnap = document.getElementById('prisKnap');
+    const prisIndhold = document.getElementById('prisIndhold');
 
     const prisDropDownIndhold = document.getElementById('pris-dropdown-indhold');
 
-    prisKnap.addEventListener('click', () => {
+    soegeikon.addEventListener('click', () => {
+        popupSoegning.style.display = 'block';
+
+    });
+
+    prisIndhold.addEventListener('click', () => {
         prisDropDownIndhold.style.display = 'block';
     });
+    
 
 </script>
 
