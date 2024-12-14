@@ -122,6 +122,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const indholdPopupProgram = document.getElementById('indholdPopupProgram');
 
+    const prisKnap = document.getElementById('prisKnap');
+
     // Denne funktion åbnes pop-uppen, når man trukker på luppen.
     soegeikon.addEventListener('click', () => {
         popupSoegning.style.display = 'block'; /* Når man klikker på søgeikonet vises popup-vinduet */
@@ -137,46 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
     lukSoegningPopup.addEventListener('click', () => {
         popupSoegning.style.display = 'none';
     });
-    
 
-    /* SCRIPT TIL FILTRER-SIDEN UNDER PROGRASIDEN */
-    const prisIndhold = document.getElementById('prisIndhold');
-
-    const prisDropDownIndhold = document.getElementById('pris-dropdown-indhold');
-
-    soegeikon.addEventListener('click', () => {
-        popupSoegning.style.display = 'block';
-
+    prisKnap.addEventListener('click', () => {
+        prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)';
     });
-
-    prisIndhold.addEventListener('click', () => {
-        prisDropDownIndhold.style.display = 'block';
-    });
-    
-
-
-/* 
-
-    const soegefelt = document.getElementById('soegefelt');
-        soegefelt.addEventListener('input', () => {
-        console.log(soegefelt.value); // Her kan du filtrere elementer baseret på input
-    });
-
-    const soegefelt2 = document.getElementById('soegefelt');
-    soegefelt.addEventListener('input', () => {
-        const filter = soegefelt.value.toLowerCase();
-        const kunstnerNavne = document.querySelectorAll('.kunstner-navn');
-    
-        kunstnerNavne.forEach(kunstner => {
-            if (kunstner.textContent.toLowerCase().includes(filter)) {
-                kunstner.parentElement.style.display = 'block';
-            } else {
-                kunstner.parentElement.style.display = 'none';
-            }
-        });
-        
-    });
-
-    */
 
     /*----------------------- SCRIPT FOR ...  ------------------------*/

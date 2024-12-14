@@ -17,7 +17,7 @@
 }
 
 body {
-  background-color: #EDE1D0;
+  background-color: var(--primaerFarve);
 }
 
 a {
