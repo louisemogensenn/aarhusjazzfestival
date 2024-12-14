@@ -144,8 +144,11 @@ document.addEventListener('DOMContentLoaded', () => {
     prisKnap.addEventListener('click', () => {
         if (prisKnap.style.backgroundColor === 'var(--sekundaerKnapfarve)') {
             prisKnap.style.backgroundColor = 'var(--knapfarve)'
+            prisKnap.style.border = 'none';
+
         } else {
             prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)'
+            prisKnap.style.border = '1px solid var(--sekundaerFarve)';
         }
         
     });
