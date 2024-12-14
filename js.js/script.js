@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (dropdown) { //"if" der findes en undermenu
                 
                 dropdown.classList.toggle('show'); //... så skiftes der mellem at vise/skjule denne specifikke undermenu
-                
-                event.stopPropagation(); //... så stoppes eventet fra at påvirke andre elementer
             }
         });
     });
