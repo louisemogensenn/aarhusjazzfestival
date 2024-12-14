@@ -91,9 +91,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-    const overskriftProgram = document.querySelector('.overskrift-program');
+    const overskriftProgram = document.getElementById('overskrift-program');
 
-    const overskriftFiltrer = document.querySelector('.overskrift-filtrer');
+    const overskriftFiltrer = document.getElementById('overskrift-filtrer');
 
     const filtrerEfterBehov = document.getElementById('filtrerEfterBehov');
 
