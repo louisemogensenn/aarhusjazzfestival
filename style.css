@@ -483,21 +483,17 @@ h3 { /**/
 
 /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
 
-  .overskrifterPaaSider, h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
-  font-weight: 300;
-  font-size: 35px;
-  }
-
-  .overskrifterPaaSider {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
-  }
-
-  .overskrifterPaaSider h2 {
+  .overskrifterPaaSider h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
+      font-weight: 300;
+      font-size: 35px;
       margin: 0 49px;
   }
 
+  .overskrifterPaaSider {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+  }
   /* Streg under program/filtrer */
   .horisontal-linje {
       margin: 47px 277px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
@@ -587,6 +583,9 @@ h3 { /**/
   #angivSoegekriterierTekst {
       text-align: center;
       margin: 50px 0 250px;
+      font-weight: 300;
+      font-size: 25px;
+
   }
 
   #soegefeltOgIkon { /* style mig mere :)*/
