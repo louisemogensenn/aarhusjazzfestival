@@ -518,6 +518,11 @@ h3 { /**/
       justify-content: space-around;
   }
 
+  #datoer-for-koncerterne h2 {
+    font-size: 25px;
+    font-weight: 300;
+  }
+
   .program {
       display: flex;
       justify-content: space-around;
