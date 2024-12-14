@@ -23,8 +23,7 @@ body {
 a {
   text-decoration: none; /* Fjerner underline fra alle links */
 }
-/*---------------------------------*/
-
+/*--------------------------------------------------------------------------------------------------------------------------------------------- */
 
 footer {
    background-color: #EDE1D0; /*Genereller regler for footer*/
@@ -155,7 +154,6 @@ h3 { /**/
   padding-right: 5px;
 }
 
-
 .bund-sektion-socials { /* instillinger for sociale medier link */
    text-align: left; /* Justerer tekst til venstre */
    margin:40px 30px;
@@ -191,7 +189,7 @@ h3 { /**/
 }
 
 
-/* --------- Sponser slide -----------*/
+/* ------------------------------------  Sponser slide ------------------------------------ */
 
 .sliding-title {
   overflow: hidden; /* fjerner alle former for scrool bare, så man ikke kan følge med hvor sliden begynder */
@@ -218,20 +216,13 @@ h3 { /**/
   100% { transform: translateX(-100%); } /* definere hvornår loopet begynder, i dette tilfælde begynder det således at den stater over når sidste logo er forsvundet ud af skærmen til venstre */
 }
 
-
-
-
-
-
-
-
- /* ------------ GENERELT - HEADER --------------------*/
+ /* ------------------------------------  GENERELT - HEADER ------------------------------------ */
  header {
   display: flex; /*Sikrer placeringen af elementerne*/
   justify-content: space-between; /* Placerer logo og navigation med plads imellem */
   }
 
-/* ------------- GENERELT - NAVIGATIONSBAR -------------*/
+/* ------------------------------------  GENERELT - NAVIGATIONSBAR ------------------------------------ */
   /* Stling af logo */
   .logo-navigationsbar img {
   max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
@@ -268,7 +259,7 @@ h3 { /**/
   }
 
 
-/* ------------- GENERELT - DROP-DOWN MENUER--------------*/
+/* ------------------------------------  GENERELT - DROP-DOWN MENUER ------------------------------------ */
   /* Styling af dropdown-elementer */
   .drop-down {
   display: none; /* Skjuler undermenuer som standard */
@@ -294,7 +285,7 @@ h3 { /**/
   }
 
 
-/* -------------- GENERELT - BURGERMENU -------------- */
+/* ------------------------------------ GENERELT - BURGERMENU ------------------------------------  */
   /* Styler burger ikon */
   .burgermenu img{
       max-width: 30px; /*Definerer størrelsen på burger-ikon*/
@@ -312,14 +303,14 @@ h3 { /**/
   }
  
 
-/* ------------- RESPONSIVT - sikrer dropdown ved hover på desktop -----------*/
+/* ------------------------------------  RESPONSIVT - sikrer dropdown ved hover på desktop ------------------------------------ */
   @media (min-width: 769px) {
       .navigationsbar > li:hover .drop-down {
           display: block;
       }
   }
 
-/* -------------- RESPONSIVITET - NAV TIL BURGER ----------------*/
+/* ------------------------------------  RESPONSIVITET - NAV TIL BURGER ------------------------------------  */
   /* Skjuler alm. nav., når burgermenu er aktiv */
   @media (max-width: 768px) {
   .burgermenu {
@@ -390,7 +381,7 @@ h3 { /**/
 }
 
 
-/* --------- FORSIDE ELEMENTER -----------------*/
+/* ------------------------------------ FORSIDE ELEMENTER ---------------------------------------------*/
   /* Styling af felxboks, som styrer både tekst og animation*/
   .forside-animation {
     display: flex; /*Giver plads til alle elementer i flexboksen*/
@@ -452,7 +443,7 @@ h3 { /**/
       } 
     }
 
-/*--------- FORSIDE ELEMENTER - MOBIL -----------*/
+/*------------------------------------ FORSIDE ELEMENTER - MOBIL ------------------------------------ */
   /* Styling af animationen */
     .forside-animation-mobil {
       margin: 5px; /*luft omkring, til kanter på mobilen*/
@@ -610,7 +601,7 @@ h3 { /**/
       padding: 0 20px;
       font-size: 20px;
       margin-right: 20px;
-     background-color: var(--knapfarve);
+      background-color: var(--knapfarve);
   }
 
   #soegeikon {
@@ -623,8 +614,6 @@ h3 { /**/
     text-align: left; /* Placerer elementet*/
     margin-left: 240px; /*Definerer afstanden til kant, og derned placeringen af funktionen*/
   }
-
-
 
   /* Besked, der vises, når man trykker på søg-ikonet */
   #popup-soegning {
@@ -755,11 +744,7 @@ h3 { /**/
           z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
           text-align: center;
       }
-      
 
-
-  /* STYLING AF SIDEN I MOBIL-VIEW*/
-
-  /* ... */
+  /* ------------------------------------ STYLING AF ... ------------------------------------  */
   
     
