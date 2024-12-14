@@ -23,6 +23,8 @@ body {
 a {
   text-decoration: none; /* Fjerner underline fra alle links */
 }
+/*---------------------------------*/
+
 
 footer {
    background-color: #EDE1D0; /*Genereller regler for footer*/
@@ -188,7 +190,8 @@ h3 { /**/
    cursor: pointer; /* ændrer mus til pointer */
 }
 
-/* Sponser slide */
+
+/* --------- Sponser slide -----------*/
 
 .sliding-title {
   overflow: hidden; /* fjerner alle former for scrool bare, så man ikke kan følge med hvor sliden begynder */
@@ -387,7 +390,7 @@ h3 { /**/
 }
 
 
-/*--------- FORSIDE ELEMENTER -----------------*/
+/* --------- FORSIDE ELEMENTER -----------------*/
   /* Styling af felxboks, som styrer både tekst og animation*/
   .forside-animation {
     display: flex; /*Giver plads til alle elementer i flexboksen*/
@@ -479,7 +482,6 @@ h3 { /**/
         color: #DA672C;/*Farve på font*/
         margin: 0 0 60px; /*Fjerner luft omkring og laver afstand til nedenforstående elementer*/
         font-weight: 400; /* tykkelse på font*/
-
       }
 
     /*Styling af "link" i teksten*/
