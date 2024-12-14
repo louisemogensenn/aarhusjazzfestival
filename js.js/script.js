@@ -1,51 +1,67 @@
 
 /* ---------- SIKRER FUNKTIONALITETEN AF BURGERMENUEN -----------*/
 
-document.addEventListener('DOMContentLoaded', () => {
-    const burgerMenu = document.querySelector('.burgermenu');
-    const mainNav = document.querySelector('.navigationsbar');
-    const burgerMenuIcon = document.querySelector('.burgermenu img');
-    const mainNavLinks = document.querySelectorAll('.navigationsbar > li');
+document.addEventListener('DOMContentLoaded', () => { //Dette sikrer, at koden først kører, når hele HTML-dokumentet er indlæst
 
-    // Tilføj click-event til hele dokumentet for at lukke menuen, når der klikkes uden for
+    //VARIABLER - "variable-deklarationer"
+    const burgerMenu = document.querySelector('.burgermenu'); //Selve burger-menu knappen
+
+    const mainNav = document.querySelector('.navigationsbar'); //Hovednavigationsmenuen 
+
+    const burgerMenuIcon = document.querySelector('.burgermenu img'); //Burger-menu ikonet
+
+    const mainNavLinks = document.querySelectorAll('.navigationsbar > li'); //Alle hovedpunkter
+
+
+    // CLICK-EVENT - Lukker menuen når der klikkes udenfor. Den tjekker:
     document.addEventListener('click', (event) => {
-        if (mainNav.classList.contains('show') && 
-            !mainNav.contains(event.target) && 
-            !burgerMenu.contains(event.target)) {
-            mainNav.classList.remove('show');
+        if (mainNav.classList.contains('show') && //Om menuen er åben (show klassen)
+            !mainNav.contains(event.target) && // Om klikket var udenfor menuen
+            !burgerMenu.contains(event.target)) 
+            
+            { //Fjerner derefter "show" og nulstiller undermenuerne
+            mainNav.classList.remove('show'); 
             burgerMenuIcon.classList.remove('open');
             
             // Ryd undermenu-status
             const dropdowns = document.querySelectorAll('.drop-down');
+            
             dropdowns.forEach(dropdown => {
                 dropdown.classList.remove('show');
             });
         }
     });
 
-    // Tilføj click-event til selve burgermenuen
+
+    // CLICK EVENT - Styrer selve burgermenuen
     burgerMenu.addEventListener('click', (event) => {
-        event.stopPropagation(); // Forhindrer at dokumentets click-event udløses
-        mainNav.classList.toggle('show');
-        burgerMenuIcon.classList.toggle('open');
+        event.stopPropagation(); // Forhindrer at dokumentets click-event udføres
+        mainNav.classList.toggle('show'); //Skifter menuens synlighed
+        burgerMenuIcon.classList.toggle('open'); //Ændrer udseendet på burgermenu ikonet, til krydset
 
         // Toggle undermenuer
         mainNavLinks.forEach(link => {
+
             const dropdown = link.querySelector('.drop-down');
-            if (dropdown) {
-                dropdown.classList.toggle('show');
-            }
+
+                if (dropdown) { //Ændrer undermenuerne 
+                    dropdown.classList.toggle('show');
+                }
         });
     });
 
-    // Tilføj click-events til hver hovednavigationslink for at toggle undermenuer
+    
+    // CLICK-EVENT - hver hovednavigationslink, for at toggle undermenuer
     mainNavLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
+        
+        link.addEventListener('click', (event) => { 
+            
             const dropdown = link.querySelector('.drop-down');
-            if (dropdown) {
-                dropdown.classList.toggle('show');
-                event.stopPropagation(); // Forhindrer at dokumentets click-event udløses
-            }
+
+                if (dropdown) {
+                    dropdown.classList.toggle('show');
+                    event.stopPropagation(); // Forhindrer at dokumentets click-event udløses
+                }
         });
     });
 });
