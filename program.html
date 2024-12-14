@@ -53,7 +53,7 @@
     <main>
 
         <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
-        <section class="overskrifter">
+        <section class="overskrifterIProgram">
             <a class="overskrift-program" href="#"><h2>Program</h2></a> <!-- Der er brugt class, da den også bruges på filtreringssiden -->
             <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a> <!-- Der er brugt class, da den også bruges på filtreringssiden -->
         </section>
@@ -256,8 +256,8 @@
         <article id="filtrerEfterBehov"> 
 
             <figure id="soegefeltOgIkon">
-                <textarea name="soegefelt" id="soegefelt"></textarea>
-                <img src="images/soeg-ikon.webp" alt="Søgeikon">
+                <input id="soegefelt" type="search" placeholder="Søg...">
+                <img id="soegeikon" src="images/soeg-ikon.webp" alt="Søgeikon">
             </figure>
 
             <figure id="filtreringsmuligheder">
@@ -272,6 +272,11 @@
             <section></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier -->
 
         </article>
+
+        <!-- Besked om, at søgningen ikke gav nogen resultater-->
+        <aside id="popup-soegning">
+            <p>Din søgning gav ingen resultater</p>
+        </aside>
 
     </main>
 
@@ -354,13 +359,13 @@
         text-decoration: none;
     }
 
-    .overskrifter {
+    .overskrifterIProgram {
         display: flex;
         justify-content: center;
         margin-top: 150px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
     }
 
-    .overskrifter h2 {
+    .overskrifterIProgram h2 {
         margin: 0 49px;
     }
  
@@ -463,6 +468,24 @@
     #angivSoegekriterierTekst {
         text-align: center;
         margin: 247px 0 358px;
+    }
+
+    #soegefeltOgIkon {
+        text-align: center;
+    }
+
+    #soegefelt {
+        width: 60%;
+        height: 67px; /* Søgefeltets højde stemmer overens med knappernes højde */
+        border: 2px solid var(--sekundaerFarve);
+        padding: 0 20px;
+        font-size: 20px;
+        margin-right: 20px;
+    }
+
+    #soegeikon {
+        width: 40px;
+        vertical-align: middle; /* Placerer søgeikonet i midten i den lodrette akse */
     }
 
     /* STYLING AF SIDEN I MOBIL-VIEW*/
