@@ -1,17 +1,6 @@
 
-/* ---------- SIKRER FUNKTIONALITETEN AF BURGERMENUEN -----------*/
 /* ---------- FUNKTIONALITETEN AF BURGERMENUEN -----------*/
 
-document.addEventListener('DOMContentLoaded', () => { //Dette sikrer, at koden først kører, når hele HTML-dokumentet er indlæst
-
-    //VARIABLER - "variable-deklarationer"
-    const burgerMenu = document.querySelector('.burgermenu'); //Selve burger-menu knappen
-
-    const mainNav = document.querySelector('.navigationsbar'); //Hovednavigationsmenuen 
-
-    const burgerMenuIcon = document.querySelector('.burgermenu img'); //Burger-menu ikonet
-
-    const mainNavLinks = document.querySelectorAll('.navigationsbar > li'); //Alle hovedpunkter
 // Venter på at hele HTML-dokumentet er indlæst før koden køres
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -22,18 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainNavLinks = document.querySelectorAll('.navigationsbar > li');//henter alle hovedmenupunkter i navigationsbaren
 
 
-    // CLICK-EVENT - Lukker menuen når der klikkes udenfor. Den tjekker:
-    document.addEventListener('click', (event) => {
-        if (mainNav.classList.contains('show') && //Om menuen er åben (show klassen)
-            !mainNav.contains(event.target) && // Om klikket var udenfor menuen
-            !burgerMenu.contains(event.target)) 
-            
-            { //Fjerner derefter "show" og nulstiller undermenuerne
-            mainNav.classList.remove('show'); 
-            burgerMenuIcon.classList.remove('open');
-            
-            // Ryd undermenu-status
-            const dropdowns = document.querySelectorAll('.drop-down');
     // CLICK-EVENT - burger-menu ikonet
     burgerMenu.addEventListener('click', () => {
         
@@ -51,8 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    
-    // CLICK-EVENT - hver hovednavigationslink, for at toggle undermenuer
     //CLICK-EVENT - alle hovedmenupunkter
     mainNavLinks.forEach(link => {
         link.addEventListener('click', (event) => {
