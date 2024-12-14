@@ -412,4 +412,166 @@ h3 { /**/
       margin-top: 150px; /*Luft til ovenforstående element (tekst)*/
     }
 
-      
+    /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
+    .overskrifterIProgram {
+      display: flex;
+      justify-content: center;
+      margin-top: 150px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+  }
+
+  .overskrifterIProgram h2 {
+      margin: 0 49px;
+  }
+
+  /* Streg under program/filtrer */
+  #horisontal-linje {
+      margin: 47px 277px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
+      background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
+      height: 2px; /* Angiver højden på linjen */
+      border: none; /* Fjerner skyggerne omkring linjen */
+  }
+
+  .pil-tilbage-ikon, .pil-frem-ikon {
+      width: 40px;
+      height: 30px;
+      cursor: pointer;
+  }
+
+  .program p {
+      font-size: 15px; /* Skriftstørrelsen på kunstnernavnet, der står under billedet */
+      font-weight: 300; /* Vægten på fonten */
+  }
+
+  #datoer-for-koncerterne {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .program {
+      display: flex;
+      justify-content: space-around;
+  }
+
+  .koncerter-venstre, .koncerter-midt, .koncerter-hoejre {
+      display: flex;
+      flex-direction: column;
+      margin-top: 64px;
+  }
+
+  .koncerter-hoejre {
+      margin: 64px 277px 64px 0;
+  }
+
+  .koncerter-venstre {
+      margin: 64px 0 64px 277px;
+  }
+
+  .program img {
+      width: 210px;
+      height: 210px;
+      margin-right: 39px;
+  }
+
+  .kunstnerNavnOgPil {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .kunstnerNavnOgPil img {
+      width: 20px;
+      height: 15px;
+      rotate: 180deg;
+      margin-bottom: 47px;
+  }
+
+  /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
+  
+  #filtrerEfterBehov {
+      display: none;
+  }
+  
+  #soegefeltOgIkon { /* style mig mere :)*/
+      display: block;
+  }
+  
+  #filtreringsmuligheder {
+      display: flex;
+      justify-content: space-between; /* Sikrer, at knapperne er placeret med lige stor afstand til hinanden*/
+      margin: 47px 277px;
+  }
+
+  #filtreringsmuligheder button {
+      flex: 1; /* Sørger for, at knapperne fylder lige meget */
+      margin: 10px; /* Tilføjer en lille afstand mellem knapperne */
+      text-align: center; /* Centrerer teksten i knappen */
+      height: 67px;
+      width: 219px;
+      background-color: var(--knapfarve);
+      font-size: 20px;
+      border: none;
+  }
+
+  #filtreringsmuligheder button p {
+      margin: 26px auto; /* Sikrer, at afstanden mellem tekst og top/bund af knap er 26px */
+  }
+
+  #angivSoegekriterierTekst {
+      text-align: center;
+      margin: 247px 0 358px;
+  }
+
+  #soegefeltOgIkon {
+      text-align: center;
+  }
+
+  #soegefelt {
+      width: 60%;
+      height: 67px; /* Søgefeltets højde stemmer overens med knappernes højde */
+      border: 1px solid var(--sekundaerFarve);
+      padding: 0 20px;
+      font-size: 20px;
+      margin-right: 20px;
+  }
+
+  #soegeikon {
+      width: 40px;
+      vertical-align: middle; /* Placerer søgeikonet i midten i den lodrette akse */
+  }
+
+  /* Besked, der vises, når man trykker på søg-ikonet */
+  #popup-soegning {
+      display: none; /* Skjult som standard */
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      width: 300px;
+      padding: 60px;
+      background-color: var(--primaerFarve);
+      border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
+      z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
+      text-align: center;
+  }
+
+  #lukSoegningPopUp {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: #555;
+  }
+
+  #pris-dropdown-indhold {
+      display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
+      background-color: var(--sekundaerKnapfarve);
+      height: 181px;
+      width: 219px;
+  }
+
+  /* STYLING AF SIDEN I MOBIL-VIEW*/
+
+  /* ... */
+  

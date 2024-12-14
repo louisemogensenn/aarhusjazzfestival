@@ -360,13 +360,13 @@
         padding: 0;
     }
 
-    h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
+    #overskrifterIProgram, h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
         font-weight: 300;
         font-size: 35px;
     }
 
     a {
-        text-decoration: none;
+        text-decoration: none; /* Fjerner underline fra alle links */
     }
 
     /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
@@ -532,7 +532,7 @@
     /* STYLING AF SIDEN I MOBIL-VIEW*/
     @media (max-width: 768px) {
         main {
-            display: none;
+            display: none; /* Fjerner al indhold fra siden */
         }
     }
     
