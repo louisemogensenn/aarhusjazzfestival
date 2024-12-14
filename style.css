@@ -607,6 +607,7 @@ h3 { /**/
       width: 60%;
       height: 67px; /* Søgefeltets højde stemmer overens med knappernes højde */
       border: 1px solid var(--sekundaerFarve);
+      background-color: var(--primaerFarve);
       padding: 0 20px;
       font-size: 20px;
       margin-right: 20px;
