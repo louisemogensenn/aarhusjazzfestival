@@ -210,7 +210,7 @@ h3 { /**/
   /* Stling af logo */
   .logo-navigationsbar img {
   max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
-  padding: 30px; /*Luft omkring logoet*/
+  padding: 30px 30px 10px; /*Luft omkring logoet*/
   }
 
   /* Styling af ul */
@@ -365,8 +365,51 @@ h3 { /**/
 }
 
 
-/*--------- FORSIDE ELEMENTER --------------*/
+/*--------- FORSIDE ELEMENTER -----------------*/
+  /* Styling af felxboks, som styrer både tekst og animation*/
+  .forside-animation {
+    display: flex; /*Giver plads til alle elementer i flexboksen*/
+    justify-content: center; /*Placering vandret*/
+    align-items: top; /*Placering lodret*/
+    margin: 0; /*Fjener luft omkring*/
+  }
 
+  /* Styling af animationen */
+  #styling-animation {
+    width: 90%; /*Animationen fylder hele bredden af sin flexboks*/
+    height: auto; /* auto = beholder sit oprindelige størrelsesforhold*/
+    display: block; /*giver animationen bedre placering i forhold til omgivende elementer.*/
+    margin-bottom: 80px; /*Aftand til nedenforstående elementer*/
+    margin-left: 30px; /*Afstand til venstre kant*/
+  }
 
+  /* Placering af tekststykke, forside*/
+  .forside-tekst {
+    flex-basis: 300px;/*delen af flexboks, med tekst, får en fast bredde*/
+    text-align: right; /*Højrestiller teksten */
+    padding-right: 30px; /*Sørger for at højre side er på linje med navigationsbaren*/
+  }
 
-  
+  /* Styling af overskrift - tekstboks*/
+    .forside-tekst h1 {
+      font-size: 50px; /*Størelse på font*/
+      margin-bottom: 25px; /*Luft til nedenforstående tekst*/
+      line-height: 1.3; /*Linjeafstanden - sikrer læsbarheden*/
+    }
+
+  /*Styling af dato-skrift*/
+    .forside-tekst p {
+      font-size: 25px;/*Størelse på font*/
+      color: #DA672C;/*Farve på font*/
+      margin: 0; /*Fjerner luft omkring*/
+      font-weight: 500; /* tykkelse på font*/
+    }
+
+  /* Styling af ikon i hjørne */
+    #ikon-forside {
+      width: 100px; /* bredde på ikonet */
+      height: auto; /* Lader højden automatisk tilpasse sig */
+      margin-top: 150px; /*Luft til ovenforstående element (tekst)*/
+    }
+
+      
