@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
     prisMuligheder.forEach(prisMuligheder => {
         prisMuligheder.addEventListener('click', (e) => {
             const valgtTekst = e.target.textContent;
-            prisKnap.innerHTML = `<b>${valgtTekst}</b>`; // Opdaterer knappen med fed tekst
+            prisKnap.innerHTML = valgtTekst; // Opdaterer knappens tekstindhold
             dropdownPris.classList.add('skjulPris'); // Skjul dropdown
         });
     });
