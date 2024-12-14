@@ -167,8 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const nulstilFiltrer = document.getElementById('nulstilFiltrer');
 
     nulstilFiltrer.addEventListener('click', () => {
-
+        prisKnap.innerHTML = 'PRIS';
+        prisKnap.style.backgroundColor = 'var(--knapfarve)';
     });
+
+    /* HUSK AT FJERNE INDHOLDER, DER VISES, HVIS MAN KLIKKER NULSTIL */
     
 
     /*----------------------- SCRIPT FOR ...  ------------------------*/
