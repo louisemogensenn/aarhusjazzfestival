@@ -606,8 +606,8 @@ h3 { /**/
   }
 
   #nulstilFiltrer {
-    text-align: right; /*Højrestiller elementet*/
-    padding-right: 300px; /*Definerer afstanden til højre side, og derned placeringen af funktionen*/
+    text-align: left; /* Placerer elementet*/
+    margin-left: 240px; /*Definerer afstanden til kant, og derned placeringen af funktionen*/
   }
 
 
