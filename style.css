@@ -579,7 +579,6 @@ h3 { /**/
       justify-content: space-between; /* Sikrer, at knapperne er placeret med lige stor afstand til hinanden*/
       margin: 47px 277px 0;
       position: relative; /* Gør det muligt for dropdownen at placeres relativt til containeren */
-
   }
 
   #filtreringsmuligheder button {
@@ -611,6 +610,7 @@ h3 { /**/
       padding: 0 20px;
       font-size: 20px;
       margin-right: 20px;
+     background-color: var(--knapfarve);
   }
 
   #soegeikon {
@@ -652,26 +652,36 @@ h3 { /**/
       color: #555;
   }
 
-  /* gfcjdbvcdjkv */
-  #dropdownPris {
+  
+  
+    #dropdownPris {
       background-color: var(--sekundaerKnapfarve);
       border: 1px solid var(--sekundaerFarve);
-      text-align: left;
-      padding: 25px 40px;
-  }
+      margin-left: 938px;  /* Samme margin som filtreringsmuligheder */
+      width: 196px;  /* Samme bredde som knapperne */
+      } 
 
-  #pris-dropdown-indhold {
-    display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
-    background-color: var(--sekundaerKnapfarve);
-}
+      #pris-dropdown-indhold {
+        display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
+        background-color: var(--sekundaerKnapfarve);
+      }
 
-  #dropdownPris.skjulPris {
-      display: none;
-  }
+      .skjulPris {
+          display: none;
+      }
 
-  .dropdownPrisMulighed:hover {
-      font-weight: bolder;
-  }
+      .dropdownPrisMulighed {
+        background-color: var(--knapfarve);
+        padding: 20px;
+        text-align: left;
+        cursor: pointer;
+      }
+
+
+      .dropdownPrisMulighed:hover {
+          font-weight: bolder;
+      }
+      
 
 
   /* STYLING AF SIDEN I MOBIL-VIEW*/

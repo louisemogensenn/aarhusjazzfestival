@@ -255,11 +255,33 @@
 
         <article id="filtrerEfterBehov"> 
 
-            <figure id="soegefeltOgIkon">
+            <aside id="soegefeltOgIkon">
                 <input id="soegefelt" type="search" placeholder="Søg...">
                 <img id="soegeikon" src="images/soeg-ikon.webp" alt="Søgeikon">
                 <p id="nulstilFiltrer">&times; nulstil</p>
-            </figure>
+            </aside>
+
+
+<!-- PRØVE MED LINKS
+
+            <aside class="firkanterTilFiltrereing" >
+                <ul>
+                    <li><a href="#"> DATO</a></li>
+                    <li><a href="#"> SPILLESTED</a></li>
+                    <li><a href="#">GENRE</a></li>
+                    <li><a href="#"> PRIS</a>
+                        <ul class="dropdownPrisMulighed">
+                            <li><a href="#">GRATIS</a></li>
+                            <li><a href="#">UNDER 100 KR.</a></li>
+                            <li><a href="#">OVER 100 KR.</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+            </aside> 
+        -->
+
+
 
             <figure id="filtreringsmuligheder">
                 <button>DATO</button>
@@ -268,11 +290,14 @@
                 <button id="prisKnap">PRIS</button>
             </figure>
 
-            <div id="dropdownPris" class="skjulPris">
+            <aside id="dropdownPris" class="skjulPris">
                 <div class="dropdownPrisMulighed">GRATIS</div>
                 <div class="dropdownPrisMulighed">UNDER 100 KR.</div>
                 <div class="dropdownPrisMulighed">OVER 100 KR.</div>
-            </div>
+            </aside> 
+
+
+
 
             <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
 
