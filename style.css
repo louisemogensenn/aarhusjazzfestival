@@ -657,8 +657,10 @@ h3 { /**/
     #dropdownPris {
       background-color: var(--sekundaerKnapfarve);
       border: 1px solid var(--sekundaerFarve);
-      margin-left: 938px;  /* Samme margin som filtreringsmuligheder */
+      margin: 0 287px 0 auto;
+      /* margin-left: 938px;  /* Samme margin som filtreringsmuligheder */
       width: 196px;  /* Samme bredde som knapperne */
+      
       } 
 
       #pris-dropdown-indhold {
