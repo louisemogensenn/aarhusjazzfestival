@@ -26,19 +26,19 @@ a {
 
 footer {
    background-color: #EDE1D0; /*Genereller regler for footer*/
-   padding: 40px 20px;
+   padding-top: 40px ;
    font-family: Arial, sans-serif;
  }
  
  .footer-indhold { /*Overodnet sektion til hele footer indhold*/
    max-width: 1400px;
-   margin: 0 auto;
+   margin: 0;
    display: flex;
    justify-content: space-between;
  }
 
  .email-tilmeld { /*Instillinger for udseende af input felt til email tildmelding*/
-   background-color: #EDE1D0;
+   background-color: var(--knapfarve);
    padding: 2% 12%;
    text-align: center;
    font-size: 80%;
@@ -47,7 +47,7 @@ footer {
 
  @media (max-width: 768px) { /*Instillinger for udseende af input felt til email tildmelding når skærmstørrelsen er mindre*/
  .email-tilmeld { 
-   background-color: #EDE1D0;
+   background-color: var(--knapfarve);
    padding: 2% 5%;
    text-align: center;
    font-size: 80%;
@@ -57,7 +57,7 @@ footer {
 }
 
  #tilmeld-knap { /*Instillinger for email tilmeld knap*/
-   background-color: #EDE1D0;
+   background-color: var(--sekundaerKnapfarve);
    padding: 2% 2%;
    text-align: center;
    font-size: 80%;
@@ -67,11 +67,11 @@ footer {
  }
 
  #tilmeld-knap:hover { /*Hover effekt til email tilmeld knap*/
-   background-color: #EDE1D0;
+   background-color: var(--sekundaerKnapfarve);
    padding: 2% 2%;
    text-align: center;
    font-size: 80%;
-   font-weight: bold;
+   font-weight: bolder; /*Gør skriften federe, ved hover*/
    color: #313F88;
    border-color: #313F88;
    cursor: pointer;
@@ -83,13 +83,17 @@ footer {
 
 .venstre-sektion {
    flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
+   padding-left: 30px;
 }
 
+/*Giver footer samme design som nav */
 .hojre-sektion {
-   flex: 1; /* Giver denne sektion mere plads i forhold til venstre sektion */
-   display: flex; /* Gør højre sektion til en flex-container */
-   justify-content: space-between; /* Fordeler indholdet jævnt */
-  }
+    display: flex; /*Sikrer placeringen af elementerne*/
+    gap: 68px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
+    margin: 0; 
+    padding-right: 30px; 
+    }
+  
 
 /* Skal ændres - overruler andre stylings og skal være mere specifik */
  h1{
@@ -138,15 +142,21 @@ h3 { /**/
 
 .bund-sektion { /* instillinger for privatlivspolitik */
    text-align: right; /* Justerer tekst til højre */
-   margin-top: 40px;
+   margin:40px 30px;
    font-size: 14px;
    flex: 1; /* Giver sektionen plads til at fylde */
    color: #313F88;
 }
 
+.bund-sektion p { 
+  margin: 0;
+  padding-right: 5px;
+}
+
+
 .bund-sektion-socials { /* instillinger for sociale medier link */
    text-align: left; /* Justerer tekst til venstre */
-   margin-top: 40px;
+   margin:40px 30px;
    font-size: 14px;
    flex: 1; /* Giver sektionen plads til at fylde */
    color: #313F88;
