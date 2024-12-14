@@ -6,20 +6,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // VARIABLER
     const burgerMenu = document.querySelector('.burgermenu'); //henter indhold i klasssen "burgermenu"
-    const mainNav = document.querySelector('.navigationsbar');//henter indhold i klaseen "navigationsbar"
-    const burgerMenuIcon = document.querySelector('.burgermenu img');//henter burger-menu billedet (ikonet)
-    const mainNavLinks = document.querySelectorAll('.navigationsbar > li');//henter alle hovedmenupunkter i navigationsbaren
+    const altNavIndhold = document.querySelector('.navigationsbar');//henter indhold i klaseen "navigationsbar"
+    const burgerMenuIkon = document.querySelector('.burgermenu img');//henter burger-menu billedet (ikonet)
+    const altNavIndholdLinks = document.querySelectorAll('.navigationsbar > li');//henter alle hovedmenupunkter i navigationsbaren
 
 
     // CLICK-EVENT - burger-menu ikonet
     burgerMenu.addEventListener('click', () => {
         
-        mainNav.classList.toggle('show');//skifter mellem at vise/skjule hovedmenuen
+        altNavIndhold.classList.toggle('show');//skifter mellem at vise/skjule hovedmenuen
         
-        burgerMenuIcon.classList.toggle('open');//skifter mellem burger-ikon og luk-ikon
+        burgerMenuIkon.classList.toggle('open');//skifter mellem burger-ikon og luk-ikon
         
         
-        mainNavLinks.forEach(link => { //håndterer visning af alle undermenuer
+        altNavIndholdLinks.forEach(link => { //håndterer visning af alle undermenuer
             const dropdown = link.querySelector('.drop-down'); //finder undermenu hvis den eksisterer
             
             if (dropdown) { //"if" der findes en undermenu
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     //CLICK-EVENT - alle hovedmenupunkter
-    mainNavLinks.forEach(link => {
+    altNavIndholdLinks.forEach(link => {
         link.addEventListener('click', (event) => {
             
             const dropdown = link.querySelector('.drop-down');// Finder undermenu hvis den eksisterer
