@@ -144,23 +144,30 @@ document.addEventListener('DOMContentLoaded', () => {
         prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)';
     });
 
-    /*hcfhfjksdkwjkjdv*/
+    /*drop down*/
 
-    const dropdownMenu = document.getElementById('dropdownMenu');
-    const options = document.querySelectorAll('.dropdown-option');
+    const dropdownPris = document.getElementById('dropdownPris');
+
+    const prisMuligheder = document.querySelectorAll('.dropdownPrisMulighed');
     
     // Viser/skjuler dropdownen, når knappen klikkes
     prisKnap.addEventListener('click', () => {
-        dropdownMenu.classList.toggle('hidden');
+        dropdownPris.classList.toggle('skjulPris');
     });
     
-    // Håndter klik på en dropdown-option
-    options.forEach(option => {
-        option.addEventListener('click', (e) => {
+    // Håndter klik på en dropdownPrisMulighed
+    prisMuligheder.forEach(prisMuligheder => {
+        prisMuligheder.addEventListener('click', (e) => {
             const valgtTekst = e.target.textContent;
             prisKnap.innerHTML = `<b>${valgtTekst}</b>`; // Opdaterer knappen med fed tekst
-            dropdownMenu.classList.add('hidden'); // Skjul dropdown
+            dropdownPris.classList.add('skjulPris'); // Skjul dropdown
         });
+    });
+
+    const nulstilFiltrer = document.getElementById('nulstilFiltrer');
+
+    nulstilFiltrer.addEventListener('click', () => {
+
     });
     
 

@@ -581,13 +581,13 @@ h3 { /**/
       border: none;
   }
 
+  /* Popup-besked */
   #angivSoegekriterierTekst {
       text-align: center;
       margin: 50px 0 250px;
   }
 
   #soegefeltOgIkon { /* style mig mere :)*/
-    display: block;
     text-align: center;
   }
 
@@ -606,7 +606,7 @@ h3 { /**/
   }
 
   #nulstilFiltrer {
-    vertical-align: right;
+    text-align: center;
   }
 
   /* Besked, der vises, når man trykker på søg-ikonet */
@@ -643,32 +643,30 @@ h3 { /**/
   }
 
   /* gfcjdbvcdjkv */
+  #dropdownPris {
+      position: absolute;
+      top: 100%; /* Placér dropdownen lige under knappen */
+      left: 0; /* Justér dropdownen til venstre for knappen */
+      background-color: white;
+      border: 1px solid #ccc;
+      width: 100%; /* Samme bredde som knappen */
+      text-align: center;
+      z-index: 1000;
+  }
 
+  #dropdownPris.skjulPris {
+      display: none;
+  }
 
-#dropdownMenu {
-    position: absolute;
-    top: 100%; /* Placér dropdownen lige under knappen */
-    left: 0; /* Justér dropdownen til venstre for knappen */
-    background-color: white;
-    border: 1px solid #ccc;
-    width: 100%; /* Samme bredde som knappen */
-    text-align: center;
-    z-index: 1000;
-}
+  .dropdown-optiondropdownPrisMulighed {
+      padding: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+  }
 
-#dropdownMenu.hidden {
-    display: none;
-}
-
-.dropdown-option {
-    padding: 10px 0;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.dropdown-option:hover {
-    background-color: #f0f0f0;
-}
+  .dropdownPrisMulighed:hover {
+      background-color: #f0f0f0;
+  }
 
 
   /* STYLING AF SIDEN I MOBIL-VIEW*/
