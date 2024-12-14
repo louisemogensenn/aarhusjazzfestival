@@ -54,8 +54,8 @@
 
     <section class="forside-animation">
         <!-- Denne sektion indeholder den animerede GIF-fil -->
-        <aside id="selve-animationen">
-          <img src="animation.gif" alt="Aarhus Jazz Festival Animation" id="styling-animation">
+        <aside>
+          <img src="images/forsideAnimation.webp" alt="Aarhus Jazz Festival" id="styling-animation">
         </aside>
 
         <!-- Denne sektion indeholder tekstindholdet -->
@@ -159,42 +159,37 @@
 </html>
 <style>
 
+/* Styling af felxboks, som styrer både tekst og animation*/
 .forside-animation {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  display: flex; /*Giver plads til alle elementer i flexboksen*/
+  justify-content: center; /*Placering vandret*/
+  align-items: top; /*Placering lodret*/
+  margin: 0;
 }
 
-#selve-animationen {
-  flex-grow: 1;
-  position: relative;
-  overflow: hidden;
-}
-
+/* Styling af animationen */
 #styling-animation {
   width: 100%;
   height: auto;
   display: block;
 }
 
+/* Placering af tekststykke, forside*/
 .forside-tekst {
-  flex-basis: 300px;
-  text-align: center;
-  padding: 2rem;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  flex-basis: 300px; /*Tekstens placering i forhold til pladsen i flexboksen*/
+  text-align: right; /*Højrestiller teksten */
+  padding-right: 30px; /*Sørger for at højre side er på linje med navigationsbaren*/
 }
 
+/* Styling af overskrift - tekstboks*/
 .forside-tekst h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 50px;
 }
 
+/*Styling af dato-skrift*/
 .forside-tekst p {
-  font-size: 1.2rem;
-  color: #666;
+  font-size: 25px;
+  color: #DA672C;
 }
 
 </style>
