@@ -562,14 +562,12 @@ h3 { /**/
       display: none;
   }
   
-  #soegefeltOgIkon { /* style mig mere :)*/
-      display: block;
-  }
-  
   #filtreringsmuligheder {
       display: flex;
       justify-content: space-between; /* Sikrer, at knapperne er placeret med lige stor afstand til hinanden*/
       margin: 47px 277px;
+      position: relative; /* Gør det muligt for dropdownen at placeres relativt til containeren */
+
   }
 
   #filtreringsmuligheder button {
@@ -583,17 +581,14 @@ h3 { /**/
       border: none;
   }
 
-  #filtreringsmuligheder button p {
-      margin: 26px auto; /* Sikrer, at afstanden mellem tekst og top/bund af knap er 26px */
-  }
-
   #angivSoegekriterierTekst {
       text-align: center;
       margin: 50px 0 250px;
   }
 
-  #soegefeltOgIkon {
-      text-align: center;
+  #soegefeltOgIkon { /* style mig mere :)*/
+    display: block;
+    text-align: center;
   }
 
   #soegefelt {
@@ -608,6 +603,10 @@ h3 { /**/
   #soegeikon {
       width: 40px;
       vertical-align: middle; /* Placerer søgeikonet i midten i den lodrette akse */
+  }
+
+  #nulstilFiltrer {
+    vertical-align: right;
   }
 
   /* Besked, der vises, når man trykker på søg-ikonet */
@@ -642,6 +641,35 @@ h3 { /**/
       height: 181px;
       width: 219px;
   }
+
+  /* gfcjdbvcdjkv */
+
+
+#dropdownMenu {
+    position: absolute;
+    top: 100%; /* Placér dropdownen lige under knappen */
+    left: 0; /* Justér dropdownen til venstre for knappen */
+    background-color: white;
+    border: 1px solid #ccc;
+    width: 100%; /* Samme bredde som knappen */
+    text-align: center;
+    z-index: 1000;
+}
+
+#dropdownMenu.hidden {
+    display: none;
+}
+
+.dropdown-option {
+    padding: 10px 0;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.dropdown-option:hover {
+    background-color: #f0f0f0;
+}
+
 
   /* STYLING AF SIDEN I MOBIL-VIEW*/
 

@@ -144,4 +144,24 @@ document.addEventListener('DOMContentLoaded', () => {
         prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)';
     });
 
+    /*hcfhfjksdkwjkjdv*/
+
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const options = document.querySelectorAll('.dropdown-option');
+    
+    // Viser/skjuler dropdownen, når knappen klikkes
+    prisKnap.addEventListener('click', () => {
+        dropdownMenu.classList.toggle('hidden');
+    });
+    
+    // Håndter klik på en dropdown-option
+    options.forEach(option => {
+        option.addEventListener('click', (e) => {
+            const valgtTekst = e.target.textContent;
+            prisKnap.innerHTML = `<b>${valgtTekst}</b>`; // Opdaterer knappen med fed tekst
+            dropdownMenu.classList.add('hidden'); // Skjul dropdown
+        });
+    });
+    
+
     /*----------------------- SCRIPT FOR ...  ------------------------*/
