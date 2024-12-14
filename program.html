@@ -258,16 +258,19 @@
             <figure id="soegefeltOgIkon">
                 <input id="soegefelt" type="search" placeholder="Søg...">
                 <img id="soegeikon" src="images/soeg-ikon.webp" alt="Søgeikon">
+                <p id="nulstilFiltrer">&times; nulstil</p>
             </figure>
 
             <figure id="filtreringsmuligheder">
                 <button>DATO</button>
                 <button>SPILLESTED</button>
                 <button>GENRE</button>
-                <button>PRIS</button>
-                
+                <button id="prisKnap">PRIS</button>
+                <div id="dropdownPris" class="skjulPris">
+                    <div class="dropdownPrisMulighed">Gratis</div>
+                    <div class="dropdownPrisMulighed">Under 100</div>
+                    <div class="dropdownPrisMulighed">Over 100</div>
                 </div>
-
             </figure>
 
             <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
@@ -334,7 +337,6 @@
 </body>
 
 </html>
-
 
 
 
