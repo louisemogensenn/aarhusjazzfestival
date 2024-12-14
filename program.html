@@ -58,7 +58,7 @@
             <a class="overskrift-filtrer" href="#"><h2>Filtrér efter behov</h2></a> <!-- Der er brugt class, da den også bruges på filtreringssiden -->
         </section>
 
-        <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
+        <hr id="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
 
         <aside id="datoer-for-koncerterne">
 
@@ -264,7 +264,15 @@
                 <button>DATO</button>
                 <button>SPILLESTED</button>
                 <button>GENRE</button>
-                <button>PRIS</button>
+                <div id="prisKnap">
+                    <button>PRIS</button>
+                    <div id="pris-dropdown-indhold">
+                        <p>Gratis</p>
+                        <p>Under 100 kr</p>
+                        <p>Over 100 kr</p>
+                    </div>
+                </div>
+
             </figure>
 
             <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
@@ -337,7 +345,8 @@
     :root {
         --primaerFarve:#EDE1D0; /* Bruges som baggrundsfarve */
         --sekundaerFarve: #313F88; /* Bruges til tekst og elementer som linjer, ikoner, mm.*/
-        --knapfarve: rgb(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
+        --knapfarve: rgba(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
+        --sekundaerKnapfarve: rgba(244, 185, 100, 0.4); /* Denne farve bruges, når en knap er valgt */
     }
 
     /* ------------------------------------- GENEREL STYLING ------------------------------------- */
@@ -359,6 +368,8 @@
         text-decoration: none;
     }
 
+    /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
+
     .overskrifterIProgram {
         display: flex;
         justify-content: center;
@@ -370,7 +381,7 @@
     }
  
     /* Streg under program/filtrer */
-    hr {
+    #horisontal-linje {
         margin: 47px 277px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
         background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
         height: 2px; /* Angiver højden på linjen */
@@ -382,8 +393,6 @@
         height: 30px;
         cursor: pointer;
     }
-
-    /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
 
     .program p {
         font-size: 15px; /* Skriftstørrelsen på kunstnernavnet, der står under billedet */
@@ -432,8 +441,6 @@
         margin-bottom: 47px;
     }
 
-
-
     /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
     
     #filtrerEfterBehov {
@@ -477,7 +484,7 @@
     #soegefelt {
         width: 60%;
         height: 67px; /* Søgefeltets højde stemmer overens med knappernes højde */
-        border: 2px solid var(--sekundaerFarve);
+        border: 1px solid var(--sekundaerFarve);
         padding: 0 20px;
         font-size: 20px;
         margin-right: 20px;
@@ -486,6 +493,18 @@
     #soegeikon {
         width: 40px;
         vertical-align: middle; /* Placerer søgeikonet i midten i den lodrette akse */
+    }
+
+    /* Besked, der vises, når man trykker på søg-ikonet */
+    #popup-soegning {
+        display: none;
+    }
+
+    #pris-dropdown-indhold {
+        display: none; /* Indhold i dropdown, når man trykker på pris, er skjult i default */
+        background-color: var(--sekundaerKnapfarve);
+        height: 181px;
+        width: 219px;
     }
 
     /* STYLING AF SIDEN I MOBIL-VIEW*/
@@ -562,6 +581,15 @@
         filtrerEfterBehov.style.display = 'none'; /* Filtrer-indholdet skjules */
         datoerOgPile.style.display = 'block'; /* Pilene og datoerne vises, når man trykker tilbage til program-siden fra filtrer-siden*/
         datoerOgPile.style.display = 'flex'; /* Sikrer, at datoerne vises på horisontal linje, når der skiftes fra filtrer-siden tilbage til program-siden*/
+    });
+
+    /* SCRIPT TIL FILTRER-SIDEN UNDER PROGRASIDEN */
+    const prisKnap = document.getElementById('prisKnap');
+
+    const prisDropDownIndhold = document.getElementById('pris-dropdown-indhold');
+
+    prisKnap.addEventListener('click', () => {
+        prisDropDownIndhold.style.display = 'block';
     });
 
 </script>
