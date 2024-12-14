@@ -500,7 +500,7 @@ h3 { /**/
   .overskrifterPaaSider {
     display: flex;
     justify-content: center;
-    margin-top: 150px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
+    margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
   }
 
   .overskrifterPaaSider h2 {
