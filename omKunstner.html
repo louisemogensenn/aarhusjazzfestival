@@ -52,7 +52,7 @@
     </header>  
     <main>
 
-        <section id="overskriftKunstnerside">
+        <section class="overskrifterPaaSider">
             <a href="program.html"><img id="tilbage-pil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage"></a>
             <h2>Læs mere om kunstneren</h2>
         </section>
@@ -66,11 +66,11 @@
 
             <section class="koncertInformation">
                 <h3 id="kunstnerNavn">Carlo Dayyani</h3>
-                <h3>Genre</h3>
-                <h3>Spillested</h3>
-                <h3>Dato</h3>
-                <h3>Adresse</h3>
-                <h3>Pris</h3>
+                <h3>— At The Roots</h3>
+                <a href="https://www.havnefronten.dk/havnefronten/hantwerk/"><h3>— Hantwerk</h3></a>
+                <h3>— Fredag d. 11. juli kl. 18</h3>
+                <h3>— Fiskerivej 2D, 8000 Aarhus C</h3>
+                <h3>— GRATIS</h3>
             </section>
 
         </article>
@@ -84,7 +84,13 @@
             <p>Til koncerten medbringer han sin trio bestående af Gustav Hagelskjær på trommer, og Lukas Loeb på kontrabas, begge er skarpe unge profiler i det danske jazzmiljø.</p>
         </article>
 
-        <button>Reserver billet her!</button>
+        <aside>
+            <button id="reserverBilletKnap">Reserver billet her!</button>
+        </aside>
+
+        <aside id="popup-reserverBillet">
+            <p>Du stilles videre til købssiden</p>
+        </aside>
 
     </main>
 
@@ -159,37 +165,19 @@
         padding: 0;
     }
 
-    #overskriftKunstnerside {
-    display: flex;
-    justify-content: space-between; /* Placer pil og tekst med afstand */
-    align-items: center; /* Sørg for, at pil og tekst er lodret centreret */
-    width: 80%; /* Begræns bredden af sektionen */
-    max-width: 1200px; /* Begræns maksimal bredde */
-    margin: 200px auto; /* Centrér hele sektionen på siden */
-    position: relative; /* Forbered til absolut positionering af pilen, hvis nødvendigt */
-}
-
-#tilbage-pil {
-    width: 24px;
-    height: 24px;
-    position: absolute; /* Gør det muligt at finjustere placeringen af pilen */
-    left: 0; /* Placer pilen tættere på venstre kant */
-    margin-left: 10px; /* Juster afstand fra kanten */
-}
-
-h2 {
-    margin: 0;
-    font-weight: 300;
-    font-size: 35px;
-    text-align: center; /* Sørg for, at teksten er centreret */
-    flex-grow: 1; /* Sørg for, at teksten optager den ledige plads */
-}
+    #tilbage-pil {
+        width: 24px;
+        height: 24px;
+        position: absolute; /* Gør det muligt at finjustere placeringen af pilen */
+        left: 0;
+        margin-left: 277px; /* placerer pilen på linje med linjen under sig */
+    }
 
 
     .billedeOgInfoKoncert {
         display: flex;
-        justify-content: center;
-        
+        justify-content: space-between;
+        margin: 0 277px;
     }
 
     .billedeOgInfoKoncert img {
@@ -207,19 +195,56 @@ h2 {
     }
 
     #beskrivelseAfKunstner {
-        margin: 0 100px;
+        margin: 0 277px;
     }
 
     #beskrivelseAfKunstner p {
-        margin: 10px 0;
+        margin: 10px 0; /* Skaber afstand mellem de individuelle p-tags, så teksten er nemmere at læse */
     }
 
     #bekrivelseOverskrift {
         font-weight: bold;
     }
 
+    #reserverBilletKnap {
+        background-color: white;
+        width: 259px;
+        height: 71px;
+        font-size: 20px;
+        margin: 47px 277px 47px auto;
+        display: block; /* Sikrer at margin-left: auto virker korrekt */
+    }
+
+    #reserverBilletKnap:hover {
+        cursor: pointer;
+    }
+
+    /* Besked, der vises, når man trykker på søg-ikonet */
+    #popup-reserverBillet {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%); 
+        width: 300px;
+        padding: 60px;
+        background-color: var(--primaerFarve);
+        border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
+        z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
+        text-align: center;
+    }
+
 </style>
 
 <script>
+
+    const reserverBilletKnap = document.getElementById('reserverBilletKnap');
+
+    const popupReserverBillet = document.getElementById('popup-reserverBillet');
+
+    reserverBilletKnap.addEventListener('click', () => {
+        popupReserverBillet.style.display = 'block';
+        setTimeout(() => { window.location.href = '404.html'; }, 2000);
+    });
 
 </script>
