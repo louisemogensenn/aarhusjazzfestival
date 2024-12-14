@@ -263,7 +263,6 @@ h3 { /**/
   left: 0; /* Venstrejuster i forhold til hovedmenupunktet */
   top: 100%; /* Placér lige under hovedmenupunktet */
   background-color: #EDE1D0; 
-  padding-top: 15px; /* Tilføjer lidt afstand mellem drop-down indholdet */
   list-style: none; /* Fjerner standard punktopstilling */
   z-index: 1; /* Placerer undermenuen oven på hovednavigation */
   }
@@ -272,6 +271,7 @@ h3 { /**/
   .drop-down li {
   margin-bottom: 5px; /* Tilføjer lidt afstand mellem undermenupunkter */
   }
+  
   /* Stuling af dropdown a */
   .drop-down li a {
   display: block; /* Gør undermenulinks klikbare på hele bredden */
