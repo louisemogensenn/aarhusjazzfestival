@@ -412,8 +412,61 @@ h3 { /**/
       margin-top: 180px; /*Luft til ovenforstående element (tekst)*/
     }
 
-<<<<<<< Updated upstream
-    /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
+ /*---- RESPONSIV - FORSIDE------- */
+    /*Skifter forsidelementer i mobilversion*/
+    @media (max-width: 768px) {
+      .forside-animation{
+        display: none;
+      }
+    }
+
+  /*Skifter forsidelementer i desktopversion*/
+    @media (min-width: 769px) {
+      .forside-animation-mobil{
+        display: none;
+      } 
+    }
+
+/*--------- FORSIDE ELEMENTER - MOBIL -----------*/
+  /* Styling af animationen */
+    .forside-animation-mobil {
+      margin: 5px; /*luft omkring, til kanter på mobilen*/
+    }
+
+    #styling-animation-mobil {
+      width: 100%; /*Animationen fylder hele bredden af sin flexboks*/
+      height: auto; /* auto = beholder sit oprindelige størrelsesforhold*/
+      display: block; /*giver animationen bedre placering i forhold til omgivende elementer.*/
+    }
+
+    /* Placering af tekststykke, forside*/
+    .forside-tekst-mobil {
+      text-align: center; /* Centrerer teksten */
+    }
+
+    /* Styling af overskrift - tekstboks*/
+      .forside-tekst-mobil h1 {
+        font-size: 35px; /*Størelse på font*/
+        margin: 20px; /*Luft til nedenforstående tekst*/
+        line-height: 1.3; /*Linjeafstanden - sikrer læsbarheden*/
+      }
+
+    /*Styling af dato-skrift*/
+      .forside-tekst-mobil p {
+        font-size: 20px;/*Størelse på font*/
+        color: #DA672C;/*Farve på font*/
+        margin: 0 0 60px; /*Fjerner luft omkring og laver afstand til nedenforstående elementer*/
+        font-weight: 400; /* tykkelse på font*/
+
+      }
+
+    /*Styling af "link" i teksten*/
+      .forside-tekst-mobil a {
+        text-decoration: none; /*Fjerner streger under links*/
+      }
+
+
+/* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
     .overskrifterIProgram {
       display: flex;
       justify-content: center;
@@ -576,60 +629,4 @@ h3 { /**/
 
   /* ... */
   
-=======
-  /*---- RESPONSIV - FORSIDE------- */
-    /*Skifter forsidelementer i mobilversion*/
-    @media (max-width: 768px) {
-      .forside-animation{
-        display: none;
-      }
-    }
-
-  /*Skifter forsidelementer i desktopversion*/
-    @media (min-width: 769px) {
-      .forside-animation-mobil{
-        display: none;
-      } 
-    }
-
-
-/*--------- FORSIDE ELEMENTER - MOBIL -----------*/
-  /* Styling af animationen */
-  .forside-animation-mobil {
-    margin: 5px; /*luft omkring, til kanter på mobilen*/
-  }
-
-  #styling-animation-mobil {
-    width: 100%; /*Animationen fylder hele bredden af sin flexboks*/
-    height: auto; /* auto = beholder sit oprindelige størrelsesforhold*/
-    display: block; /*giver animationen bedre placering i forhold til omgivende elementer.*/
-  }
-
-  /* Placering af tekststykke, forside*/
-  .forside-tekst-mobil {
-    text-align: center; /* Centrerer teksten */
-  }
-
-  /* Styling af overskrift - tekstboks*/
-    .forside-tekst-mobil h1 {
-      font-size: 35px; /*Størelse på font*/
-      margin: 20px; /*Luft til nedenforstående tekst*/
-      line-height: 1.3; /*Linjeafstanden - sikrer læsbarheden*/
-    }
-
-  /*Styling af dato-skrift*/
-    .forside-tekst-mobil p {
-      font-size: 20px;/*Størelse på font*/
-      color: #DA672C;/*Farve på font*/
-      margin: 0 0 60px; /*Fjerner luft omkring og laver afstand til nedenforstående elementer*/
-      font-weight: 400; /* tykkelse på font*/
-
-    }
-
-  /*Styling af "link" i teksten*/
-    .forside-tekst-mobil a {
-      text-decoration: none; /*Fjerner streger under links*/
-    }
-
     
->>>>>>> Stashed changes
