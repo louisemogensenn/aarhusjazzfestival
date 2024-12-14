@@ -606,8 +606,10 @@ h3 { /**/
   }
 
   #nulstilFiltrer {
-    text-align: center;
+    text-align: right;
   }
+
+
 
   /* Besked, der vises, når man trykker på søg-ikonet */
   #popup-soegning {
