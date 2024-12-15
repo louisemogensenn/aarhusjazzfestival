@@ -47,68 +47,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*----------------------- SCRIPT FOR PROGRAMSIDEN ------------------------*/
 
-    const programFoersteSide = document.getElementById('program-foerste-side');
-
-    const programAndenSide = document.getElementById('program-anden-side');
-
-    const pilFremIkonProgram = document.querySelector('.pil-frem-ikon');
-
-    const pilTilbageIkonProgram = document.querySelector('.pil-tilbage-ikon');
-
-    const datoVenstre = document.getElementById('datoVenstre');
-
-    const datoMidt = document.getElementById('datoMidt');
-
-    const datoHoejre = document.getElementById('datoHoejre');
-
-    const datoerOgPile = document.getElementById('datoer-for-koncerterne');
-
-    programAndenSide.style.display = 'none';
-
-    const datoer = ["11. juli", "12. juli", "13. juli", "14. juli", "15. juli", "16. juli"]; /* Et array af datoer, der skal bruges til at indsætte over billeder */
-
-    // Initialiser datoerne ved sidens indlæsning
-    datoVenstre.innerHTML = datoer[0]; /* Sætter datoen til index-værdien */
-    datoMidt.innerHTML = datoer[1]; /* Sætter datoen til index-værdien */
-    datoHoejre.innerHTML = datoer[2]; /* Sætter datoen til index-værdien */
-
-    pilFremIkonProgram.addEventListener ('click', () => {
-        programFoersteSide.style.display = 'none'; /* Programmets første side skjules... */
-        programAndenSide.style.display = 'block'; /* ... og erstattes af programmets anden side */
-
-        datoVenstre.innerHTML = datoer[3]; /* Sætter datoen til index-værdien */
-        datoMidt.innerHTML = datoer[4]; /* Sætter datoen til index-værdien */
-        datoHoejre.innerHTML = datoer[5]; /* Sætter datoen til index-værdien */
-    });
-
-    pilTilbageIkonProgram.addEventListener ('click', () => {
-        programFoersteSide.style.display = 'block'; /* Programmets første side vises */
-        programAndenSide.style.display = 'none';  /* Programmets anden side skjules */
-
-        datoVenstre.innerHTML = datoer[0]; /* Sætter datoen til index-værdien */
-        datoMidt.innerHTML = datoer[1]; /* Sætter datoen til index-værdien */
-        datoHoejre.innerHTML = datoer[2]; /* Sætter datoen til index-værdien */
-
-    });
-
     const overskriftProgram = document.getElementById('overskrift-program');
 
     const overskriftFiltrer = document.getElementById('overskrift-filtrer');
 
     const filtrerEfterBehov = document.getElementById('filtrerEfterBehov');
 
+    const program = document.getElementById('program');
+
     overskriftFiltrer.addEventListener('click', () => {
-        programFoersteSide.style.display = 'none'; /*  Programsiden skjules */
-        filtrerEfterBehov.style.display = 'block'; /* Indholdet for filtreringssiden vises */
-        datoerOgPile.style.display = 'none'; /* Pilene og datoerne, der står på linje på programsiden skjules */
-    });
+        program.style.display = 'none';
+        filtrerEfterBehov.style.display = 'block';
+    })
 
     overskriftProgram.addEventListener('click', () => {
-        programFoersteSide.style.display = 'block'; /* programmets første side vises, når der trykkes fra filtrer-siden ind på program-siden*/
-        filtrerEfterBehov.style.display = 'none'; /* Filtrer-indholdet skjules */
-        datoerOgPile.style.display = 'block'; /* Pilene og datoerne vises, når man trykker tilbage til program-siden fra filtrer-siden*/
-        datoerOgPile.style.display = 'flex'; /* Sikrer, at datoerne vises på horisontal linje, når der skiftes fra filtrer-siden tilbage til program-siden*/
-    });
+        filtrerEfterBehov.style.display = 'none';
+        program.style.display = 'block';
+    })
 
     /*----------------------- SCRIPT FOR FILTRERSIDEN ------------------------*/
 

@@ -499,63 +499,46 @@ h3 { /**/
       border: none; /* Fjerner skyggerne omkring linjen */
   }
 
-  .pil-tilbage-ikon, .pil-frem-ikon {
-      width: 40px;
-      height: 30px;
-      cursor: pointer;
-  }
 
-  .program p {
-      font-size: 15px; /* Skriftstørrelsen på kunstnernavnet, der står under billedet */
-      font-weight: 300; /* Vægten på fonten */
-  }
+  .koncertFraDag {
+    display: flex;
+    justify-content: center;
+    margin: 30px 210px;
+}
 
-  #datoer-for-koncerterne {
-      display: flex;
-      justify-content: space-around;
-  }
+.enkeltKoncert {
+    text-align: left;
+    margin: 0 40px;
+}
 
-  #datoer-for-koncerterne h2 {
-    font-size: 25px;
-    font-weight: 300;
-  }
+.enkeltKoncert img {
+    width: 210px;
+    height: auto;
+}
 
-  .program {
-      display: flex;
-      justify-content: space-around;
-  }
+.enkeltKoncert p {
+    margin-top: 10px;
+    font-size: 14px;
+}
 
-  .koncerter-venstre, .koncerter-midt, .koncerter-hoejre {
-      display: flex;
-      flex-direction: column;
-  }
+.pilTilTekst img {
+    width: 20px; /* Juster ikonets bredde */
+    height: auto; /* Bevar proportioner */
+    margin-left: 5px; /* Giv lidt afstand mellem tekst og ikon */
+    vertical-align: middle; /* Juster ikonet i forhold til teksten */
+    transition: transform 0.3s ease; /* Tilføj en glidende effekt ved hover */
+}
 
-  .koncerter-hoejre {
-      margin: 0 277px 64px 0;
-  }
+.pilTilTekst:hover img {
+    transform: scale(1.5); /* Gør ikonet lidt større ved hover */
+}
 
-  .koncerter-venstre {
-      margin: 0 0 64px 277px;
-  }
-
-  .program img {
-      width: 210px;
-      height: 210px;
-      margin-right: 39px;
-  }
-
-  .kunstnerNavnOgPil {
-      display: flex;
-      justify-content: space-between;
-  }
-
-  .kunstnerNavnOgPil img {
-      width: 20px;
-      height: 15px;
-      rotate: 180deg;
-      margin-top: 10px;
-      margin-bottom: 47px;
-  }
+.datoForKoncerter, .overskriftArkivet {
+    margin-left: 277px;
+    margin-top: 70px;
+    margin-bottom: 0;
+    font-weight: 700;
+}
 
   /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
   
