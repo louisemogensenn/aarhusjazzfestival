@@ -474,13 +474,16 @@ h3 { /**/
         text-decoration: none; /*Fjerner streger under links*/
       }
 
-
 /* ------------------------------------- STYLING AF PROGRAM-SIDEN ------------------------------------- */
 
   .overskrifterPaaSider h2 { /* Alle overskrifter, der bruges til at skrifte mellem to links styles på denne måde */
       font-weight: 300;
       font-size: 35px;
       margin: 0 49px;
+      cursor: pointer;
+  }
+  .overskrifterPaaSider h2:hover {
+    font-weight: 500;
   }
 
   .overskrifterPaaSider {
