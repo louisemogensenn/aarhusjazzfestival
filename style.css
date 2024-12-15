@@ -10,21 +10,18 @@
   --knapfarve: rgba(244, 185, 100, 0.2); /* Dette er knapfarven. Den står i RGB for at kunne ændre opaciteten på farven */
   --sekundaerKnapfarve: rgba(244, 185, 100, 0.4); /* Denne farve bruges, når en knap er valgt */
 }
-    
+
+/* Fjerner "basis" for dokumentet, og definerer vores egen*/
 * {
    font-family: 'Heebo', 'Times New Roman', Times, serif;
    color: var(--sekundaerFarve);
+   background-color: var(--primaerFarve);
+   text-decoration: none; /* Fjerner underline fra alle links */
 }
 
-body {
-  background-color: var(--primaerFarve);
-}
-
-a {
-  text-decoration: none; /* Fjerner underline fra alle links */
-}
 /*--------------------------------------------------------------------------------------------------------------------------------------------- */
 
+/*Hvad er det her? Skal det ikke bare slettes?*/
 footer {
    background-color: #EDE1D0; /*Genereller regler for footer*/
    padding-top: 40px ;
@@ -245,7 +242,6 @@ h3 { /**/
 
   /*Styling af a */
   .navigationsbar a {
-  text-decoration: none; /*Fjerner understregninger*/
   color: #313F88; /*Definerer farven på fonten*/
   font-size: 25px; /*Definerer sørrelsen på fonten*/
   font-weight: 350; /*Definerer tykkelsen på fonten*/
@@ -266,7 +262,7 @@ h3 { /**/
   position: absolute; /* Placerer undermenuerne */
   left: 0; /* Venstrejuster i forhold til hovedmenupunktet */
   top: 100%; /* Placér lige under hovedmenupunktet */
-  background-color: #EDE1D0; 
+  background-color: #EDE1D0; /*Definerer farven, så dropdown overgår andre elementer med fuld baggrundsfarve*/
   list-style: none; /* Fjerner standard punktopstilling */
   z-index: 1; /* Placerer undermenuen oven på hovednavigation */
   }
@@ -333,7 +329,6 @@ h3 { /**/
       left: 0;
       width: 100%; /* Fuld bredde */
       height: 100%; /* Fuld højde */
-      background-color: #EDE1D0; /* Baggrundsfarve for menuen */
       display: none; /* Skjult som standard */
       flex-direction: column;
       justify-content: center;
@@ -364,7 +359,6 @@ h3 { /**/
   .drop-down {
       position: static; /* Ændrer position for undermenuer */
       display: none; /* Skjuler undermenuer som standard */
-      background-color: transparent;
       margin-top: 12px; /*Afstand til ovenforstående element*/
       text-align: left; /*Venstrestiller teksten i mobil-version*/
   }
