@@ -767,7 +767,7 @@ h3 { /**/
       }
 
       /* Besked, der vises, når man trykker på søg-ikonet */
-      #popup-reserverBillet {
+      #popup-reserverBillet, #popup-bestilPlakat {
           display: none;
           position: fixed;
           top: 50%;
