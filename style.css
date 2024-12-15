@@ -538,7 +538,6 @@ h3 { /**/
 
 .datoForKoncerter, .overskriftIArkivet {
     margin-top: 70px;
-    margin-bottom: 0;
     font-weight: 700;
 }
 
@@ -572,9 +571,6 @@ h3 { /**/
   transition: transform 0.3s ease; /* Tilføj en glidende effekt ved hover */
 }
 
-#fraArkivet {
-  display: none;
-}
 
 #andenPlakatSide {
   display: none;
