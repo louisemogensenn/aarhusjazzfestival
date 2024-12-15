@@ -374,7 +374,6 @@ h3 { /**/
   }
 }
 
-
 /* ------------------------------------ FORSIDE ELEMENTER ---------------------------------------------*/
   /* Styling af felxboks, som styrer både tekst og animation*/
   .forside-animation {
@@ -499,7 +498,7 @@ h3 { /**/
       border: none; /* Fjerner skyggerne omkring linjen */
   }
 
-  /* NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN*/
+  /* ---------------------- NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN ------------------- */
 
   
   .koncertFraDag {
@@ -540,6 +539,44 @@ h3 { /**/
     margin-top: 70px;
     margin-bottom: 0;
     font-weight: 700;
+}
+
+/* STYLING AF ARKIVSIDEN */
+
+.plakater {
+  display: flex;
+  justify-content: center;
+  margin: 30px 210px;
+}
+
+.enkeltPlakat {
+  text-align: left;
+}
+
+.enkeltPlakat img {
+  width: 210px;
+  height: auto;
+}
+
+.enkeltPlakat p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.pilTilTekst img {
+  width: 20px; /* Juster ikonets bredde */
+  height: auto; /* Bevar proportioner */
+  margin-left: 5px; /* Giv lidt afstand mellem tekst og ikon */
+  vertical-align: middle; /* Juster ikonet i forhold til teksten */
+  transition: transform 0.3s ease; /* Tilføj en glidende effekt ved hover */
+}
+
+#fraArkivet {
+  display: none;
+}
+
+#andenPlakatSide {
+  display: none;
 }
 
   /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */

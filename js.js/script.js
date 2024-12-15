@@ -1,4 +1,3 @@
-
 /* ---------- FUNKTIONALITETEN AF BURGERMENUEN -----------*/
 
 // Venter på at hele HTML-dokumentet er indlæst før koden køres
@@ -183,3 +182,23 @@ document.addEventListener('DOMContentLoaded', () => {
         fraArkivet.style.display = 'none';
         fraFestivalen.style.display = 'block';
     });
+
+    /*----------------------- SCRIPT FOR REPORTAGESIDEN - FRA ARKIV  ------------------------*/
+    const skiftPlakatSideFrem = document.getElementById('skiftPlakatsideFrem');
+
+    const skiftPlakatsideTilbage = document.getElementById('skiftPlakatsideTilbage');
+
+    const foerstePlakatSide = document.getElementById('foerstePlakatSide');
+
+    const andenPlakatSide = document.getElementById('andenPlakatSide');
+
+    skiftPlakatSideFrem.addEventListener('click', () => {
+        foerstePlakatSide.style.display = 'none';
+        andenPlakatSide.style.display = 'block';
+    });
+
+    skiftPlakatsideTilbage.addEventListener('click', () => {
+        andenPlakatSide.style.display = 'none';
+        foerstePlakatSide.style.display = 'block';
+    });
+
