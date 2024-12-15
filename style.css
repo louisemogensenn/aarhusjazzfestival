@@ -499,6 +499,11 @@ h3 { /**/
       border: none; /* Fjerner skyggerne omkring linjen */
   }
 
+  /* NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN*/
+
+  #fraArkivet {
+    display: none;
+}
 
   .koncertFraDag {
     display: flex;

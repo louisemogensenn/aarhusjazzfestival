@@ -42,9 +42,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-
-
-
     /*----------------------- SCRIPT FOR PROGRAMSIDEN ------------------------*/
 
     const overskriftProgram = document.getElementById('overskrift-program');
