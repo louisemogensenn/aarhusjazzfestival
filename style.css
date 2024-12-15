@@ -300,7 +300,7 @@ h3 { /**/
  
 
 /* ------------------------------------  RESPONSIVT - sikrer dropdown ved hover på desktop ------------------------------------ */
-  @media (min-width: 769px) {
+  @media (min-width: 391px) {
       .navigationsbar > li:hover .drop-down {
           display: block;
       }
@@ -308,7 +308,7 @@ h3 { /**/
 
 /* ------------------------------------  RESPONSIVITET - NAV TIL BURGER ------------------------------------  */
   /* Skjuler alm. nav., når burgermenu er aktiv */
-  @media (max-width: 768px) {
+  @media (max-width: 390px) {
   .burgermenu {
       position: fixed; /* Fastgør burgermenu-ikonet i højre hjørne */
       top: 60px; /* Juster efter behov for placering */
@@ -342,7 +342,7 @@ h3 { /**/
       display: flex; /* Vis navigationsbar, når den har klassen "show" */
       flex-direction: column; /* Visningen sættes til en vertikal kolonne i mobil-visning */
       align-items: start; /* Justering til venstre */
-      padding: 20px; /* Tilføj lidt afstand rundt om menupunkter */
+      padding-left: 50px; /* Tilføj lidt afstand rundt om menupunkter */
   }
 
   .navigationsbar > li {
@@ -352,7 +352,7 @@ h3 { /**/
 
   /*Styling af a - i mobil-version*/
   .navigationsbar a {
-      font-size: 25px; /* Større tekststørrelse i mobil-version */
+      font-size: 40px; /* Større tekststørrelse i mobil-version */
   }
 
   /*Styling af dropdown - i mobil-version*/
@@ -369,9 +369,11 @@ h3 { /**/
   }
 
   /*Styling af li - i mobil-version*/
-  .drop-down li {
+  .drop-down li a {
       margin-bottom: 8px; /*Afstand mellem linjerne*/
+      font-size: 30px;
   }
+
 }
 
 /* ------------------------------------ FORSIDE ELEMENTER ---------------------------------------------*/
@@ -416,27 +418,32 @@ h3 { /**/
 
   /* Styling af ikon i hjørne */
     #ikon-forside {
-      width: 90px; /* bredde på ikonet */
+      width: 30px; /* bredde på ikonet */
       height: auto; /* Lader højden automatisk tilpasse sig */
-      margin-top: 180px; /*Luft til ovenforstående element (tekst)*/
+      margin-top: 230px; /*Luft til ovenforstående element (tekst)*/
+      margin-left: 10px ;
+    }
+    /* Styling af tekst, før pil-ikon */
+    .forside-tekst a{
+      font-size:25px; /*Definerer størrelsen på "Se program"*/
     }
 
  /*---- RESPONSIV - FORSIDE------- */
     /*Skifter forsidelementer i mobilversion*/
-    @media (max-width: 768px) {
+    @media (max-width: 390px) {
       .forside-animation{
         display: none;
       }
     }
 
   /*Skifter forsidelementer i desktopversion*/
-    @media (min-width: 769px) {
+    @media (min-width: 391px) {
       .forside-animation-mobil{
         display: none;
       } 
     }
 
-/*------------------------------------ FORSIDE ELEMENTER - MOBIL ------------------------------------ */
+/*----------------- FORSIDE ELEMENTER - MOBIL ------------------ */
   /* Styling af animationen */
     .forside-animation-mobil {
       margin: 5px; /*luft omkring, til kanter på mobilen*/
