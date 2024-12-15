@@ -75,12 +75,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const prisKnap = document.getElementById('prisKnap');
 
+    const carloId = document.getElementById('carloId');
+
     // Denne funktion åbnes pop-uppen, når man trukker på luppen.
     soegeikon.addEventListener('click', () => {
         popupSoegning.style.display = 'block'; /* Når man klikker på søgeikonet vises popup-vinduet */
-        if(soegefelt.value.trim() === '') {
+        if(soegeFelt.value.trim() === '') {
             indholdPopupProgram.innerHTML = "Angiv søgeord"; /* Hvis søgefeltet er tomt vil denne besked angives */
-        } else {
+        } else if (soegeFelt.value.trim() === 'Carlo' || soegeFelt.value.trim() === 'carlo') {
+            filtreredeKoncerter.innerHTML = carloId.outerHTML; /* Her skal Carlos koncert sættes ind */
+            angivSoegekriterierTekst.style.display = 'none';
+            popupSoegning.style.display = 'none';
+        }
+        else {
             indholdPopupProgram.innerHTML = 'Din søgning "' + soegeFelt.value + '" gav ingen resultater'; /* Hvis søgeordet ikke matcher nogen resultater, vil denne besked komme. Der er ikke lavet funktionalitet til at søge websitets indhold igennem. */
             soegeFelt.value = ''; /* Inholdet i søgefeltet fjernes */
         }        
@@ -116,13 +123,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const gratisKoncerter = document.querySelectorAll('.gratisKoncert');
 
+    const filtreringsmuligheder = document.getElementById('filtreringsmuligheder');
+
     prisKnap.addEventListener('click', () => {
         if(dropdownPris.style.display === 'block') {
             dropdownPris.style.display = 'none';
         } else {
             dropdownPris.style.display = 'block';
         }
-        
     });
 
     prisMuligheder.forEach(function (mulighed) {
@@ -131,6 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 prisKnap.innerHTML = 'GRATIS'; // Opdater knapteksten
                 dropdownPris.style.display = 'none'; // Skjul dropdownen
                 nulstilFiltrer.style.display = 'block'; // Vis "nulstil"-knappen
+                angivSoegekriterierTekst.style.display = 'none';
+                filtreredeKoncerter.innerHTML = gratisKoncerter.outerHTML;
+                filtreredeKoncerter.style.justifyContent = 'center';
+                filtreredeKoncerter.style.margin = '0 300px 200px';
                 
                 // Tøm tidligere viste koncerter
                 filtreredeKoncerter.innerHTML = '';
@@ -148,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
         prisKnap.style.backgroundColor = 'var(--knapfarve)';
         nulstilFiltrer.style.display = 'none';
         prisKnap.style.border = 'none';
+        filtreredeKoncerter.innerHTML = '';
+        angivSoegekriterierTekst.style.display = 'block';
     });
 
     /* HUSK AT FJERNE INDHOLDET, DER VISES, HVIS MAN KLIKKER NULSTIL */
