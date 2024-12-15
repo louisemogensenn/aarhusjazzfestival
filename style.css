@@ -428,7 +428,8 @@ h3 { /**/
       font-size:25px; /*Definerer størrelsen på "Se program"*/
     }
 
- /*---- RESPONSIV - FORSIDE------- */
+
+ /*------------------ RESPONSIV - FORSIDE------------------ */
     /*Skifter forsidelementer i mobilversion*/
     @media (max-width: 390px) {
       .forside-animation{
@@ -443,10 +444,12 @@ h3 { /**/
       } 
     }
 
+
 /*----------------- FORSIDE ELEMENTER - MOBIL ------------------ */
   /* Styling af animationen */
     .forside-animation-mobil {
       margin: 5px; /*luft omkring, til kanter på mobilen*/
+      width: 500px; /*Sikrer at dden fylder hele skærmen*/
     }
 
     #styling-animation-mobil {
