@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="da"> <!-- sprogkode dansk-->
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Om Kunstneren</title>
-    <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
-    <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
-    <!-- Med tiden kommer linket til styles.css til at ligge her -->
-    <link rel="stylesheet" href="style.css">
-    <script src="js.js/script.js" defer></script>
-
-</head>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Om plakat</title>
+        <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
+        <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
+        <!-- Med tiden kommer linket til styles.css til at ligge her -->
+        <script src="js.js/script.js" defer ></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
 <body>
+
     <header> <!-- NAVIGATION -->
         <aside class="logo-navigationsbar">
             <a href="index.html"> <!--Linker til forsiden, når der klikkes på logo-->
@@ -50,48 +50,54 @@
             <img src="images/burgermenu-ikon.svg" alt="Burgermenu-ikon">
           </aside>
         </nav>
-    </header> 
+    </header>  
+
     <main>
 
         <section class="overskrifterPaaSider">
-            <a href="program.html"><img id="tilbage-pil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage"></a>
-            <h2>Læs mere om kunstneren</h2>
+            <a href="reportager.html"><img id="tilbage-pil" src="images/naeste-ikon.svg" alt="Pil for at komme tilbage" style="rotate: 180deg;"></a>
+            <h2>Læs mere om plakaten</h2>
         </section>
         
         <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
 
-        <article class="billedeOgInfoKoncert">
+        <article id="billedeOgInfoPlakat">
             <figure>
-                <img src="images/carloDayyani.webp" alt="Billede af Carlo Dayyani">
+                <img src="images/plakat2025.webp" alt="Billede af plakaten for 2025">
             </figure>
 
-            <section class="koncertInformation">
-                <h3 id="kunstnerNavn">Carlo Dayyani Trio</h3>
-                <h3>— At The Roots</h3>
-                <a href="https://www.havnefronten.dk/havnefronten/hantwerk/"><h3>— Hantwerk</h3></a>
-                <h3>— Fredag d. 11. juli kl. 18</h3>
-                <h3>— Fiskerivej 2D, 8000 Aarhus C</h3>
-                <h3>— GRATIS</h3>
+            <section id="plakatInformation">
+                <p> Heri skrives information om plakaten </p>
             </section>
 
         </article>
 
-        <article id="beskrivelseAfKunstner">
+            
 
-            <p id="beskrivelseAfKunstnerOverskrift">Ung guitarist og komponist med kunstnerisk dybde</p>
-            <p>Carlo Dayyani (f. 2003) er en ung komponist og guitarist, der holder til i Berlin, hvor han studerer på Jazz Institute Berlin. I sine kompositioner stræber han efter at finde en kunstnerisk dybde i begrænset materiale.</p>
-            <p>En fri, vilter og improvisationspræget ånd blandet med den nordiske musikers higen efter smukke og fortællende melodier giver musikken et dragende udtryk af en frem- og tilbagegåen mellem angstprovokerende kaos og bedårende, dulmende kosmos. Stemningsmæssigt bevæger kompositionerne sig i et spændingsfelt mellem dyster, smuk melankoli og mild, insisterende eufori. Alt sammen udført med et særligt dynamisk og teknisk håndelag, der kendetegner ham som instrumentalist.</p>
-            <p>I marts 2024 udgav han sit debutalbum ''Melankoli Eufori''.</p>
-            <p>Til koncerten medbringer han sin trio bestående af Gustav Hagelskjær på trommer, og Lukas Loeb på kontrabas, begge er skarpe unge profiler i det danske jazzmiljø.</p>
         </article>
 
-        <aside>
-            <button id="reserverBilletKnap">Reserver billet her!</button>
-        </aside>
+        <article class="plakater">
+            <figure class="enkeltPlakat">
+                <img src="images/plakat24.webp" alt="">
+                <a href="omKoncerten.html" class="pilTilTekst"><p>Plakat, 2025 <img src="images/naeste-ikon.svg" alt=""></a></p>
+            </figure>
 
-        <aside id="popup-reserverBillet">
-            <p>Du stilles videre til købssiden</p>
-        </aside>
+            <figure class="enkeltPlakat">
+                <img src="images/plakat23.webp" alt="">
+                <a href="#" class="pilTilTekst"><p>Plakat, 2024 <img src="images/naeste-ikon.svg" alt=""></a></p>
+            </figure>
+
+            <figure class="enkeltPlakat">
+                <img src="images/plakat22.webp" alt="">
+                <a href="#" class="pilTilTekst"><p>Plakat, 2023 <img src="images/naeste-ikon.svg" alt=""></a></p>
+            </figure>
+
+            <figure class="enkeltPlakat">
+                <img src="images/plakat21.webp" alt="">
+                <a href="#" class="pilTilTekst"><p>Plakat 2022 <img src="images/naeste-ikon.svg" alt=""></a></p>
+            </figure>
+
+        </article>
 
     </main>
 
@@ -140,20 +146,7 @@
                 <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
             </div>
         </div>
-      </footer>
+    </footer>
     
 </body>
-
 </html>
-
-<script>
-    const reserverBilletKnap = document.getElementById('reserverBilletKnap');
-
-    const popupReserverBillet = document.getElementById('popup-reserverBillet');
-
-    reserverBilletKnap.addEventListener('click', () => {
-        popupReserverBillet.style.display = 'block';
-        setTimeout(() => { window.location.href = '404.html'; }, 2000);
-    });
-</script>
-

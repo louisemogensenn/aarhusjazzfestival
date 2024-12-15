@@ -509,8 +509,6 @@ h3 { /**/
   }
 
   /* ---------------------- NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN ------------------- */
-
-
   
   .koncertFraDag {
     display: flex;
@@ -581,8 +579,11 @@ h3 { /**/
   transition: transform 0.3s ease; /* Tilføj en glidende effekt ved hover */
 }
 
-
 #andenPlakatSide {
+  display: none;
+}
+
+#fraArkivet {
   display: none;
 }
 
@@ -714,7 +715,7 @@ h3 { /**/
       }
 
 
-      .billedeOgInfoKoncert {
+      .billedeOgInfoKoncert, #billedeOgInfoPlakat {
           display: flex;
           justify-content: space-between;
           margin: 0 277px;
@@ -724,7 +725,12 @@ h3 { /**/
           height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
       }
 
-      .koncertInformation {
+      #billedeOgInfoPlakat img {
+          width: 420px;
+          height: auto;
+      }
+
+      .koncertInformation, #plakatinformation {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
@@ -746,7 +752,7 @@ h3 { /**/
         font-weight: lighter;
       }
 
-      #reserverBilletKnap {
+      #reserverBilletKnap, #bestilPlakatKnap {
           background-color: var(--sekundaerKnapfarve);
           font-weight: bold;
           width: 259px;
@@ -756,7 +762,7 @@ h3 { /**/
           display: block; /* Sikrer at margin-left: auto virker korrekt */
       }
 
-      #reserverBilletKnap:hover {
+      #reserverBilletKnap:hover, #bestilPlakatKnap:hover {
           cursor: pointer;
       }
 
