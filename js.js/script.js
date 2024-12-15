@@ -166,6 +166,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /*----------------------- SCRIPT FOR REPORTAGESIDEN - FRA FESTIVAL  ------------------------*/
 
+
     const fraArkivet = document.getElementById('fraArkivet');
 
     const fraFestivalen = document.getElementById('fraFestivalen');
@@ -182,4 +183,5 @@ document.addEventListener('DOMContentLoaded', () => {
     overskriftFestivalen.addEventListener('click', () => {
         fraArkivet.style.display = 'none';
         fraFestivalen.style.display = 'block';
-    });
+    }); 
+
