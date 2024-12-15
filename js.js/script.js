@@ -139,8 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 prisKnap.innerHTML = 'GRATIS'; // Opdater knapteksten
                 dropdownPris.style.display = 'none'; // Skjul dropdownen
                 nulstilFiltrer.style.display = 'block'; // Vis "nulstil"-knappen
-                angivSoegekriterierTekst.style.display = 'none';
-                filtreredeKoncerter.innerHTML = gratisKoncerter.outerHTML;
+                angivSoegekriterierTekst.style.display = 'none'; /* Teksten om at angive søgekriterier ønskes ikke vist, når der er angivet søgekriterier */
+                filtreredeKoncerter.innerHTML = gratisKoncerter.outerHTML; /* */
                 filtreredeKoncerter.style.justifyContent = 'center';
                 filtreredeKoncerter.style.margin = '0 300px 200px';
                 
@@ -178,7 +178,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /*----------------------- SCRIPT FOR REPORTAGESIDEN - FRA FESTIVAL  ------------------------*/
-
 
     const fraFestivalen = document.getElementById('fraFestivalen');
 

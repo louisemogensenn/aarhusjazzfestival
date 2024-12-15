@@ -500,6 +500,9 @@ h3 { /**/
 
   /* ---------------------- NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN ------------------- */
 
+  #program {
+    margin: 0 277px;
+  }
   
   .koncertFraDag {
     display: flex;
