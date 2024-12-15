@@ -76,7 +76,7 @@
             <figure class="program">
                 <section class="kunstnere-for-datoen koncerter-venstre"> <!-- De koncerter, der står i venstre side -->
                     <a href="omKunstner.html"><img src="images/carloDayyani.webp" alt="Billede af Carlo Dayyani Trio"></a>
-                    <aside class="kunstnerNavnOgPil">
+                    <aside class="kunstnerNavnOgPil" class="gratisKoncert">
                         <a href="omKunstner.html"><p class="kunstner-navn">Carlo Dayyani Trio</p></a>
                         <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
                     </aside>
@@ -111,7 +111,7 @@
         
                     <img src="images/modouTraore.webp" alt="Billede af Modou Traore">
                     
-                    <aside class="kunstnerNavnOgPil">
+                    <aside class="kunstnerNavnOgPil" class="gratisKoncert">
                         <a href="#"><p class="kunstner-navn">Modou Traore</p></a>
                         <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
                     </aside>
@@ -151,7 +151,7 @@
                     </aside>
         
                     <img src="images/leftUpRight.webp" alt="Billede af Left Up Right">
-                    <aside class="kunstnerNavnOgPil">
+                    <aside class="kunstnerNavnOgPil" class="gratisKoncert">
                         <a href="#"><p class="kunstner-navn">Left Up Right</p></a>
                         <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
                     </aside>
@@ -166,6 +166,12 @@
 
             <figure class="program">
                 <section class="kunstnere-for-datoen koncerter-venstre"> <!-- De koncerter, der står i venstre side -->
+                    <img src="images/jamesLoveless.webp" alt="Billede af James Loveless">
+                    <aside class="kunstnerNavnOgPil">
+                        <a href="#"><p class="kunstner-navn">James Loveless</p></a>
+                        <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
+                    </aside>
+
                     <img src="images/emmaPilgaardTrio.webp" alt="Billede af Emma Pilgaard Trio">
                     <aside class="kunstnerNavnOgPil">
                         <a href="#"><p class="kunstner-navn">Emma Pilgaard Trio</p></a>
@@ -182,12 +188,6 @@
                     <img src="images/erlingsJazzJam.webp" alt="Billede af Erlings Jazz Jam">
                     <aside class="kunstnerNavnOgPil">
                         <a href="#"><p class="kunstner-navn">Erlings Jazz Jam</p></a>
-                        <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
-                    </aside>
-        
-                    <img src="images/jamesLoveless.webp" alt="Billede af James Loveless">
-                    <aside class="kunstnerNavnOgPil">
-                        <a href="#"><p class="kunstner-navn">James Loveless</p></a>
                         <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
                     </aside>
         
@@ -222,11 +222,6 @@
                 </section>
                 
                 <section class="kunstnere-for-datoen koncerter-hoejre"> <!-- De koncerter, der står i højre side -->
-                    <a href="omKunstner.html"><img src="images/carloDayyani.webp" alt="Billede af Carlo Dayyani Trio"></a>
-                    <aside class="kunstnerNavnOgPil">
-                        <a href="omKunstner.html"><p class="kunstner-navn">Carlo Dayyani Trio</p></a>
-                        <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
-                    </aside>
         
                     <img src="images/oscarPloyart.webp" alt="Billede af Oscar Pluyart">
                     <aside class="kunstnerNavnOgPil">
@@ -245,7 +240,12 @@
                         <a href="#"><p class="kunstner-navn">Kalpi</p></a>
                         <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
                     </aside>
-                    
+
+                    <a href="omKunstner.html"><img src="images/carloDayyani.webp" alt="Billede af Carlo Dayyani Trio"></a>
+                    <aside class="kunstnerNavnOgPil">
+                        <a href="omKunstner.html"><p class="kunstner-navn">Carlo Dayyani Trio</p></a>
+                        <a href="omKunstner.html"><img src="images/forrige-ikon.webp" alt="Næste-ikon"></a>
+                    </aside>
         
                 </section>
             </figure>
@@ -291,7 +291,7 @@
                 <button id="prisKnap">PRIS</button>
             </figure>
 
-            <aside id="dropdownPris" class="skjulPris">
+            <aside id="dropdownPris">
                 <div class="dropdownPrisMulighed">GRATIS</div>
                 <div class="dropdownPrisMulighed">UNDER 100 KR.</div>
                 <div class="dropdownPrisMulighed">OVER 100 KR.</div>
@@ -299,7 +299,7 @@
 
             <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
 
-            <section></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier -->
+            <section id="filtreredeKoncerter"></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier -->
 
         </article>
 

@@ -158,29 +158,46 @@ document.addEventListener('DOMContentLoaded', () => {
     const dropdownPris = document.getElementById('dropdownPris');
 
     const prisMuligheder = document.querySelectorAll('.dropdownPrisMulighed');
-    
-    // Viser/skjuler dropdownen, når knappen klikkes
-    prisKnap.addEventListener('click', () => {
-        dropdownPris.classList.toggle('skjulPris');
-    });
-    
-    // Håndter klik på en dropdownPrisMulighed
-    prisMuligheder.forEach(prisMuligheder => {
-        prisMuligheder.addEventListener('click', (e) => {
-            const valgtTekst = e.target.textContent;
-            prisKnap.innerHTML = valgtTekst; // Opdaterer knappens tekstindhold
-            dropdownPris.classList.add('skjulPris'); // Skjul dropdown
-        });
-    });
 
     const nulstilFiltrer = document.getElementById('nulstilFiltrer');
+
+    const filtreredeKoncerter = document.getElementById('filtreredeKoncerter');
+
+    const gratisKoncerter = document.querySelectorAll('.gratisKoncert');
+
+    prisKnap.addEventListener('click', () => {
+        if(dropdownPris.style.display === 'block') {
+            dropdownPris.style.display = 'none';
+        } else {
+            dropdownPris.style.display = 'block';
+        }
+        
+    });
+
+    prisMuligheder.forEach(function (mulighed) {
+        mulighed.addEventListener('click', function () {
+            if (mulighed.innerHTML === 'GRATIS') {
+                prisKnap.innerHTML = 'GRATIS'; // Opdater knapteksten
+                dropdownPris.style.display = 'none'; // Skjul dropdownen
+                nulstilFiltrer.style.display = 'block'; // Vis "nulstil"-knappen
+                
+                // Tøm tidligere viste koncerter
+                filtreredeKoncerter.innerHTML = '';
+    
+                // Gå gennem alle gratis koncerter og vis dem
+                for (let i = 0; i < gratisKoncerter.length; i++) {
+                    filtreredeKoncerter.innerHTML += gratisKoncerter[i].outerHTML;
+                }
+            }
+        });
+    });
 
     nulstilFiltrer.addEventListener('click', () => {
         prisKnap.innerHTML = 'PRIS';
         prisKnap.style.backgroundColor = 'var(--knapfarve)';
+        nulstilFiltrer.style.display = 'none';
+        prisKnap.style.border = 'none';
     });
-
-    
 
     /* HUSK AT FJERNE INDHOLDET, DER VISES, HVIS MAN KLIKKER NULSTIL */
     
@@ -195,4 +212,4 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { window.location.href = '404.html'; }, 2000);
     });
 
-     /*----------------------- SCRIPT FOR ...  ------------------------*/
+    /*----------------------- SCRIPT FOR ...  ------------------------*/
