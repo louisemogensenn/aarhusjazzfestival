@@ -166,9 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
     /*----------------------- SCRIPT FOR REPORTAGESIDEN - FRA FESTIVAL  ------------------------*/
 
 
-    const fraArkivet = document.getElementById('fraArkivet');
-
     const fraFestivalen = document.getElementById('fraFestivalen');
+
+    const fraArkivet = document.getElementById('fraArkivet');
 
     const overskriftFestivalen = document.getElementById('overskriftFestivalen');
 
