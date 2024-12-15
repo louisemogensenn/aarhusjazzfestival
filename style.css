@@ -501,10 +501,7 @@ h3 { /**/
 
   /* NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN*/
 
-  #fraArkivet {
-    display: none;
-}
-
+  
   .koncertFraDag {
     display: flex;
     justify-content: center;
@@ -538,7 +535,7 @@ h3 { /**/
     transform: scale(1.5); /* Gør ikonet lidt større ved hover */
 }
 
-.datoForKoncerter, .overskriftArkivet {
+.datoForKoncerter, .overskriftIArkivet {
     margin-left: 277px;
     margin-top: 70px;
     margin-bottom: 0;

@@ -55,12 +55,12 @@ document.addEventListener('DOMContentLoaded', () => {
     overskriftFiltrer.addEventListener('click', () => {
         program.style.display = 'none';
         filtrerEfterBehov.style.display = 'block';
-    })
+    });
 
     overskriftProgram.addEventListener('click', () => {
         filtrerEfterBehov.style.display = 'none';
         program.style.display = 'block';
-    })
+    });
 
     /*----------------------- SCRIPT FOR FILTRERSIDEN ------------------------*/
 
@@ -164,4 +164,22 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => { window.location.href = '404.html'; }, 2000);
     });
 
-    /*----------------------- SCRIPT FOR ...  ------------------------*/
+    /*----------------------- SCRIPT FOR REPORTAGESIDEN - FRA FESTIVAL  ------------------------*/
+
+    const fraArkivet = document.getElementById('fraArkivet');
+
+    const fraFestivalen = document.getElementById('fraFestivalen');
+
+    const overskriftFestivalen = document.getElementById('overskriftFestivalen');
+
+    const overskriftArkivet = document.getElementById('overskriftArkivet');
+
+    overskriftArkivet.addEventListener('click', () => {
+        fraFestivalen.style.display = 'none';
+        fraArkivet.style.display = 'block';
+    });
+
+    overskriftFestivalen.addEventListener('click', () => {
+        fraArkivet.style.display = 'none';
+        fraFestivalen.style.display = 'block';
+    });
