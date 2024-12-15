@@ -499,7 +499,7 @@ h3 { /**/
   }
   /* Streg under program/filtrer */
   .horisontal-linje {
-      margin: 20px 277px 47px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
+      margin: 20px 150px 47px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
       background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
       height: 2px; /* Angiver højden på linjen */
       border: none; /* Fjerner skyggerne omkring linjen */
@@ -507,14 +507,13 @@ h3 { /**/
 
   /* ---------------------- NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN ------------------- */
 
-  #program {
-    margin: 0 277px;
-  }
+
   
   .koncertFraDag {
     display: flex;
     justify-content: center;
-    margin: 30px 210px;
+    /* margin: 30px 210px; */
+    margin: 30px 0;
 }
 
 .enkeltKoncert {
@@ -545,9 +544,7 @@ h3 { /**/
 }
 
 .datoForKoncerter, .overskriftIArkivet {
-    margin-left: 277px;
     margin-top: 70px;
-    margin-bottom: 0;
     font-weight: 700;
 }
 
@@ -581,9 +578,6 @@ h3 { /**/
   transition: transform 0.3s ease; /* Tilføj en glidende effekt ved hover */
 }
 
-#fraArkivet {
-  display: none;
-}
 
 #andenPlakatSide {
   display: none;
