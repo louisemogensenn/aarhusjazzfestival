@@ -51,9 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const programAndenSide = document.getElementById('program-anden-side');
 
-    const pilFremIkon = document.querySelector('.pil-frem-ikon');
+    const pilFremIkonProgram = document.querySelector('.pil-frem-ikon');
 
-    const pilTilbageIkon = document.querySelector('.pil-tilbage-ikon');
+    const pilTilbageIkonProgram = document.querySelector('.pil-tilbage-ikon');
 
     const datoVenstre = document.getElementById('datoVenstre');
 
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     datoMidt.innerHTML = datoer[1]; /* Sætter datoen til index-værdien */
     datoHoejre.innerHTML = datoer[2]; /* Sætter datoen til index-værdien */
 
-    pilFremIkon.addEventListener ('click', () => {
+    pilFremIkonProgram.addEventListener ('click', () => {
         programFoersteSide.style.display = 'none'; /* Programmets første side skjules... */
         programAndenSide.style.display = 'block'; /* ... og erstattes af programmets anden side */
 
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
         datoHoejre.innerHTML = datoer[5]; /* Sætter datoen til index-værdien */
     });
 
-    pilTilbageIkon.addEventListener ('click', () => {
+    pilTilbageIkonProgram.addEventListener ('click', () => {
         programFoersteSide.style.display = 'block'; /* Programmets første side vises */
         programAndenSide.style.display = 'none';  /* Programmets anden side skjules */
 
