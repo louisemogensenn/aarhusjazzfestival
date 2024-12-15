@@ -692,7 +692,7 @@ h3 { /**/
         justify-content: space-around;
       }
 
-        /* ------------------------------------- STYLING AF OM KUNSTNER ------------------------------------- */
+        /* ------------------------------------- STYLING AF OM KUNSTNER OG OM KONCERT ------------------------------------- */
 
 
       #tilbage-pil {
@@ -730,6 +730,10 @@ h3 { /**/
 
       #beskrivelseAfKunstner p {
           margin: 10px 0; /* Skaber afstand mellem de individuelle p-tags, så teksten er nemmere at læse */
+      }
+
+      #forfatterafReportage {
+        font-weight: lighter;
       }
 
       #reserverBilletKnap {
