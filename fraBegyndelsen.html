@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="da"> <!-- sprogkode dansk-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Om Kunstneren</title>
+    <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
+    <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
+    <!-- Med tiden kommer linket til styles.css til at ligge her -->
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script>
+    <script src="js/omKunstner.js" defer></script>
+
+</head>
+<body>
+    <header> <!-- NAVIGATION -->
+        <aside class="logo-navigationsbar">
+            <a href="index.html"> <!--Linker til forsiden, når der klikkes på logo-->
+                <img src="images/aarhus-jazz-festival-logo.svg" alt="Logo">
+            </a>
+        </aside>
+
+        <nav>
+            <ul class="navigationsbar">
+                <li>
+                    <a href="program.html">Program</a>
+                    <ul class="drop-down">
+                        <li><a href="program.html"> –Program</a></li>
+                        <li><a href="program.html"> –Filtrer efter behov</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="praktisk.html">Praktisk</a>
+                    <ul class="drop-down">
+                        <li><a href="praktisk.html"> –Publikum</a></li>
+                        <li><a href="praktisk.html"> –Musikere</a></li>
+                        <li><a href="praktisk.html"> –Arrangører</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="reportager.html">Reportager</a>
+                    <ul class="drop-down">
+                        <li><a href="reportager.html"> –Festivalen</a></li>
+                        <li><a href="reportager.html"> –Arkivet</a></li>
+                    </ul>
+                </li>
+            </ul>
+          <aside class="burgermenu">
+            <img src="images/burgermenu-ikon.svg" alt="Burgermenu-ikon">
+          </aside>
+        </nav>
+    </header> 
+    <main>
+
+        <section class="overskrifterPaaSider">
+            <a href="program.html"><img id="tilbage-pil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage"></a>
+            <h2>Læs mere om begyndelsen</h2>
+        </section>
+        
+        <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
+
+        <article id="billedeOgInfoFraBegyndelsen">
+            <figure>
+                <img src="images/aarhusJazzFestivalHHistorieEt.webp" alt="Billede af Aarhus Jazz Festival fra begyndelsen">
+            </figure>
+
+            <section class="fraBegyndelsenInformation">
+                <h3 id="underoverskriftFraBegyndelsen">Aarhus Jazz Festival i tal</h3>
+                <h3>— Varighed: 8 — 10 dage</h3>
+                <h3>— Antal koncerter: 250 — 350</h3>
+                <h3>— Antal arrangørmedlemmer: 35 — 45</h3>
+                <h3>— Antal spillesteder: 40 — 50</h3>
+                <h3>— Antal besøgende: 40.000 — 50.000</h3>
+            </section>
+
+        </article>
+
+        <article id="beskrivelseAfKunstner">
+
+            <p id="beskrivelseAfKunstnerOverskrift">Ung guitarist og komponist med kunstnerisk dybde</p>
+           <p> Aarhus Jazz Festival tog sin begyndelse i 1989 med et ønske om at gøre Aarhus By levende i
+sommerperioden. 
+Siden begyndelsen har jazzfestivalen vokset sig større og stærkere og udgør i
+dag sammen med Copenhagen Jazz Festival de to store allround jazzfestivaler i Danmark.
+Vigtige målsætninger er, at:
+• levere en musikfestival med høj kvalitet og en god balance mellem internationale artister og
+danske musikere med plads til både det folkelige, det eksperimenterende og alt det
+indimellem.
+• holde fast i jazzfestivalens traditioner og brede appel, samtidig med at nye initiativer
+udvikles med henblik på at styrke festivalens brand og nå nye publikumsgrupper.
+• støtte og synliggøre det aarhusianske jazzmiljø, samt medvirke til dialog og netværksdeling
+internt i miljøet og mellem det lokale miljø og omverdenen.
+• være et fast holdepunkt i aarhusianernes, turisternes og jazzpublikummets sommerplaner,
+som en stor og vigtig event, hvor man får det, man forventer og vidste man ville have, og
+bliver udfordret med det, man ikke forventede, men ikke kan leve foruden.
+Aarhus Jazz Festival er en bred musikfestival med alle typer af jazz repræsenteret og en bred
+forståelse af genrebegrebet. Der er masser af kvalitetskoncerter fra både ud- og indland, stort
+lokalt engagement, og det blomstrende aarhusianske jazzmiljø danner et stærkt grundlag for den
+årlige jazzfest. De fleste af festivalens koncerter er placeret overskueligt indenfor rimelig gåafstand
+i Aarhus City, men der kan også være koncerter i andre dele af byen. Aarhus Jazz Festival har
+stort fokus på at udvide rammerne for jazzkoncertoplevelsen – og samtidig på at udvikle
+programmet indholdsmæssigt, bl.a. via flerårige projekter, tematiske projekter og evalueringer med
+samarbejdspartnere.
+           </p>
+        </article>
+
+        <aside>
+            <button id="reserverBilletKnap">Reserver billet her!</button>
+        </aside>
+
+        <aside id="popup-reserverBillet">
+            <p>Du stilles videre til købssiden</p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <section class="footer-indhold">
+            <section class="venstre-sektion">
+                <h1>Tilmeld dig vores nyhedsbrev</h1>
+                <form aria-label="Nyhedsbrev tilmelding">
+                    <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" required />
+                    <button id="tilmeld-knap" type="submit">Tilmeld</button>
+                </form>
+            </section>
+            <section class="hojre-sektion">
+                <nav class="sektion-beholder">
+                    <h3>Program</h3>
+                    <ul>
+                        <li><a href="program.html" class="fjern-link">Program</a></li>
+                        <li><a href="program.html" class="fjern-link">Filtrer efter behov</a></li>
+                    </ul>
+                </nav>
+                <nav class="sektion-beholder">
+                  <h3>Praktisk</h3>
+                  <ul>
+                      <li><a href="praktisk.html" class="fjern-link">Publikum</a></li>
+                      <li><a href="praktisk.html" class="fjern-link">Arrangører</a></li>
+                      <li><a href="praktisk.html" class="fjern-link">Musikere</a></li>
+                  </ul>
+              </nav>
+                <nav class="sektion-beholder">
+                    <h3>Reportager</h3>
+                    <ul>
+                        <li><a href="reportager.html" class="fjern-link">Festivalen</a></li>
+                        <li><a href="reportager.html" class="fjern-link">Arkiv</a></li>
+                    </ul>
+                </nav>
+            </section>
+        </section>
+        <section class="bund-beholder">
+            <section class="bund-sektion-socials">
+                <a href="https://www.instagram.com" target="_blank" class="fjern-link">Instagram</a>
+                <a href="https://www.facebook.com" target="_blank" class="fjern-link">Facebook</a>
+                <a href="https://www.youtube.com" target="_blank" class="fjern-link">YouTube</a>
+                <a href="https://www.spotify.com" target="_blank" class="fjern-link">Spotify</a>
+            </section>
+            <section class="bund-sektion">
+                <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
+            </section>
+        </section>
+      </footer>
+    
+</body>
+
+</html>

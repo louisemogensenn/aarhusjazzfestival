@@ -684,7 +684,7 @@ h3 { /**/
       }
 
 
-      .billedeOgInfoKoncert, #billedeOgInfoPlakat {
+      .billedeOgInfoKoncert, #billedeOgInfoPlakat, #billedeOgInfoFraBegyndelsen {
           display: flex;
           justify-content: space-between;
           margin: 0 277px;
@@ -699,13 +699,13 @@ h3 { /**/
           height: auto;
       }
 
-      .koncertInformation, #plakatinformation {
+      .koncertInformation, #plakatinformation, #fraBegyndelsenInformation {
           display: flex;
           flex-direction: column;
           justify-content: space-around;
       }
 
-      #kunstnerNavn, #beskrivelseAfKunstnerOverskrift {
+      #kunstnerNavn, #beskrivelseAfKunstnerOverskrift, #underoverskriftFraBegyndelsen {
           font-weight: bold;
       }
 
