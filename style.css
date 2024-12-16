@@ -880,4 +880,29 @@ h3 { /**/
 
   /* ------------------------------------ STYLING AF ... ------------------------------------  */
   
-    
+/* Error side */
+
+#gå-til-program { /*gå til program knappen*/
+  background-color: var(--sekundaerKnapfarve);
+  padding: 1% 2%;
+  text-align: center;
+  font-size: 80%;
+  color: #313F88;
+  border: solid #313F88;
+  cursor: pointer;
+}
+
+#error-beholder{
+  display: flex; /* Gør containeren til en flex-container */
+}
+
+#error-figure{
+  flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
+  padding-left: 30px;
+}
+
+#error-tekst{
+  display: block; /*Sikrer placeringen af elementerne*/
+  padding-right: 10%; 
+  margin-top: 15%;
+}
