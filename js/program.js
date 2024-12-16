@@ -11,11 +11,15 @@
     overskriftFiltrer.addEventListener('click', () => { // Når der klikkes på overskriftFiltrer...
         program.style.display = 'none'; // ... skjules program-sektionen...
         filtrerEfterBehov.style.display = 'block'; // ... og filtrer-sektionen vises
+        overskriftFiltrer.style.fontWeight = '500';
+        overskriftProgram.style.fontWeight = '300';
     });
 
     overskriftProgram.addEventListener('click', () => { // Når der klikkes på overskriftProgram...
         filtrerEfterBehov.style.display = 'none'; // ... skjules filtrer-sektionen...
         program.style.display = 'block'; // ... og program-sektionen vises
+        overskriftProgram.style.fontWeight = '500';
+        overskriftFiltrer.style.fontWeight = '300';
     });
 
     /*----------------------- SCRIPT FOR FILTRERSIDEN ------------------------*/
@@ -34,34 +38,33 @@
     const carloId = document.getElementById('carloId'); // Henter elementet med id'et carloId og gemmer i konstanten
 
     // Denne funktion åbnes pop-uppen, når man trukker på luppen.
-    soegeikon.addEventListener('click', () => {
-        popupSoegning.style.display = 'block'; // Når man klikker på søgeikonet vises popup-vinduet... 
-        if(soegeFelt.value.trim() === '') { // og hvis det indtastede i søgefeltet (trimmet ned, så uden mellemrum) er tomt...
-            indholdPopupProgram.innerHTML = "Angiv søgeord"; // ... vises denne besked (indsat i et p-tag med id'et indholdPopupProgram).
+    soegeikon.addEventListener('click', () => { // Når brugeren klikker direkte på søgeikonet (luppen)
+        if(soegeFelt.value.trim() === '') { // ...og hvis det indtastede i søgefeltet (trimmet ned, så uden mellemrum) er tomt...
+            popupSoegning.style.display = 'block'; // ... vises popup-vinduet... 
+            indholdPopupProgram.innerHTML = "Angiv søgeord"; // ... og i popup-vinduet vises denne besked (indsat i et p-tag med id'et indholdPopupProgram).
         } else if (soegeFelt.value.trim().toLowerCase() === 'carlo'){ // Hvis feltets indhold i små bogstaver er 'carlo' ...
             filtreredeKoncerter.innerHTML = carloId.outerHTML; // ... indsættes koncerten for Carlo...
             angivSoegekriterierTekst.style.display = 'none'; // .. og teksten med "Angiv dine søgekriterier" fjernes ...
-            popupSoegning.style.display = 'none'; // ... og der vises ikke en popup
         } else { // Hvis det indtastede i feltet ikke matcher søgekriteriet 'carlo' og heller ikke er tomt...
+            popupSoegning.style.display = 'block'; // ... vises popup-vinduet... 
             indholdPopupProgram.innerHTML = 'Din søgning "' + soegeFelt.value + '" gav ingen resultater'; //... vises popup-beskeden, hvori også det søgte søgeord vises ...
             soegeFelt.value = ''; // .. hvorefter søgefeltet tømmes.
         }        
     });
 
     // Lukker popup, når man trykker på luk-knappen
-    lukSoegningPopup.addEventListener('click', () => {
-        popupSoegning.style.display = 'none';
+    lukSoegningPopup.addEventListener('click', () => { // Når brugeren klikker på kryds-ikonet i pop-uppen ...
+        popupSoegning.style.display = 'none'; // ... skjules pop-uppen
     });
 
     /* Nedstående funktion ændrer knappens farve ved at tjekke, hvilken farve den har først */
-    prisKnap.addEventListener('click', () => {
-        if (prisKnap.style.backgroundColor === 'var(--sekundaerKnapfarve)') {
-            prisKnap.style.backgroundColor = 'var(--knapfarve)'
-            prisKnap.style.border = 'none';
-
-        } else {
-            prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)'
-            prisKnap.style.border = '1px solid var(--sekundaerFarve)';
+    prisKnap.addEventListener('click', () => { // Når der klikkes på pris-knappen...
+        if (prisKnap.style.backgroundColor === 'var(--sekundaerKnapfarve)') { // ... og hvis knappens baggrundsfarve er den sekundære farve... (knappens baggrunsfavre er sekundær, når der er valgt et filter, og primær, når der ikke er valgt et filter)
+            prisKnap.style.backgroundColor = 'var(--knapfarve)' // ...ændres den til den primære knapfarve... (så der ikke længere)
+            prisKnap.style.border = 'none'; // ...og kanten fjernes
+        } else { // ...ellers
+            prisKnap.style.backgroundColor = 'var(--sekundaerKnapfarve)'; // sættes baggrundsfarven til den sekundære knapfarve...
+            prisKnap.style.border = '1px solid var(--sekundaerFarve)'; // ... og knappen for en kant for at tydeligøre, at den er valgt
         }
         
     });

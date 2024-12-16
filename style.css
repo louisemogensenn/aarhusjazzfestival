@@ -43,17 +43,6 @@ footer {
    border: solid #313F88;
  }
 
- @media (max-width: 768px) { /*Instillinger for udseende af input felt til email tildmelding når skærmstørrelsen er mindre*/
- .email-tilmeld { 
-   background-color: var(--knapfarve);
-   padding: 2% 5%;
-   text-align: center;
-   font-size: 80%;
-   color: #313F88;
-   border: solid #313F88;
- }
-}
-
  #tilmeld-knap { /*Instillinger for email tilmeld knap*/
    background-color: var(--sekundaerKnapfarve);
    padding: 2% 2%;
@@ -98,11 +87,6 @@ footer {
    color: #313F88;
  }
 
- @media (max-width: 768px) { /* Juster fontstørrelse for skærme mindre end 768px */
-   h1 {
-      font-size: 1.5em; /* Mindre fontstørrelse for mindre skærme */
-   }
-}
 /* Skal ændres - overruler andre stylings og skal være mere specifik */ 
 h3 { /**/
    font-size: 25px;
@@ -111,14 +95,6 @@ h3 { /**/
    font-weight: normal;
  }
 
- @media (max-width: 1000px) { /* Juster fontstørrelse for skærme mindre end 1000px */
-  h3 {
-    font-size: 14px;
-    margin-bottom: 20px;
-    color: #313F88;
-    font-weight: normal;
-  }
-}
  
 /* Skal ændres - overruler andre stylings og skal være mere specifik */
  ul { /**/
@@ -167,15 +143,6 @@ h3 { /**/
    color: #313F88; 
    text-decoration: none; /* fjerner underlinje */
    cursor: pointer; /* ændrer mus til pointer */
-}
-
-@media (max-width: 1000px) { /* Juster fontstørrelse for skærme mindre end 1000px */
-  .fjern-link { /**/
-    color: #313F88; 
-    text-decoration: none; /* fjerner underlinje */
-    cursor: pointer; /* ændrer mus til pointer */
-    font-size: 12px;
- }
 }
 
 .fjern-link:hover {
@@ -428,23 +395,6 @@ h3 { /**/
       font-size:25px; /*Definerer størrelsen på "Se program"*/
     }
 
-
- /*------------------ RESPONSIV - FORSIDE------------------ */
-    /*Skifter forsidelementer i mobilversion*/
-    @media (max-width: 390px) {
-      .forside-animation{
-        display: none;
-      }
-    }
-
-  /*Skifter forsidelementer i desktopversion*/
-    @media (min-width: 391px) {
-      .forside-animation-mobil{
-        display: none;
-      } 
-    }
-
-
 /*----------------- FORSIDE ELEMENTER - MOBIL ------------------ */
   /* Styling af animationen */
     .forside-animation-mobil {
@@ -492,6 +442,10 @@ h3 { /**/
       cursor: pointer;
   }
 
+  #overskrift-program {
+    font-weight: 500;
+  }
+
   .overskrifterPaaSider h2:hover {
     font-weight: 500;
   }
@@ -507,16 +461,6 @@ h3 { /**/
       background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
       height: 2px; /* Angiver højden på linjen */
       border: none; /* Fjerner skyggerne omkring linjen */
-  }
-
-  @media (max-width: 390px) {
-    .overskrifterPaaSider h2 {
-      font-size: 25px;
-      margin: 10px;
-    }
-    .horisontal-linje {
-      margin: 5px;
-    }
   }
 
   /* ---------------------- NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN ------------------- */
@@ -566,41 +510,6 @@ h3 { /**/
 
 .seMereLink {
   display: none;
-}
-
-/* ------------------------------------- STYLING AF PROGRAM OG REPORTAGER I MOBIL ------------------------------------- */
-@media (max-width: 390px) {
-
-  .pilFremOgTilbage {
-    display: none;
-  }
-
-  .koncertFraDag a {
-    font-size: 10px;
-  }
-
-  .koncertFraDag, .plakater {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* To kolonner */
-      gap: 5px; /* Afstand mellem billeder */
-  }
-
-  .enkeltKoncert, .enkeltPlakat {
-      margin: 10px 5px; /* Giv lidt afstand mellem koncerterne */
-  }
-
-  .seMereLink {
-    display: block;
-    text-align: right;
-    font-weight: bold;
-    margin-right: 29px; /* Sææter pilen på linje med billeder i skærmstørrelsen 390px*/
-  }
-
-  .kunstnerbillede {
-    max-width: 150px; /* Begræns bredden af billedet til maksimalt 150px */
-    height: auto; /* Bevarer billedets proportioner */
-  }
-
 }
 
 /* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
@@ -755,44 +664,6 @@ h3 { /**/
       #filtreredeKoncerter { /* Styling af de gratis koncerter, der vises i filtreringsfunktionen */
         display: flex;
         justify-content: space-around;
-      }
-
-      /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
-      @media (max-width: 390px) {
-        #filtreringsmuligheder {
-            margin: 10px 50px;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #filtreringsmuligheder button {
-          padding: 10px 20px;
-        }
-
-        #soegefelt {
-          margin-top: 20px;
-          height: 50px;
-        }
-
-        #soegeikon {
-          height: 30px;
-          width: 30px;
-        }
-
-        #filtreredeKoncerter {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* To kolonner */
-            gap: 5px; /* Afstand mellem billeder */
-            margin-left: 80px;
-            font-size: 10px;
-        }
-
-        #dropdownPris {
-          display: none;
-          background-color: var(--sekundaerKnapfarve);
-          border: 1px solid var(--sekundaerFarve);
-          margin-left: 80px;
-        }
       }
 
         /* ------------------------------------- STYLING AF OM KUNSTNER OG OM KONCERT ------------------------------------- */
