@@ -527,7 +527,7 @@ h3 { /**/
     height: auto;
 }
 
-.enkeltKoncert p {
+.enkeltKoncert span {
     margin-top: 10px;
     font-size: 14px;
 }
@@ -780,6 +780,11 @@ h3 { /**/
           z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
           text-align: center;
       }
+
+      #bestilPlakatKnap {
+        margin-bottom: 300px;
+      }
+
 
   /* ------------------------------------ STYLING AF ... ------------------------------------  */
   
