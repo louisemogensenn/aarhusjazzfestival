@@ -408,6 +408,12 @@ h3 { /**/
       display: block; /*giver animationen bedre placering i forhold til omgivende elementer.*/
     }
 
+    @media (min-width: 391px) {
+      .forside-animation-mobil{
+        display: none;
+      } 
+    }
+
     /* Placering af tekststykke, forside*/
     .forside-tekst-mobil {
       text-align: center; /* Centrerer teksten */
