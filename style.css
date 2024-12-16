@@ -473,23 +473,39 @@ h3 { /**/
 
   .koncertFraDag {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;  /* Placerer elementerne med lige meget plads mellem */
     margin: 30px 277px;
-  }  
+    position: relative;  /* Sørger for at pilen kan placeres absolut i forhold til denne container */
+}
 
-.enkeltKoncert {
-    text-align: left;
-    margin: 0 40px;
+.enkeltKoncert, .enkeltPlakat {
+  text-align: left;
+  flex: 1;  /* Gør hvert billede fleksibelt, så de deler pladsen */
+  margin: 0; /* Juster marginen */
+  max-width: 23%; /* Begræns hver koncertboks til maks. 23% af bredden */
 }
 
 .enkeltKoncert img, .enkeltPlakat img {
-    width: 210px;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
-.enkeltKoncert span {
-    margin-top: 10px;
-    font-size: 14px;
+.pilFrem {
+  position: absolute; /* Pilen placeres uden for den normale flow */
+  right: -60px;  /* Juster denne værdi for at flytte pilen længere ud til højre */
+  top: 50%;  /* Juster pilen til at være centreret i højden i dens container */
+  transform: translateY(-50%);  /* Juster pilen til præcist at være centreret */
+  width: 30px; /* Juster pilens størrelse */
+  height: auto;
+}
+
+.pilTilbage {
+  position: absolute; /* Pilen placeres uden for den normale flow */
+  left: -60px;  /* Juster denne værdi for at flytte pilen længere ud til højre */
+  top: 50%;  /* Juster pilen til at være centreret i højden i dens container */
+  transform: translateY(-50%);  /* Juster pilen til præcist at være centreret */
+  width: 30px; /* Juster pilens størrelse */
+  height: auto;
 }
 
 .pilTilTekst {
@@ -517,13 +533,14 @@ h3 { /**/
 
 .plakater {
   display: flex;
-  justify-content: center;
-  margin: 30px 210px;
+  justify-content: space-between;
+  margin: 30px 277px;
+  position: relative;
 }
 
 .enkeltPlakat img {
-  width: 210px;
-  height: auto;
+  width: 238.05px; /* Følger andre billders størrelser i bredden */
+  max-height: 320px; /* Sikrer, at alle plakater er lige høje */
 }
 
 .enkeltPlakat p {
