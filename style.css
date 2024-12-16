@@ -686,7 +686,7 @@ h3 { /**/
 
       .billedeOgInfoKoncert, #billedeOgInfoPlakat, #billedeOgInfoFraBegyndelsen {
           display: flex;
-          justify-content: space-between;
+          justify-content: space-around;
           margin: 0 277px;
       }
 
@@ -694,7 +694,7 @@ h3 { /**/
           height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
       }
 
-      #billedeOgInfoPlakat img {
+      #billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
           width: 420px;
           height: auto;
       }
