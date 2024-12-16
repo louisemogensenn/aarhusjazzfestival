@@ -1,59 +1,54 @@
 
     /*----------------------- SCRIPT FOR PROGRAMSIDEN ------------------------*/
+    const overskriftProgram = document.getElementById('overskrift-program'); // Henter elementet med id'et overskrift-program og gemmer i konstanten
 
-    const overskriftProgram = document.getElementById('overskrift-program');
+    const overskriftFiltrer = document.getElementById('overskriftFiltrer'); // Henter elementet med id'et overskriftFiltrer og gemmer i konstanten
 
-    const overskriftFiltrer = document.getElementById('overskriftFiltrer');
+    const filtrerEfterBehov = document.getElementById('filtrerEfterBehov'); // Henter elementet med id'et filtrerEfterBehov og gemmer i konstanten
 
-    const filtrerEfterBehov = document.getElementById('filtrerEfterBehov');
+    const program = document.getElementById('program'); // Henter elementet med id'et program og gemmer i konstanten
 
-    const program = document.getElementById('program');
-
-    overskriftFiltrer.addEventListener('click', () => {
-        program.style.display = 'none';
-        filtrerEfterBehov.style.display = 'block';
+    overskriftFiltrer.addEventListener('click', () => { // Når der klikkes på overskriftFiltrer...
+        program.style.display = 'none'; // ... skjules program-sektionen...
+        filtrerEfterBehov.style.display = 'block'; // ... og filtrer-sektionen vises
     });
 
-    overskriftProgram.addEventListener('click', () => {
-        filtrerEfterBehov.style.display = 'none';
-        program.style.display = 'block';
+    overskriftProgram.addEventListener('click', () => { // Når der klikkes på overskriftProgram...
+        filtrerEfterBehov.style.display = 'none'; // ... skjules filtrer-sektionen...
+        program.style.display = 'block'; // ... og program-sektionen vises
     });
 
     /*----------------------- SCRIPT FOR FILTRERSIDEN ------------------------*/
-    
+    const soegeikon = document.getElementById('soegeikon'); // Henter elementet med id'et soegeikon og gemmer i konstanten
 
+    const popupSoegning = document.getElementById('popup-soegning'); // Henter elementet med id'et popup-soegning og gemmer i konstanten
 
-    const soegeikon = document.getElementById('soegeikon');
+    const lukSoegningPopup = document.getElementById('lukSoegningPopUp'); // Henter elementet med id'et lukSoegningPopUp og gemmer i konstanten
 
-    const popupSoegning = document.getElementById('popup-soegning');
+    const soegeFelt = document.getElementById('soegefelt'); // Henter elementet med id'et soegefelt og gemmer i konstanten
 
-    const lukSoegningPopup = document.getElementById('lukSoegningPopUp');
+    const indholdPopupProgram = document.getElementById('indholdPopupProgram'); // Henter elementet med id'et indholdPopupProgram og gemmer i konstanten
 
-    const soegeFelt = document.getElementById('soegefelt');
+    const prisKnap = document.getElementById('prisKnap'); // Henter elementet med id'et prisKnap og gemmer i konstanten
 
-    const indholdPopupProgram = document.getElementById('indholdPopupProgram');
-
-    const prisKnap = document.getElementById('prisKnap');
-
-    const carloId = document.getElementById('carloId');
+    const carloId = document.getElementById('carloId'); // Henter elementet med id'et carloId og gemmer i konstanten
 
     // Denne funktion åbnes pop-uppen, når man trukker på luppen.
     soegeikon.addEventListener('click', () => {
-        popupSoegning.style.display = 'block'; /* Når man klikker på søgeikonet vises popup-vinduet */
-        if(soegeFelt.value.trim() === '') {
-            indholdPopupProgram.innerHTML = "Angiv søgeord"; /* Hvis søgefeltet er tomt vil denne besked angives */
-        } else if (soegeFelt.value.trim() === 'Carlo' || soegeFelt.value.trim() === 'carlo') {
-            filtreredeKoncerter.innerHTML = carloId.outerHTML; /* Her skal Carlos koncert sættes ind */
-            angivSoegekriterierTekst.style.display = 'none';
-            popupSoegning.style.display = 'none';
-        }
-        else {
-            indholdPopupProgram.innerHTML = 'Din søgning "' + soegeFelt.value + '" gav ingen resultater'; /* Hvis søgeordet ikke matcher nogen resultater, vil denne besked komme. Der er ikke lavet funktionalitet til at søge websitets indhold igennem. */
-            soegeFelt.value = ''; /* Inholdet i søgefeltet fjernes */
+        popupSoegning.style.display = 'block'; // Når man klikker på søgeikonet vises popup-vinduet... 
+        if(soegeFelt.value.trim() === '') { // og hvis det indtastede i søgefeltet (trimmet ned, så uden mellemrum) er tomt...
+            indholdPopupProgram.innerHTML = "Angiv søgeord"; // ... vises denne besked (indsat i et p-tag med id'et indholdPopupProgram).
+        } else if (soegeFelt.value.trim().toLowerCase() === 'carlo'){ // Hvis feltets indhold i små bogstaver er 'carlo' ...
+            filtreredeKoncerter.innerHTML = carloId.outerHTML; // ... indsættes koncerten for Carlo...
+            angivSoegekriterierTekst.style.display = 'none'; // .. og teksten med "Angiv dine søgekriterier" fjernes ...
+            popupSoegning.style.display = 'none'; // ... og der vises ikke en popup
+        } else { // Hvis det indtastede i feltet ikke matcher søgekriteriet 'carlo' og heller ikke er tomt...
+            indholdPopupProgram.innerHTML = 'Din søgning "' + soegeFelt.value + '" gav ingen resultater'; //... vises popup-beskeden, hvori også det søgte søgeord vises ...
+            soegeFelt.value = ''; // .. hvorefter søgefeltet tømmes.
         }        
     });
 
-    // Luk popup, når man trykker på luk-knappen
+    // Lukker popup, når man trykker på luk-knappen
     lukSoegningPopup.addEventListener('click', () => {
         popupSoegning.style.display = 'none';
     });
@@ -71,7 +66,7 @@
         
     });
 
-    /*drop down af priser */
+    /*----------------------- SCRIPT FOR DROP DOWN MED PRISER ------------------------*/
 
     const dropdownPris = document.getElementById('dropdownPris');
 
