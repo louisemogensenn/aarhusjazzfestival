@@ -448,10 +448,6 @@ h3 { /**/
       cursor: pointer;
   }
 
-  .valgtOverskrift {
-    font-weight: 500; /* Giver den valgte overskrift en federe skrift */
-  }
-
   .overskrifterPaaSider h2:hover {
     font-weight: 500;
   }
@@ -462,6 +458,9 @@ h3 { /**/
       margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
   }
 
+  .valgtOverskrift {
+    font-weight: 500; /* Giver den valgte overskrift en federe skrift */
+  }
 
   .horisontal-linje {
       margin: 20px 150px 47px; /* Afstad mellem elementer for oven og for neden er 47px og den har 150px ud til hver kant af skærmen */
