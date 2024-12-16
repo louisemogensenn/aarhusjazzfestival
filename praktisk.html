@@ -153,18 +153,6 @@
     position: relative; /* Til positionering af '+'/'-' tegn */
 }
 
-/* Tilføjer '+' tegn efter hvert spørgsmål */
-.praktisk-sporgsmål::after {
-    content: '+'; /* Viser '+' tegn */
-    font-size: 24px; /* Stor skriftstørrelse */
-    transition: transform 0.3s ease; /* Blød overgang ved animation */
-}
-
-/* Ændrer '+' til '-' når spørgsmål er aktivt */
-.praktisk-sporgsmål.active::after {
-    content: '−'; /* Viser '-' tegn */
-    transform: rotate(180deg); /* Roterer tegnet */
-}
 
 /* Styling for svar-sektionen */
 .praktisk-svar {
@@ -229,15 +217,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Hver kategori indeholder arrays med spørgsmål og svar
     const faqData = {
         publikum: [
-            // Spørgsmål og svar for publikum kategorien
-            ["Hvad er parkeringsmulighederne?", "Du kan finde flere parkeringspladser ud fra hvor du skal høre en koncert. Vi har her en knap som kan henvise til et kort over parkingsmuligheder"],
+            // Spørgsmål og svar for publikum kategorien´
+            ["Hvad er priserne?", "Billetpriser kan varierer fra spillested og kunstner. Kig indenunder den pågældene koncert omkring billetinfo."],
+            ["Er der rabatter tilknyttet festivalen?", "Ja! Aarhus Jazz Festival har en aftale med Scandic Aarhus City, hvor det er muligt at bestille værelse med festivalrabat."],
+            ["Hvordan bliver jeg frivillig?", "Du bedes sende en mail direkte til info@jazzfestival.dk. Skriv dit navn, generel kontakt information og hvorfor du gerne vil være frivillig."],
+            ["Hvor kan jeg se fastivalens plakater?", "Du kan se festivalens plakater på siden der er linket til nedenunder."],
             ["Er der udendørs eller indendørs arrangementer?", "Det er forskelligt for hver koncert, det står enten under den pågældene koncert. Du kan også prøve at kontakte spillestedet direkte hvis du er i tvivl."],
             ["Hvor kan jeg se spillesteder?", "Spillestederne er spredt ud over hele Aarhus. Nedenunder kan de se et kort over alle spillester."],
-            ["Er der rabatter tilknyttet festivalen?", "Ja! Aarhus Jazz Festival har en aftale med Scandic Aarhus City, hvor det er muligt at bestille værelse med festivalrabat."],
             ["Hvor kan jeg finde praktisk information til folk med handikap?", "Der er flere parkeringsmuligheder tæt på festivalområdet. Vi tilbyder både handicapparkering og generel parkering."],
             ["Må man medbringe dyr?", "Dette kan du læse mere om på de individuelle spillesteders hjemmeside."],
-            ["Hvordan bliver jeg frivillig?", "Du bedes sende en mail direkte til info@jazzfestival.dk. Skriv dit navn, generel kontakt information og hvorfor du gerne vil være frivillig."],
-            ["Hvad er priserne?", "Billetpriser kan varierer fra spillested og kunstner. Kig indenunder den pågældene koncert omkring billetinfo."],
+            ["Hvad er parkeringsmulighederne?", "Du kan finde flere parkeringspladser ud fra hvor du skal høre en koncert. Vi har her en knap som kan henvise til et kort over parkingsmuligheder"],
         ],
         arrangør: [
             // Spørgsmål og svar for arrangør kategorien
@@ -283,6 +272,12 @@ document.addEventListener('DOMContentLoaded', () => {
             spoergsmaalElement.classList.add('praktisk-sporgsmål');
             spoergsmaalElement.textContent = spoergsmaal;
 
+            // Opretter SVG-ikonet for '+' tegn
+            const plusIcon = document.createElement('img');
+            plusIcon.src = 'images/plus-ikon.svg'; // Angiv stien til dit plus SVG-ikon
+            plusIcon.classList.add('icon');
+            spoergsmaalElement.appendChild(plusIcon);
+
             // Opretter svars-elementet
             const svarElement = document.createElement('div');
             svarElement.classList.add('praktisk-svar');
@@ -295,6 +290,13 @@ document.addEventListener('DOMContentLoaded', () => {
             spoergsmaalElement.addEventListener('click', () => {
                 spoergsmaalElement.classList.toggle('active');
                 svarElement.classList.toggle('show');
+
+                // Skift mellem plus og minus ikoner
+                if (spoergsmaalElement.classList.contains('active')) {
+                    plusIcon.src = 'images/minus-ikon.svg'; // Angiv stien til dit minus SVG-ikon
+                } else {
+                    plusIcon.src = 'images/plus-ikon.svg'; // Angiv stien til dit plus SVG-ikon
+                }
             });
 
           // Sammensætter elementerne
@@ -329,6 +331,17 @@ if (spoergsmaal === "Hvor kan jeg se spillesteder?") {
     viderstilKnap.classList.add('praktisk-action-knap');
     viderstilKnap.addEventListener('click', () => {
         window.open('404.html', '_blank');
+    });
+    svarElement.appendChild(viderstilKnap);
+}
+
+/*Knap til plakater spørgsmål*/
+if (spoergsmaal === "Hvor kan jeg se fastivalens plakater?") {
+    const viderstilKnap = document.createElement('button');
+    viderstilKnap.textContent = 'Se festivalens plakater';
+    viderstilKnap.classList.add('praktisk-action-knap');
+    viderstilKnap.addEventListener('click', () => {
+        window.open('reportager.html', '_blank');
     });
     svarElement.appendChild(viderstilKnap);
 }
