@@ -448,8 +448,8 @@ h3 { /**/
       cursor: pointer;
   }
 
-  #overskrift-program {
-    font-weight: 500;
+  .valgtOverskrift {
+    font-weight: 500; /* Giver den valgte overskrift en federe skrift */
   }
 
   .overskrifterPaaSider h2:hover {
@@ -461,7 +461,8 @@ h3 { /**/
       justify-content: center;
       margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
   }
-  /* Streg under program/filtrer */
+
+
   .horisontal-linje {
       margin: 20px 150px 47px; /* Afstad mellem elementer for oven og for neden er 47px og den har 150px ud til hver kant af skærmen */
       background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
@@ -513,21 +514,12 @@ h3 { /**/
     margin-top: 70px;
     font-weight: 700;
 }
-
-.seMereLink {
-  display: none;
-}
-
 /* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
 
 .plakater {
   display: flex;
   justify-content: center;
   margin: 30px 210px;
-}
-
-.enkeltPlakat {
-  text-align: left;
 }
 
 .enkeltPlakat img {
@@ -538,6 +530,7 @@ h3 { /**/
 .enkeltPlakat p {
   margin-top: 10px;
   font-size: 14px;
+  text-align: left;
 }
 
 .pilTilTekst img {
@@ -552,16 +545,14 @@ h3 { /**/
   display: none;
 }
 
-#fraArkivet {
-  display: none;
-}
-
   /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
   
+  /*
       #filtrerEfterBehov {
           display: none;
       }
-      
+  */   
+  
       #filtreringsmuligheder {
           display: flex;
           justify-content: space-between; /* Sikrer, at knapperne er placeret med lige stor afstand til hinanden*/
@@ -672,10 +663,14 @@ h3 { /**/
         justify-content: space-around;
       }
 
+      .gratisKoncertFiltrer {
+        display: none; /* De koncerter, der er gratis, vises ikke i default */
+      }
+
         /* ------------------------------------- STYLING AF OM KUNSTNER OG OM KONCERT ------------------------------------- */
 
 
-      #tilbage-pil {
+      .gaaTilbagePil {
           width: 24px;
           height: 24px;
           position: absolute; /* Gør det muligt at finjustere placeringen af pilen */

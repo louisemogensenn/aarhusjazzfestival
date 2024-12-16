@@ -1,17 +1,15 @@
-<!DOCTYPE html>
 <html lang="da"> <!-- sprogkode dansk-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404-side</title>
+    <title>Program</title>
     <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
     <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
-
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
-    <script src="js.js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/filtrer.js" defer></script>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header> <!-- NAVIGATION -->
         <aside class="logo-navigationsbar">
@@ -53,35 +51,80 @@
         </nav>
     </header>  
     <main>
+
+        <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
         <section class="overskrifterPaaSider">
-            <img class="gaaTilbagePil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage">
-            <h2> 404 - Siden mangler et par takter...</h2>
+            <a href="program.html"><h2>Program</h2></a>
+            <a href="filtrer.html"><h2 id="valgtOverskrift">Filtrér efter behov</h2></a>
         </section>
-        
+
         <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
-        <article id="error-beholder">
-            <img id="error-figure" src="images/404-animation 1.webp" alt="error animation">
-           <article id="error-tekst">
-            <h2>Vi har mistet melodien her..</h2>
-            <p>Lad os hjælpe dig tilbage til den</p>
-            <p>gode musik, på én af vores</p>
-            <p>andre sider.</p>
-             <a href="program.html"><button  id="gå-til-program">Gå til program</button></a>
-            </article>
-          </article>
+
+        <article id="filtrerEfterBehov"> 
+
+            <aside id="soegefeltOgIkon">
+                <input id="soegefelt" type="search" placeholder="Søg...">
+                <img id="soegeikon" src="images/soeg-ikon.webp" alt="Søgeikon">
+                <p id="nulstilFiltrer">&times; nulstil</p>
+            </aside>
+
+            <figure id="filtreringsmuligheder">
+                <button>DATO</button>
+                <button>SPILLESTED</button>
+                <button>GENRE</button>
+                <button id="prisKnap">PRIS</button>
+            </figure>
+
+            <aside id="dropdownPris">
+                <div class="dropdownPrisMulighed">GRATIS</div>
+                <div class="dropdownPrisMulighed">UNDER 100 KR.</div>
+                <div class="dropdownPrisMulighed">OVER 100 KR.</div>
+            </aside> 
+
+            <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
+
+            <section id="filtreredeKoncerter"></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier -->
+
+        </article>
+
+        <!-- Besked om, at søgningen ikke gav nogen resultater-->
+        <aside id="popup-soegning">
+            <button id="lukSoegningPopUp">&times;</button>
+            <p id="indholdPopupProgram"></p>
+        </aside>
+
+        <figure class="enkeltKoncert gratisKoncert gratisKoncertFiltrer" id="carloId">
+            <a href="omKunstner.html"><img class="kunstnerbillede" src="images/carloDayyani.webp" alt="Carlo Dayyani Trio (DK)"></a>
+            <a href="omKunstner.html" class="pilTilTekst">Carlo Dayyani Trio (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+        </figure>
+
+        <figure class="enkeltKoncert gratisKoncert gratisKoncertFiltrer">
+            <img class="kunstnerbillede" src="images/erlingsJazzJam.webp" alt="Billede af Erlings Jazz Jam">
+            <a href="#" class="pilTilTekst">Erlings Jazz Jam (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+        </figure>
+
+        <figure class="enkeltKoncert gratisKoncert gratisKoncertFiltrer">
+            <img class="kunstnerbillede" src="images/triatlon.webp" alt="Billede af Triatlon">
+            <a href="#" class="pilTilTekst">Triatlon (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+        </figure>
+
+        <figure class="enkeltKoncert gratisKoncert gratisKoncertFiltrer">
+            <img class="kunstnerbillede" src="images/dayyaniAkrofi.webp" alt="Billede af Dayyani & Akrofi">
+            <a href="#" class="pilTilTekst">3X Dayyani + Akrofi  <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+        </figure>
 
     </main>
 
     <footer>
-        <section class="footer-indhold">
-            <section class="venstre-sektion">
+        <div class="footer-indhold">
+            <div class="venstre-sektion">
                 <h1>Tilmeld dig vores nyhedsbrev</h1>
                 <form aria-label="Nyhedsbrev tilmelding">
                     <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" required />
                     <button id="tilmeld-knap" type="submit">Tilmeld</button>
                 </form>
-            </section>
-            <section class="hojre-sektion">
+            </div>
+            <div class="hojre-sektion">
                 <nav class="sektion-beholder">
                     <h3>Program</h3>
                     <ul>
@@ -90,13 +133,13 @@
                     </ul>
                 </nav>
                 <nav class="sektion-beholder">
-                  <h3>Praktisk</h3>
-                  <ul>
-                      <li><a href="praktisk.html" class="fjern-link">Publikum</a></li>
-                      <li><a href="praktisk.html" class="fjern-link">Arrangører</a></li>
-                      <li><a href="praktisk.html" class="fjern-link">Musikere</a></li>
-                  </ul>
-              </nav>
+                    <h3>Praktisk</h3>
+                    <ul>
+                        <li><a href="praktisk.html" class="fjern-link">Publikum</a></li>
+                        <li><a href="praktisk.html" class="fjern-link">Arrangører</a></li>
+                        <li><a href="praktisk.html" class="fjern-link">Musikere</a></li>
+                    </ul>
+                </nav>
                 <nav class="sektion-beholder">
                     <h3>Reportager</h3>
                     <ul>
@@ -104,29 +147,22 @@
                         <li><a href="reportager.html" class="fjern-link">Arkiv</a></li>
                     </ul>
                 </nav>
-            </section>
-        </section>
-        <section class="bund-beholder">
-            <section class="bund-sektion-socials">
+            </div>
+        </div>
+        <div class="bund-beholder">
+            <div class="bund-sektion-socials">
                 <a href="https://www.instagram.com" target="_blank" class="fjern-link">Instagram</a>
                 <a href="https://www.facebook.com" target="_blank" class="fjern-link">Facebook</a>
                 <a href="https://www.youtube.com" target="_blank" class="fjern-link">YouTube</a>
                 <a href="https://www.spotify.com" target="_blank" class="fjern-link">Spotify</a>
-            </section>
-            <section class="bund-sektion">
+            </div>
+            <div class="bund-sektion">
                 <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
-            </section>
-        </section>
+            </div>
+        </div>
       </footer>
-    
+
 </body>
 
 </html>
 
-<style>
-
-</style>
-
-<script>
-
-</script>

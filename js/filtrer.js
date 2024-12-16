@@ -1,5 +1,5 @@
 
-    /*----------------------- SCRIPT FOR PROGRAMSIDEN ------------------------*/
+    /*----------------------- SCRIPT FOR PROGRAMSIDEN ------------------------
     const overskriftProgram = document.getElementById('overskrift-program'); // Henter elementet med id'et overskrift-program og gemmer i konstanten
 
     const overskriftFiltrer = document.getElementById('overskriftFiltrer'); // Henter elementet med id'et overskriftFiltrer og gemmer i konstanten
@@ -21,6 +21,8 @@
         overskriftProgram.style.fontWeight = '500';
         overskriftFiltrer.style.fontWeight = '300';
     });
+
+    */
 
     /*----------------------- SCRIPT FOR FILTRERSIDEN ------------------------*/
     const soegeikon = document.getElementById('soegeikon'); // Henter elementet med id'et soegeikon og gemmer i konstanten
@@ -44,6 +46,8 @@
             indholdPopupProgram.innerHTML = "Angiv søgeord"; // ... og i popup-vinduet vises denne besked (indsat i et p-tag med id'et indholdPopupProgram).
         } else if (soegeFelt.value.trim().toLowerCase() === 'carlo'){ // Hvis feltets indhold i små bogstaver er 'carlo' ...
             filtreredeKoncerter.innerHTML = carloId.outerHTML; // ... indsættes koncerten for Carlo...
+            carloId.style.display = 'block';
+            carloId.style.margin = '20px 0 0 277px';
             angivSoegekriterierTekst.style.display = 'none'; // .. og teksten med "Angiv dine søgekriterier" fjernes ...
         } else { // Hvis det indtastede i feltet ikke matcher søgekriteriet 'carlo' og heller ikke er tomt...
             popupSoegning.style.display = 'block'; // ... vises popup-vinduet... 
@@ -79,7 +83,7 @@
 
     const filtreredeKoncerter = document.getElementById('filtreredeKoncerter');
 
-    const gratisKoncerter = document.querySelectorAll('.gratisKoncert');
+    const gratisKoncerter = document.querySelectorAll('.gratisKoncertFiltrer');
 
     const filtreringsmuligheder = document.getElementById('filtreringsmuligheder');
 
@@ -98,7 +102,6 @@
                 dropdownPris.style.display = 'none'; // Skjul dropdownen
                 nulstilFiltrer.style.display = 'block'; // Vis "nulstil"-knappen
                 angivSoegekriterierTekst.style.display = 'none'; /* Teksten om at angive søgekriterier ønskes ikke vist, når der er angivet søgekriterier */
-                filtreredeKoncerter.innerHTML = gratisKoncerter.outerHTML; /* */
                 filtreredeKoncerter.style.justifyContent = 'center';
                 filtreredeKoncerter.style.margin = '0 300px 200px';
                 
@@ -107,6 +110,7 @@
     
                 // Gå gennem alle gratis koncerter og vis dem
                 for (let i = 0; i < gratisKoncerter.length; i++) {
+                    gratisKoncerter[i].style.display = 'block';
                     filtreredeKoncerter.innerHTML += gratisKoncerter[i].outerHTML;
                 }
             }

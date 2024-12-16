@@ -3,15 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>404-side</title>
+    <title>Reportager</title>
     <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
     <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
-
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
-    <script src="js.js/script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <script src="js/script.js" defer></script> <!-- https://www.w3schools.com/tags/att_script_defer.asp -->
+    <script src="js/arkiv.js" defer></script>
 </head>
-
 <body>
     <header> <!-- NAVIGATION -->
         <aside class="logo-navigationsbar">
@@ -51,25 +50,91 @@
             <img src="images/burgermenu-ikon.svg" alt="Burgermenu-ikon">
           </aside>
         </nav>
-    </header>  
+    </header> 
+
     <main>
         <section class="overskrifterPaaSider">
-            <img class="gaaTilbagePil" src="images/forrige-ikon.webp" alt="Pil for at komme tilbage">
-            <h2> 404 - Siden mangler et par takter...</h2>
+            <a href="festivalen.html"><h2>Festivalen</h2></a>
+            <a href="arkiv.html"><h2 class="valgtOverskrift">Arkivet</h2></a>
         </section>
-        
-        <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
-        <article id="error-beholder">
-            <img id="error-figure" src="images/404-animation 1.webp" alt="error animation">
-           <article id="error-tekst">
-            <h2>Vi har mistet melodien her..</h2>
-            <p>Lad os hjælpe dig tilbage til den</p>
-            <p>gode musik, på én af vores</p>
-            <p>andre sider.</p>
-             <a href="program.html"><button  id="gå-til-program">Gå til program</button></a>
-            </article>
-          </article>
 
+        <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
+
+        <section id="fraArkivet">
+
+            <h2 class="overskriftIArkivet">Om festivalen</h2>
+            <article class="koncertFraDag">
+                <figure class="enkeltKoncert">
+                    <a href="fraBegyndelsen.html"><img class="kunstnerbillede" src="images/aarhusJazzFestivalHHistorieEt.webp" alt=""></a>
+                    <a href="fraBegyndelsen.html" class="pilTilTekst">Fra begyndelsen <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltKoncert">
+                    <img class="kunstnerbillede" src="images/aarhusJazzFestivalHHistorieTo.webp" alt="">
+                    <a href="#" class="pilTilTekst">Organisationen <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltKoncert">
+                    <img class="kunstnerbillede" src="images/aarhusJazzFestivalHHistorieTre.webp" alt="">
+                    <a href="#" class="pilTilTekst">De frivillige <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltKoncert">
+                    <img class="kunstnerbillede" src="images/aarhusJazzFestivalHHistorieFire.webp" alt="">
+                    <a href="#" class="pilTilTekst">Om plakaterne <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+                <img class="pilFremOgTilbage" src="images/naeste-ikon.svg" alt="Pil-tilbage-ikon">
+
+            </article>
+
+            <h2 class="overskriftIArkivet">Plakatens udvikling</h2>
+            <article class="plakater" id="foerstePlakatSide">
+                <figure class="enkeltPlakat">
+                    <a href="omPlakat.html"><img class="kunstnerbillede" src="images/plakat2025.webp" alt=""></a>
+                    <a href="omPlakat.html" class="pilTilTekst">Plakat, 2025 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat24.webp" alt="">
+                    <a href="404.html" class="pilTilTekst">Plakat, 2024 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat23.webp" alt="">
+                    <a href="404.html" class="pilTilTekst">Plakat, 2023 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat22.webp" alt="">
+                    <a href="404.html" class="pilTilTekst">Plakat 2022 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+                <img class="pilFremOgTilbage" id="skiftPlakatsideFrem" src="images/naeste-ikon.svg" alt="Pil-tilbage-ikon">
+
+            </article>
+
+            <article class="plakater" id="andenPlakatSide">
+                <img class="pilFremOgTilbage" src="images/forrige-ikon.svg" alt="Pil-frem-ikon">
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat21.webp" alt="">
+                    <a href="omPlakat.html" class="pilTilTekst">Plakat, 2025 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat20.webp" alt="">
+                    <a href="404.html" class="pilTilTekst">Plakat, 2024 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat19.webp" alt="">
+                    <a href="404.html" class="pilTilTekst">Plakat, 2023 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+
+                <figure class="enkeltPlakat">
+                    <img class="kunstnerbillede" src="images/plakat18.webp" alt="">
+                    <a href="404.html" class="pilTilTekst">Plakat 2022 <img src="images/naeste-ikon.svg" alt=""></a>
+                </figure>
+            </article>
+        </section>
     </main>
 
     <footer>
@@ -122,11 +187,3 @@
 </body>
 
 </html>
-
-<style>
-
-</style>
-
-<script>
-
-</script>

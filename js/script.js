@@ -40,4 +40,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Vælger alle elementer med klassen "tilbage-pil"
+    const gaaTilbagePil = document.getElementsByClassName("gaaTilbagePil");
+
+    // Lægger en event listener på alle elementer med denne klasse
+    for (let i = 0; i < gaaTilbagePil.length; i++) {
+        gaaTilbagePil[i].addEventListener("click", () => {
+            window.history.back();
+        });
+    }
+
 });
