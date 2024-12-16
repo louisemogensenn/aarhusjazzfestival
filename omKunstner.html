@@ -8,7 +8,8 @@
     <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
     <link rel="stylesheet" href="style.css">
-    <script src="js.js/script.js" defer></script>
+    <script src="js/script.js" defer></script>
+    <script src="js/omKunstner.js" defer></script>
 
 </head>
 <body>
@@ -145,15 +146,3 @@
 </body>
 
 </html>
-
-<script>
-    const reserverBilletKnap = document.getElementById('reserverBilletKnap');
-
-    const popupReserverBillet = document.getElementById('popup-reserverBillet');
-
-    reserverBilletKnap.addEventListener('click', () => {
-        popupReserverBillet.style.display = 'block';
-        setTimeout(() => { window.location.href = '404.html'; }, 2000);
-    });
-</script>
-

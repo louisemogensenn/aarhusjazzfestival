@@ -8,7 +8,8 @@
     <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
     <!-- Med tiden kommer linket til styles.css til at ligge her -->
     <link rel="stylesheet" href="style.css">
-    <script src="js.js/script.js" defer></script>
+    <script src="js/script.js" defer></script> <!-- https://www.w3schools.com/tags/att_script_defer.asp -->
+    <script src="js/reportager.js" defer></script>
 </head>
 <body>
     <header> <!-- NAVIGATION -->
@@ -344,42 +345,3 @@
 </body>
 
 </html>
-
-<script>
-const fraFestivalen = document.getElementById('fraFestivalen');
-
-const fraArkivet = document.getElementById('fraArkivet');
-
-const overskriftFestivalen = document.getElementById('overskriftFestivalen');
-
-const overskriftArkivet = document.getElementById('overskriftArkivet');
-
-overskriftArkivet.addEventListener('click', () => {
-    fraFestivalen.style.display = 'none';
-    fraArkivet.style.display = 'block';
-});
-
-overskriftFestivalen.addEventListener('click', () => {
-    fraArkivet.style.display = 'none';
-    fraFestivalen.style.display = 'block';
-});
-
-/*----------------------- SCRIPT FOR REPORTAGESIDEN - FRA ARKIV  ------------------------*/
-const skiftPlakatSideFrem = document.getElementById('skiftPlakatsideFrem');
-
-const skiftPlakatsideTilbage = document.getElementById('skiftPlakatsideTilbage');
-
-const foerstePlakatSide = document.getElementById('foerstePlakatSide');
-
-const andenPlakatSide = document.getElementById('andenPlakatSide');
-
-skiftPlakatSideFrem.addEventListener('click', () => {
-    foerstePlakatSide.style.display = 'none';
-    andenPlakatSide.style.display = 'block';
-});
-
-skiftPlakatsideTilbage.addEventListener('click', () => {
-    andenPlakatSide.style.display = 'none';
-    foerstePlakatSide.style.display = 'block';
-});
-</script>
