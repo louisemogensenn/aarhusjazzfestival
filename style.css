@@ -502,10 +502,20 @@ h3 { /**/
   }
   /* Streg under program/filtrer */
   .horisontal-linje {
-      margin: 20px 150px 47px; /* Afstad mellem elementer for oven og for neden er 47px og den har 277px ud til hver kant af skærmen */
+      margin: 20px 150px 47px; /* Afstad mellem elementer for oven og for neden er 47px og den har 150px ud til hver kant af skærmen */
       background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
       height: 2px; /* Angiver højden på linjen */
       border: none; /* Fjerner skyggerne omkring linjen */
+  }
+
+  @media (max-width: 390px) {
+    .overskrifterPaaSider h2 {
+      font-size: 25px;
+      margin: 10px;
+    }
+    .horisontal-linje {
+      margin: 5px;
+    }
   }
 
   /* ---------------------- NEDSTÅENDE STYLING GÆLDER FOR PROGRAMSIDNE OG FOR REPORTAGESIDEN ------------------- */
@@ -515,7 +525,7 @@ h3 { /**/
     justify-content: center;
     /* margin: 30px 210px; */
     margin: 30px 0;
-}
+  }
 
 .enkeltKoncert {
     text-align: left;
@@ -530,6 +540,10 @@ h3 { /**/
 .enkeltKoncert span {
     margin-top: 10px;
     font-size: 14px;
+}
+
+.pilTilTekst {
+  display: block;
 }
 
 .pilTilTekst img {
@@ -549,7 +563,47 @@ h3 { /**/
     font-weight: 700;
 }
 
-/* STYLING AF ARKIVSIDEN */
+.seMereLink {
+  display: none;
+}
+
+/* ------------------------------------- STYLING AF PROGRAM OG REPORTAGER I MOBIL ------------------------------------- */
+@media (max-width: 390px) {
+
+  .pilFremOgTilbage {
+    display: none;
+  }
+
+  .koncertFraDag a {
+    font-size: 10px;
+  }
+
+  .koncertFraDag {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* To kolonner */
+      gap: 5px; /* Afstand mellem billeder */
+  }
+
+  .enkeltKoncert {
+      margin: 10px 5px; /* Giv lidt afstand mellem koncerterne */
+  }
+
+  .seMereLink {
+    display: block;
+    text-align: right;
+    font-weight: bold;
+    margin-right: 29px; /* Sææter pilen på linje med billeder i skærmstørrelsen 390px*/
+  }
+
+  .kunstnerbillede {
+    width: 100%; /* Billedet fylder hele bredden af sin container */
+    max-width: 150px; /* Begræns bredden af billedet til maksimalt 150px */
+    height: auto; /* Bevarer billedets proportioner */
+  }
+
+}
+
+/* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
 
 .plakater {
   display: flex;
@@ -683,7 +737,7 @@ h3 { /**/
 
       @media (max-width: 1435px) {
         #dropdownPris {
-          display: none;
+          display: none; /* Dropdown flytter sig, og bliver fjernet ved mindre skærm*/
         }
       }
 
@@ -701,6 +755,13 @@ h3 { /**/
       #filtreredeKoncerter { /* Styling af de gratis koncerter, der vises i filtreringsfunktionen */
         display: flex;
         justify-content: space-around;
+      }
+
+      /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
+      @media (max-width: 390px) {
+        .filtreringsmuligheder {
+          display: block;
+        }
       }
 
         /* ------------------------------------- STYLING AF OM KUNSTNER OG OM KONCERT ------------------------------------- */
