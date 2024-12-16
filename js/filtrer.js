@@ -1,30 +1,4 @@
 
-    /*----------------------- SCRIPT FOR PROGRAMSIDEN ------------------------
-    const overskriftProgram = document.getElementById('overskrift-program'); // Henter elementet med id'et overskrift-program og gemmer i konstanten
-
-    const overskriftFiltrer = document.getElementById('overskriftFiltrer'); // Henter elementet med id'et overskriftFiltrer og gemmer i konstanten
-
-    const filtrerEfterBehov = document.getElementById('filtrerEfterBehov'); // Henter elementet med id'et filtrerEfterBehov og gemmer i konstanten
-
-    const program = document.getElementById('program'); // Henter elementet med id'et program og gemmer i konstanten
-
-    overskriftFiltrer.addEventListener('click', () => { // Når der klikkes på overskriftFiltrer...
-        program.style.display = 'none'; // ... skjules program-sektionen...
-        filtrerEfterBehov.style.display = 'block'; // ... og filtrer-sektionen vises
-        overskriftFiltrer.style.fontWeight = '500';
-        overskriftProgram.style.fontWeight = '300';
-    });
-
-    overskriftProgram.addEventListener('click', () => { // Når der klikkes på overskriftProgram...
-        filtrerEfterBehov.style.display = 'none'; // ... skjules filtrer-sektionen...
-        program.style.display = 'block'; // ... og program-sektionen vises
-        overskriftProgram.style.fontWeight = '500';
-        overskriftFiltrer.style.fontWeight = '300';
-    });
-
-    */
-
-    /*----------------------- SCRIPT FOR FILTRERSIDEN ------------------------*/
     const soegeikon = document.getElementById('soegeikon'); // Henter elementet med id'et soegeikon og gemmer i konstanten
 
     const popupSoegning = document.getElementById('popup-soegning'); // Henter elementet med id'et popup-soegning og gemmer i konstanten
