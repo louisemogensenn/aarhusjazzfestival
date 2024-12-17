@@ -144,7 +144,7 @@ ul { /**/
   }  
 
   /*Styling af a */
-  .navigationsbar a {
+  .navigationsbar a, .sektion-beholder h3 {
   color: #313F88; /*Definerer farven på fonten*/
   font-size: 25px; /*Definerer sørrelsen på fonten*/
   font-weight: 350; /*Definerer tykkelsen på fonten*/
