@@ -19,9 +19,13 @@
             popupSoegning.style.display = 'block'; // ... vises popup-vinduet... 
             indholdPopupProgram.innerHTML = "Angiv søgeord"; // ... og i popup-vinduet vises denne besked (indsat i et p-tag med id'et indholdPopupProgram).
         } else if (soegeFelt.value.trim().toLowerCase() === 'carlo'){ // Hvis feltets indhold i små bogstaver er 'carlo' ...
-            filtreredeKoncerter.innerHTML = carloId.outerHTML; // ... indsættes koncerten for Carlo...
+
+            filtreredeKoncerter.innerHTML = ''; // Fjerner tidligere filtrerede koncerter 
+
+            filtreredeKoncerter.appendChild(carloId); // ... indsættes koncerten for Carlo...
             carloId.style.display = 'block';
             carloId.style.margin = '20px 0 0 277px';
+            nulstilFiltrer.style.display = 'block';
             angivSoegekriterierTekst.style.display = 'none'; // .. og teksten med "Angiv dine søgekriterier" fjernes ...
         } else { // Hvis det indtastede i feltet ikke matcher søgekriteriet 'carlo' og heller ikke er tomt...
             popupSoegning.style.display = 'block'; // ... vises popup-vinduet... 
@@ -82,10 +86,12 @@
                 angivSoegekriterierTekst.style.display = 'none'; /* Teksten om at angive søgekriterier ønskes ikke vist, når der er angivet søgekriterier */
     
                 // Gå gennem alle gratis koncerter og vis dem
-                for (let i = 0; i < gratisKoncerter.length; i++) {
-                    gratisKoncerter[i].style.display = 'block';
-                    filtreredeKoncerter.innerHTML += gratisKoncerter[i].outerHTML;
-                }
+                gratisKoncerter.forEach(koncert => {
+                    // Clone the element to avoid moving the original from the DOM
+                    const koncertKopi = koncert.cloneNode(true);
+                    koncertKopi.style.display = 'block';
+                    filtreredeKoncerter.appendChild(koncertKopi);
+                });
             }
         });
     });
