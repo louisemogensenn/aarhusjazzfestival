@@ -1,23 +1,21 @@
 <!DOCTYPE html>
-<html lang="da"> <!-- sprogkode dansk-->
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reportager</title>
-    <meta name="description" content="Aarhus Jazz Festival er...."> <!-- SEO beskrivelse, vises i søgeresultatet-->
-    <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/> <!-- Lille ikon i faneblad -->
-    <!-- Med tiden kommer linket til styles.css til at ligge her -->
+    <meta name="description" content="Aarhus Jazz Festival er....">
+    <link rel="icon" href="images/aarhusJazzFestival-ikon.webp" type="image/x-icon"/>
     <link rel="stylesheet" href="style.css">
-    <script src="js/script.js" defer></script> <!-- https://www.w3schools.com/tags/att_script_defer.asp -->
+    <script src="js/script.js" defer></script>
 </head>
 <body>
-    <header> <!-- NAVIGATION -->
+    <header>
         <aside class="logo-navigationsbar">
-            <a href="index.html"> <!--Linker til forsiden, når der klikkes på logo-->
+            <a href="index.html">
                 <img src="images/aarhus-jazz-festival-logo.svg" alt="Logo">
             </a>
         </aside>
-
         <nav>
             <ul class="navigationsbar">
                 <li>
@@ -27,7 +25,6 @@
                         <li><a href="filtrer.html"> Filtrer efter behov</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="praktisk.html">Praktisk</a>
                     <ul class="drop-down">
@@ -36,7 +33,6 @@
                         <li><a href="praktisk.html"> Musikere</a></li>
                     </ul>
                 </li>
-
                 <li>
                     <a href="festivalen.html">Reportager</a>
                     <ul class="drop-down">
@@ -45,9 +41,9 @@
                     </ul>
                 </li>
             </ul>
-          <aside class="burgermenu">
-            <img src="images/burgermenu-ikon.svg" alt="Burgermenu-ikon">
-          </aside>
+            <aside class="burgermenu">
+                <img src="images/burgermenu-ikon.svg" alt="Burgermenu-ikon">
+            </aside>
         </nav>
     </header>   
 
@@ -57,151 +53,74 @@
             <a href="arkiv.html"><h2>Arkivet</h2></a>
         </section>
 
-        <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
+        <hr class="horisontal-linje">
 
-        <section>
+        <!-- Fredag -->
+        <h2 class="datoForKoncerter">Fra fredag d. 11. juli</h2>
+        <article class="koncertFraDag">
+            <figure class="enkeltKoncert">
+                <a href="omKoncerten.html"><img src="images/carloDayyani.webp" alt="Carlo Dayyani Trio (DK)"></a>
+                <a href="omKunstner.html" class="pilTilTekst">Carlo Dayyani Trio (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/kalpi.webp" alt="Kalpi (DK)">
+                <a href="#" class="pilTilTekst">Kalpi (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/oscarPloyart.webp" alt="Oscar Ployart (DK/NL)">
+                <a href="#" class="pilTilTekst">Oscar Ployart (DK/NL) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/antonioDayyani.webp" alt="Antonio & Friends (DK)">
+                <a href="#" class="pilTilTekst">Antonio & Friends (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+        </article>
 
-            <h2 class="datoForKoncerter">Fra fredag d. 11. juli</h2>
+        <!-- Lørdag -->
+        <h2 class="datoForKoncerter">Fra lørdag d. 12. juli</h2>
+        <article class="koncertFraDag">
+            <figure class="enkeltKoncert">
+                <img src="images/jamesLoveLess.webp" alt="James Loveless (UK)">
+                <a href="#" class="pilTilTekst">James Loveless (UK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/emmaPilgaardTrio.webp" alt="Emma Pilgaard Trio (DK)">
+                <a href="#" class="pilTilTekst">Emma Pilgaard Trio (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/erlingsJazzJam.webp" alt="Erlings Jazz Jam (DK)">
+                <a href="#" class="pilTilTekst">Erlings Jazz Jam (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/modouTraore.webp" alt="Modou Traore (US)">
+                <a href="#" class="pilTilTekst">Modou Traore (US) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+        </article>
 
-            <article class="koncertFraDag">
-                <figure class="enkeltKoncert">
-                    <a href="omKoncerten.html"><img src="images/carloDayyani.webp" alt="Carlo Dayyani Trio (DK)"></a>
-                    <a href="omKunstner.html" class="pilTilTekst">Carlo Dayyani Trio (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/oscarPloyart.webp" alt="Oscar Ployart (DK/NL)">
-                    <a href="#" class="pilTilTekst">Oscar Ployart (DK/NL) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/antonioDayyani.webp" alt="Antonio & Friends (DK)">
-                    <a href="#" class="pilTilTekst">Antonio & Friends (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/kalpi.webp" alt="Kalpi (DK)">
-                    <a href="#" class="pilTilTekst">Kalpi (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-                <img class="pilFrem" src="images/naeste-ikon.svg" alt="Pil-frem-ikon">
-
-            </article>
-
-            <h2 class="datoForKoncerter">Fra lørdag d. 12. juli</h2>
-
-            <article class="koncertFraDag">
-                <figure class="enkeltKoncert">
-                    <img src="images/emmaPilgaardTrio.webp" alt="Billede af Emma Pilgaard">
-                    <a href="#" class="pilTilTekst">Emma Pilgaard Trio (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/modouTraore.webp" alt="Billede af Modou Traore">
-                    <a href="#" class="pilTilTekst">Modou Traore (US) <img src="images/naeste-ikon.svg" alt="Næstiekon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/erlingsJazzJam.webp" alt="Billede af Erlings Jazz Jam">
-                    <a href="#" class="pilTilTekst">Erlings Jazz Jam (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/jamesLoveLess.webp" alt="Billede af James Loveless">
-                    <a href="#" class="pilTilTekst">James Loveless (UK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-                <img class="pilFrem" src="images/naeste-ikon.svg" alt="Pil-frem-ikon">
-
-            </article>
-
-            <h2 class="datoForKoncerter">Fra søndag d. 13. juli</h2>
-
-            <article class="koncertFraDag">
-                <figure class="enkeltKoncert">
-                    <img src="images/lazosDCuba.webp" alt="Billede af Lazos D' Cuba">
-                    <a href="#" class="pilTilTekst">Lazos D' Cuba (CU) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/musvit.webp" alt="Billede af Musvit">
-                    <a href="#" class="pilTilTekst">Musvit (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/moerch.webp" alt="Billede af Mørch">
-                    <a href="#" class="pilTilTekst">Mørch (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/leftUpRight.webp" alt="Billede af Left Up Right">
-                    <a href="#" class="pilTilTekst">Left Up Right (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <img class="pilFrem" src="images/naeste-ikon.svg" alt="Pil-frem-ikon">
-                
-            </article>
-
-            <h2 class="datoForKoncerter">Fra mandag d. 14. juli</h2>
-
-            <article class="koncertFraDag">
-                <figure class="enkeltKoncert">
-                    <img src="images/triatlon.webp" alt="Billede af Triatlon">
-                    <a href="#" class="pilTilTekst">Triatlon (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/nordlys.webp" alt="Billede af Nordlys"> <!-- DU ER KOMMET HERTIL -->
-                    <a href="#" class="pilTilTekst">Nordlys (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/dayyaniAkrofi.webp" alt="Billede af Dayyani & Akrofi">
-                    <a href="#" class="pilTilTekst">3X Dayyani + Akrofi  <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/featherdrop.webp" alt="Billede af Featherdrop">
-                    <a href="#" class="pilTilTekst">Featherdrop (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
-                </figure>
-
-                <img class="pilFrem" src="images/naeste-ikon.svg" alt="Pil-frem-ikon">
-                
-            </article>
-
-            <h2 class="datoForKoncerter">Fra tirsdag d. 15. juli</h2>
-
-            <article class="koncertFraDag">
-                <figure class="enkeltKoncert">
-                    <img src="images/smilingLis.webp" alt="Billede af Smiling Lis">
-                    <a href="#" class="pilTilTekst">Smiling Lis (UK) <img src="images/naeste-ikon.svg" alt="Billede af Lazos D' Cuba"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/musvit.webp" alt="Billede af Musvit">
-                    <a href="#" class="pilTilTekst">Musvit (DK) <img src="images/naeste-ikon.svg" alt="Billede af Musvit"></a>
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/moerch.webp" alt="Billede af Mørch">
-                    <a href="#" class="pilTilTekst">Mørch (DK) <img src="images/naeste-ikon.svg" alt="Billede af Mørch"></a>
-
-                </figure>
-
-                <figure class="enkeltKoncert">
-                    <img src="images/leftUpRight.webp" alt="Billede af Left Up Right">
-                    <a href="#" class="pilTilTekst">Left Up Right (DK) <img src="images/naeste-ikon.svg" alt="Billede af Left Up Right"></a>
-                </figure>
-
-                <img class="pilFrem" src="images/naeste-ikon.svg" alt="Pil-frem-ikon">
-                
-            </article>
-
-        </section>
-
+        <!-- Søndag -->
+        <h2 class="datoForKoncerter">Fra søndag d. 13. juli</h2>
+        <article class="koncertFraDag">
+            <figure class="enkeltKoncert">
+                <img src="images/musvit.webp" alt="Musvit (DK)">
+                <a href="#" class="pilTilTekst">Musvit (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/moerch.webp" alt="Mørch (DK)">
+                <a href="#" class="pilTilTekst">Mørch (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/leftUpRight.webp" alt="Left Up Right (DK)">
+                <a href="#" class="pilTilTekst">Left Up Right (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+            <figure class="enkeltKoncert">
+                <img src="images/lazosDCuba.webp" alt="Lazos D' Cuba (CU)">
+                <a href="#" class="pilTilTekst">Lazos D' Cuba (CU) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
+            </figure>
+        </article>
     </main>
 
     <footer>
+        <hr>
         <div class="footer-indhold">
 
             <div class="venstre-sektion">
@@ -261,7 +180,5 @@
         </aside>
         
     </footer>
-    
 </body>
-
 </html>

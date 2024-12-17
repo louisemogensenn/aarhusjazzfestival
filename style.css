@@ -25,6 +25,12 @@ footer {
   padding-top: 40px ;
 }
 
+footer hr {
+    background-color: var(--sekundaerFarve); /* Angiver farven på linjen */
+      height: 2px; /* Angiver højden på linjen */
+      border: none; /* Fjerner skyggerne omkring linjen */
+}
+
 .footer-indhold { /*Overodnet sektion til hele footer indhold*/
   display: flex;
 }
