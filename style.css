@@ -703,7 +703,7 @@ ul { /**/
         font-weight: 400;
       }
 
-      #kunstnerNavn {
+      #kunstnerNavn, #underoverskriftFraBegyndelsen {
         font-size: 30px;
       }
 
