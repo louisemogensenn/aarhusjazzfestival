@@ -657,13 +657,12 @@ ul { /**/
 
       .billedeOgInfoKoncert, #billedeOgInfoPlakat, #billedeOgInfoFraBegyndelsen {
           display: flex;
-          justify-content: space-between;
-          margin: 0 277px;
+          justify-content: left;
+          margin: 0 239px;
       }
 
       .billedeOgInfoKoncert img, .billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
           height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
-          margin-left: -38px; /* Dette giver billedet sin placering på linje med den horisontale linje og den beskrivende tekst under sig*/
       }
 
       #billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
@@ -675,6 +674,7 @@ ul { /**/
           display: flex;
           flex-direction: column;
           justify-content: space-around;
+          margin-left: 100px;
       }
 
       .koncertInformation h3, #plakatinformation h3, #fraBegyndelsenInformation h3 {
