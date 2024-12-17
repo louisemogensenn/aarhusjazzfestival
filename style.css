@@ -498,9 +498,41 @@ ul { /**/
 }
 
 #bodyProgram{
-  background-image: url('/images/baggrundsbilledeProgram.png');
+  background-image: url('/images/baggrundsbilledeProgram.webp');
   background-size: cover;
 } 
+
+#bodyPraktisk {
+  background-image: url('images/baggrundsbilledePraktisk.webp');
+}
+
+#bodyOmPlakat {
+  background-image: url('images/baggrundsbilledeOmPlakat.webp');
+}
+
+#bodyOmKunstner {
+  background-image: url('images/baggrundsbilledeOmKunstner.webp');
+}
+
+#bodyOmKoncerten {
+  background-image: url('images/baggrundsbilledeOmKoncerterne.webp');
+}
+
+#bodyFraBegyndelsen {
+  background-image: url('images/baggrundsbilledeFraBegyndelsen.webp');
+}
+
+#bodyFiltrer {
+  background-image: url('images/baggrundsbilledeFiltrer.webp');
+}
+
+#bodyFestivalen {
+  background-image: url('images/baggrundsbilledeFestivalen.webp');
+}
+
+#bodyArkiv {
+  background-image: url('images/baggrundsbilledeArkiv.webp');
+}
 /* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
 
 .plakater {
