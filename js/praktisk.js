@@ -105,7 +105,7 @@ if (spoergsmaal === "Hvad er parkeringsmulighederne?") {
     // Tilføjer klik-hændelse til knappen
     viderstilKnap.addEventListener('click', () => {
         // Åbner et nyt tomt vindue (eller specifik side)
-        window.open('parkeringskort.html', '_blank'); /* Vi har ikke lavet et parkeringskort? */
+        window.open('404.html', '_blank'); /* Vi har ikke lavet et parkeringskort? */
     });
     
     // Tilføjer knappen til svar-elementet
@@ -129,7 +129,7 @@ if (spoergsmaal === "Hvor kan jeg se fastivalens plakater?") {
     viderstilKnap.textContent = 'Se festivalens plakater';
     viderstilKnap.classList.add('praktisk-action-knap');
     viderstilKnap.addEventListener('click', () => {
-        window.open('reportager.html', '_blank');
+        window.open('arkiv.html', '_blank');
     });
     svarElement.appendChild(viderstilKnap);
 }
