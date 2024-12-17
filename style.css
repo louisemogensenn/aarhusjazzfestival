@@ -21,138 +21,73 @@
 
 /*--------------------------------------------------------------------------------------------------------------------------------------------- */
 
-/*Hvad er det her? Skal det ikke bare slettes?*/
 footer {
-   background-color: #EDE1D0; /*Genereller regler for footer*/
-   padding-top: 40px ;
-   font-family: Arial, sans-serif;
- }
+  padding-top: 40px ;
+}
 
- #tilmeld-email-tekst {
-  font-size: 200%;
+.footer-indhold { /*Overodnet sektion til hele footer indhold*/
+  display: flex;
+}
+
+.email-tilmeld { /*Instillinger for udseende af input felt til email tildmelding*/
+  background-color: var(--knapfarve); /* Giver feltet til e-mailen en baggrundsfarve */
+  padding: 13.5px 115px; /* Sææter højden og bredden på e-mail-feltet */
+  text-align: center; /* Teksen der står placeres i midten af feltet */
+  font-size: 12px; /* Skriftstørrelsen */
+  border: solid #313F88; /* Kantfarven på boksen og stregtypen */
+}
+
+#tilmeld-knap { /*Instillinger for email tilmeld knap*/
+  background-color: var(--sekundaerKnapfarve); /* Giver knappen en baggrundsfarve */
+  padding: 12px 25px; /* Sætter størrelsen på tilmeldknappen */
+  text-align: center; /* Placerer teksten i midten af knappen */
+  font-size: 14px; /* Skriftstørrelsen på teksten 'Tilmeld' i knappen */
   font-weight: bold;
- }
- 
- .footer-indhold { /*Overodnet sektion til hele footer indhold*/
-   display: flex;
-   justify-content: space-between;
- }
-
- .email-tilmeld { /*Instillinger for udseende af input felt til email tildmelding*/
-   background-color: var(--knapfarve);
-   padding: 3% 20%;
-   text-align: center;
-   font-size: 80%;
-   border: solid #313F88;
- }
-
- #tilmeld-knap { /*Instillinger for email tilmeld knap*/
-   background-color: var(--sekundaerKnapfarve);
-   padding: 3% 7%;
-   text-align: center;
-   font-size: 80%;
-   color: #313F88;
-   border: solid #313F88;
-   cursor: pointer;
- }
-
- #tilmeld-knap:hover { /*Hover effekt til email tilmeld knap*/
-   background-color: var(--sekundaerKnapfarve);
-   padding: 3% 7%;
-   text-align: center;
-   font-size: 80%;
-   font-weight: bolder; /*Gør skriften federe, ved hover*/
-   color: #313F88;
-   border-color: #313F88;
-   cursor: pointer;
- }
- 
- .beholder {
-   display: flex; /* Gør containeren til en flex-container */
+  border: solid #313F88; /* Kantfarven på boksen og stregtypen */
+  cursor: pointer; /* Når man holder musen over knappen */
+  vertical-align: bottom;
 }
 
 .venstre-sektion {
-   padding-left: 30px;
+  flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
+  padding-left: 30px; /* Samme afstand som logo */
 }
 
-/*Giver footer samme design som nav */
+/*Giver footer samme design som nav - smid evt. denne klasse på ved styling af header? */
 .hojre-sektion {
-    display: flex; /*Sikrer placeringen af elementerne*/
-    gap: 150px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
-    padding-right: 3%;
+   display: flex; /* Navigationen placeres på række */
+   gap: 68px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter */
+   padding-right: 30px; /* Samme afstand som headerens navigation */
 }
-  
 
 /* Skal ændres - overruler andre stylings og skal være mere specifik */
- h1{
-   color: #313F88;
- }
+ul { /**/
+  list-style-type: none; /* Fjerner prikker ved listeelementer */
+  padding: 0; /* Sørger for alle elementerne følger samme venstre kant */
+}
 
-/* Skal ændres - overruler andre stylings og skal være mere specifik */ 
-h3 { /**/
-   font-size: 25px;
-   margin-bottom: 20px;
-   color: #313F88;
-   font-weight: normal;
- }
-
- 
-/* Skal ændres - overruler andre stylings og skal være mere specifik */
- ul { /**/
-   list-style-type: none;
-   padding: 0;
- }
- 
-/* Skal ændres - overruler andre stylings og skal være mere specifik */
- li {
-   margin-bottom: 10px;
- }
-
- .bund-beholder { /* Ny container for at holde de to sektioner */
-   display: flex;
-   justify-content: space-between; /* Placerer dem på hver sin side */
-   margin-top: 40px; /* Tilføj margin for afstand */
-   width: 100%; /* Sørg for at containeren strækker sig over hele bredden */
+.bund-beholder { /* Ny container for at holde de to sektioner */
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
 }
 
 .bund-sektion { /* instillinger for privatlivspolitik */
-   text-align: right; /* Justerer tekst til højre */
-   margin:40px 30px;
-   font-size: 14px;
-   flex: 1; /* Giver sektionen plads til at fylde */
-   color: #313F88;
-}
-
-.bund-sektion p { 
-  margin: 0;
-  padding-right: 5px;
+  font-size: 14px;
 }
 
 .bund-sektion-socials { /* instillinger for sociale medier link */
-   text-align: left; /* Justerer tekst til venstre */
-   margin:40px 30px;
-   font-size: 14px;
-   flex: 1; /* Giver sektionen plads til at fylde */
-   color: #313F88;
+  margin: 40px 30px; /* Placerer link 40px fra top og 30px fra kant*/
+  flex: 1; /* Giver sektionen plads til at fylde */
 }
 
 .bund-sektion-socials a { /* Tilføj margin mellem sociale links */
-   margin-right: 40px; /* Juster værdien for at ændre afstanden */
+  margin-right: 65px; /* skaber afstanden mellem hver link */
 }
 
- .fjern-link { /**/
-   color: #313F88; 
-   text-decoration: none; /* fjerner underlinje */
-   cursor: pointer; /* ændrer mus til pointer */
+.bund-sektion-socials a:hover {
+   font-weight: 700;
 }
-
-.fjern-link:hover {
-   color: #313F88; 
-   text-decoration: none; /* fjerner underlinje */
-   font-weight: bold;
-   cursor: pointer; /* ændrer mus til pointer */
-}
-
 
 /* ------------------------------------  Sponser slide ------------------------------------ */
 
@@ -209,7 +144,7 @@ h3 { /**/
   }  
 
   /*Styling af a */
-  .navigationsbar a {
+  .navigationsbar a, .sektion-beholder h3{
   color: #313F88; /*Definerer farven på fonten*/
   font-size: 25px; /*Definerer sørrelsen på fonten*/
   font-weight: 350; /*Definerer tykkelsen på fonten*/
@@ -241,11 +176,15 @@ h3 { /**/
   }
   
   /* Stuling af dropdown a */
-  .drop-down li a {
+  .drop-down li a, .sektion-beholder ul li a {
   display: block; /* Gør undermenulinks klikbare på hele bredden */
   white-space: nowrap; /* Forhindrer at links bryder over flere linjer */
   font-size: 20px;
   font-weight: 300;
+  }
+
+  .sektion-beholder ul li a {
+    font-size: 15px;
   }
 
 
