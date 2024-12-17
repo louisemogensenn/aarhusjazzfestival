@@ -132,13 +132,14 @@ ul { /**/
   100% { transform: translateX(-100%); } /* definere hvornår loopet begynder, i dette tilfælde begynder det således at den stater over når sidste logo er forsvundet ud af skærmen til venstre */
 }
 
- /* -------------  GENERELT - HEADER -------------- */
+
+ /* ------------------------------------  GENERELT - HEADER ------------------------------------ */
  header {
   display: flex; /*Sikrer placeringen af elementerne*/
   justify-content: space-between; /* Placerer logo og navigation med plads imellem */
   }
 
-/* ---------------  GENERELT - NAVIGATIONSBAR -------------- */
+/* ------------------------------------  GENERELT - NAVIGATIONSBAR ------------------------------------ */
   /* Stling af logo */
   .logo-navigationsbar img {
   max-width: 300px; /*Max dimentionering, som angivet på prototypen i figma*/
@@ -160,7 +161,7 @@ ul { /**/
   }  
 
   /*Styling af a */
-  .navigationsbar a, .sektion-beholder h3 {
+  .navigationsbar a {
   color: #313F88; /*Definerer farven på fonten*/
   font-size: 25px; /*Definerer sørrelsen på fonten*/
   font-weight: 350; /*Definerer tykkelsen på fonten*/
@@ -174,7 +175,7 @@ ul { /**/
   }
 
 
-/* --------------  GENERELT - DROP-DOWN MENUER ---------------- */
+/* ------------------------------------  GENERELT - DROP-DOWN MENUER ------------------------------------ */
   /* Styling af dropdown-elementer */
   .drop-down {
   display: none; /* Skjuler undermenuer som standard */
@@ -192,14 +193,15 @@ ul { /**/
   }
   
   /* Stuling af dropdown a */
-  .drop-down li a, .sektion-beholder ul li a {
+  .drop-down li a {
   display: block; /* Gør undermenulinks klikbare på hele bredden */
   white-space: nowrap; /* Forhindrer at links bryder over flere linjer */
   font-size: 20px;
   font-weight: 300;
   }
 
-/* ----------------- GENERELT - BURGERMENU ---------------  */
+
+/* ------------------------------------ GENERELT - BURGERMENU ------------------------------------  */
   /* Styler burger ikon */
   .burgermenu img{
       max-width: 30px; /*Definerer størrelsen på burger-ikon*/
@@ -217,17 +219,14 @@ ul { /**/
   }
  
 
-/* ------------  RESPONSIVT -------------------- */
+/* ------------------------------------  RESPONSIVT - sikrer dropdown ved hover på desktop ------------------------------------ */
   @media (min-width: 391px) {
       .navigationsbar > li:hover .drop-down {
           display: block;
       }
-      .forside-animation-mobil{
-        display: none;
-      } 
   }
- 
-/* ---------  RESPONSIVITET - NAV TIL BURGER ---------------  */
+
+/* ------------------------------------  RESPONSIVITET - NAV TIL BURGER ------------------------------------  */
   /* Skjuler alm. nav., når burgermenu er aktiv */
   @media (max-width: 390px) {
   .burgermenu {
@@ -295,22 +294,14 @@ ul { /**/
       font-size: 30px;
   }
 
-  section .forside-animation {
-    display: none;
-  }
-
-  .forside-tekst {
-    display: none;
-  }
-
 }
 
-/* ---------------- FORSIDE ELEMENTER ------------------*/
+/* ------------------------------------ FORSIDE ELEMENTER ---------------------------------------------*/
   /* Styling af felxboks, som styrer både tekst og animation*/
   .forside-animation {
     display: flex; /*Giver plads til alle elementer i flexboksen*/
     justify-content: center; /*Placering vandret*/
-    /* align-items: top; /* Placering lodret*/
+    align-items: top; /*Placering lodret*/
     margin: 0; /*Fjener luft omkring*/
   }
 
@@ -356,6 +347,23 @@ ul { /**/
     .forside-tekst a{
       font-size:25px; /*Definerer størrelsen på "Se program"*/
     }
+
+
+ /*------------------ RESPONSIV - FORSIDE------------------ */
+    /*Skifter forsidelementer i mobilversion*/
+    @media (max-width: 390px) {
+      .forside-animation{
+        display: none;
+      }
+    }
+
+  /*Skifter forsidelementer i desktopversion*/
+    @media (min-width: 391px) {
+      .forside-animation-mobil{
+        display: none;
+      } 
+    }
+
 
 /*----------------- FORSIDE ELEMENTER - MOBIL ------------------ */
   /* Styling af animationen */
