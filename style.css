@@ -161,7 +161,7 @@ ul { /**/
   }  
 
   /*Styling af a */
-  .navigationsbar a {
+  .navigationsbar a, .sektion-beholder h3 { /*Definerer også for footeren*/
   color: #313F88; /*Definerer farven på fonten*/
   font-size: 25px; /*Definerer sørrelsen på fonten*/
   font-weight: 350; /*Definerer tykkelsen på fonten*/
@@ -193,7 +193,7 @@ ul { /**/
   }
   
   /* Stuling af dropdown a */
-  .drop-down li a {
+  .drop-down li a, .sektion-beholder ul li a { /*Definerer også for footeren*/
   display: block; /* Gør undermenulinks klikbare på hele bredden */
   white-space: nowrap; /* Forhindrer at links bryder over flere linjer */
   font-size: 20px;
@@ -294,6 +294,9 @@ ul { /**/
       font-size: 30px;
   }
 
+  footer {
+    display: none;
+  }
 }
 
 /* ------------------------------------ FORSIDE ELEMENTER ---------------------------------------------*/
