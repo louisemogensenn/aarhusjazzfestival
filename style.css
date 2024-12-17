@@ -647,8 +647,6 @@ ul { /**/
       }
 
         /* ------------------------------------- STYLING AF OM KUNSTNER OG OM KONCERT ------------------------------------- */
-
-
       .gaaTilbagePil {
           width: 24px;
           height: 24px;
@@ -657,15 +655,15 @@ ul { /**/
           margin-left: 253px; /* placerer pilen på linje med linjen under sig */
       }
 
-
       .billedeOgInfoKoncert, #billedeOgInfoPlakat, #billedeOgInfoFraBegyndelsen {
           display: flex;
-          justify-content: space-around;
+          justify-content: space-between;
           margin: 0 277px;
       }
 
-      .billedeOgInfoKoncert img {
+      .billedeOgInfoKoncert img, .billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
           height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
+          margin-left: -38px; /* Dette giver billedet sin placering på linje med den horisontale linje og den beskrivende tekst under sig*/
       }
 
       #billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
@@ -676,11 +674,20 @@ ul { /**/
       .koncertInformation, #plakatinformation, #fraBegyndelsenInformation {
           display: flex;
           flex-direction: column;
-          justify-content: space-around;
+          justify-content: space-between;
+      }
+
+      .koncertInformation h3, #plakatinformation h3, #fraBegyndelsenInformation h3 {
+        font-weight: 400;
+      }
+
+      #kunstnerNavn {
+        font-size: 30px;
       }
 
       #kunstnerNavn, #beskrivelseAfKunstnerOverskrift, #underoverskriftFraBegyndelsen {
           font-weight: bold;
+          margin-bottom: 40px;
       }
 
       #beskrivelseAfKunstner {
