@@ -485,7 +485,7 @@ ul { /**/
 
 .enkeltPlakat img {
   width: 216.66px; /* Følger andre billders størrelser i bredden */
-  max-height: 377.5px; /* Sikrer, at alle plakater er lige høje (følger laveste fællesnævner */
+  max-height: 292.5px; /* Sikrer, at alle plakater er lige høje (følger laveste fællesnævner */
 }
 
 .enkeltPlakat p {
