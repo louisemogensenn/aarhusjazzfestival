@@ -27,17 +27,20 @@ footer {
    padding-top: 40px ;
    font-family: Arial, sans-serif;
  }
+
+ #tilmeld-email-tekst {
+  font-size: 200%;
+  font-weight: bold;
+ }
  
  .footer-indhold { /*Overodnet sektion til hele footer indhold*/
-   max-width: 1400px;
-   margin: 0;
    display: flex;
    justify-content: space-between;
  }
 
  .email-tilmeld { /*Instillinger for udseende af input felt til email tildmelding*/
    background-color: var(--knapfarve);
-   padding: 2% 12%;
+   padding: 3% 20%;
    text-align: center;
    font-size: 80%;
    border: solid #313F88;
@@ -45,7 +48,7 @@ footer {
 
  #tilmeld-knap { /*Instillinger for email tilmeld knap*/
    background-color: var(--sekundaerKnapfarve);
-   padding: 2% 2%;
+   padding: 3% 7%;
    text-align: center;
    font-size: 80%;
    color: #313F88;
@@ -55,7 +58,7 @@ footer {
 
  #tilmeld-knap:hover { /*Hover effekt til email tilmeld knap*/
    background-color: var(--sekundaerKnapfarve);
-   padding: 2% 2%;
+   padding: 3% 7%;
    text-align: center;
    font-size: 80%;
    font-weight: bolder; /*Gør skriften federe, ved hover*/
@@ -69,17 +72,15 @@ footer {
 }
 
 .venstre-sektion {
-   flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
    padding-left: 30px;
 }
 
 /*Giver footer samme design som nav */
 .hojre-sektion {
     display: flex; /*Sikrer placeringen af elementerne*/
-    gap: 68px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
-    margin: 0; 
-    padding-right: 30px; 
-    }
+    gap: 150px; /*Laver mellemrum, vandret, mellem de enkelte navigationspunkter*/
+    padding-right: 3%;
+}
   
 
 /* Skal ændres - overruler andre stylings og skal være mere specifik */
@@ -796,9 +797,9 @@ h3 { /**/
 
 #gå-til-program { /*gå til program knappen*/
   background-color: var(--sekundaerKnapfarve);
-  padding: 1% 2%;
+  padding: 5% 7%;
   text-align: center;
-  font-size: 80%;
+  font-size: 110%;
   color: #313F88;
   border: solid #313F88;
   cursor: pointer;
@@ -809,8 +810,8 @@ h3 { /**/
 }
 
 #error-figure{
-  flex: 1; /* Giver denne sektion mulighed for at vokse og fylde tilgængelig plads */
-  padding-left: 30px;
+  width: 40%;
+  padding-left: 22%;
 }
 
 #error-tekst{
