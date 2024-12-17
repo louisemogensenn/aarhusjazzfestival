@@ -15,7 +15,7 @@
 * {
    font-family: 'Heebo', 'Times New Roman', Times, serif;
    color: var(--sekundaerFarve);
-   background-color: var(--primaerFarve);
+   /* background-color: var(--primaerFarve); */
    text-decoration: none; /* Fjerner underline fra alle links */
 }
 
@@ -496,6 +496,11 @@ ul { /**/
     font-weight: 700;
     margin-left: 277px;
 }
+
+#bodyProgram{
+  background-image: url('/images/baggrundsbilledeProgram.webp');
+  background-size: cover;
+} 
 /* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
 
 .plakater {
