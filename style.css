@@ -506,13 +506,7 @@ ul { /**/
   display: none;
 }
 
-  /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */
-  
-  /*
-      #filtrerEfterBehov {
-          display: none;
-      }
-  */   
+  /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */ 
   
       #filtreringsmuligheder {
           display: flex;
@@ -631,7 +625,7 @@ ul { /**/
       }
 
       .dropdownPrisMulighed {
-        background-color: var(--knapfarve);
+        background-color: transparent;
         padding: 20px;
         text-align: left;
         cursor: pointer;

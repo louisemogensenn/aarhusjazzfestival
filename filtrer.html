@@ -56,19 +56,21 @@
         <!-- --------------------------DETTE INDHOLD ER FOR PROGRAM-SIDEN -------------------------- -->
         <section class="overskrifterPaaSider">
             <a href="program.html"><h2>Program</h2></a>
-            <a href="filtrer.html"><h2 class="valgtOverskrift">Filtrér efter behov</h2></a>
+            <a href="filtrer.html"><h2>Filtrér efter behov</h2></a>
         </section>
 
         <hr class="horisontal-linje"> <!-- horisontal linje, der skal markere overgangen fra overskrifter til indhold på siden -->
 
-        <article id="filtrerEfterBehov"> 
+        <article> 
 
+            <!-- Søgefeltet og søgeikonet på siden - samt et tekstfelt, nulstil, der kun vises, når der er valgt filtre-->
             <aside id="soegefeltOgIkon">
                 <input id="soegefelt" type="search" placeholder="Søg...">
                 <img id="soegeikon" src="images/soeg-ikon.svg" alt="Søgeikon">
                 <p id="nulstilFiltrer">&times; nulstil</p>
             </aside>
 
+            <!-- Knapperne, der angiver filtereringsmulighederne -->
             <figure id="filtreringsmuligheder">
                 <button>DATO</button>
                 <button id="spillestedKnap">SPILLESTED</button>
@@ -76,24 +78,26 @@
                 <button id="prisKnap">PRIS</button>
             </figure>
 
+            <!-- Den dropdown, der viser prisniveauerne og hvad, der kan sorteres efter-->
             <aside id="dropdownPris">
-                <div class="dropdownPrisMulighed">GRATIS</div>
-                <div class="dropdownPrisMulighed">UNDER 100 KR.</div>
-                <div class="dropdownPrisMulighed">OVER 100 KR.</div>
+                <p class="dropdownPrisMulighed">GRATIS</p> <!-- Denne knap er den eneste med funktionalitet-->
+                <p class="dropdownPrisMulighed">UNDER 100 KR.</p>
+                <p class="dropdownPrisMulighed">OVER 100 KR.</p>
             </aside> 
 
             <h2 id="angivSoegekriterierTekst">Angiv dine søgekriterier</h2>
 
-            <section id="filtreredeKoncerter"></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier -->
+            <section id="filtreredeKoncerter"></section> <!-- Denne section er tom og bruges til at indsætte indhold i, når der er angivet kriterier. Se filtrer.js -->
 
         </article>
 
         <!-- Besked om, at søgningen ikke gav nogen resultater-->
         <aside id="popup-soegning">
-            <button id="lukSoegningPopUp">&times;</button>
-            <p id="indholdPopupProgram"></p> <!-- Beskeden indsættes her med JavaScript -->
+            <button id="lukSoegningPopUp">&times;</button> <!-- Kryds, der bruges som lukekknap -->
+            <p id="indholdPopupProgram"></p> <!-- Beskeden indsættes her med JavaScript - se filtrer.js -->
         </aside>
 
+        <!-- De koncerter, der er gratis -->
         <figure class="enkeltKoncert gratisKoncert gratisKoncertFiltrer" id="carloId">
             <a href="omKunstner.html"><img src="images/carloDayyani.webp" alt="Carlo Dayyani Trio (DK)"></a>
             <a href="omKunstner.html" class="pilTilTekst">Carlo Dayyani Trio (DK) <img src="images/naeste-ikon.svg" alt="Næsteikon"></a>
