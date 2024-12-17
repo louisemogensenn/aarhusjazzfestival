@@ -578,13 +578,21 @@ h3 { /**/
 
       #filtreringsmuligheder button {
           flex: 1; /* Sørger for, at knapperne fylder lige meget */
-          margin: 10px; /* Tilføjer en lille afstand mellem knapperne */
           text-align: center; /* Centrerer teksten i knappen */
           height: 67px;
           width: 219px;
           background-color: var(--knapfarve);
           font-size: 20px;
           border: none;
+          padding: 0;
+      }
+
+      #spillestedKnap {
+        margin: 0 10px;
+      }
+
+      #genreKnap {
+        margin-right: 10px;
       }
 
       /* Popup-besked */
@@ -593,33 +601,47 @@ h3 { /**/
           margin: 50px 0 250px;
           font-weight: 300;
           font-size: 25px;
-
       }
 
-      #soegefeltOgIkon { /* style mig mere :)*/
-        text-align: center;
-      }
+      #soegefeltOgIkon {
+        position: relative; /* For at placere ikonet i forhold til søgefeltet */
+        margin: 0 277px; /* 277px margin til venstre og højre */
+        width: calc(100% - 554px); /* Resten af bredden tages af søgefeltet */
+        height: 67px; /* Søgefeltets højde */
+    }
+    
+    #soegefelt {
+        width: 100%; /* Søgefeltet fylder hele containeren */
+        height: 100%; /* Fylder højden af containeren */
+        padding: 0 40px; /* Skaber plads til ikonet til højre */
+        font-size: 20px;
+        border: 1px solid var(--sekundaerFarve);
+        background-color: var(--knapfarve);
+        box-sizing: border-box; /* Tager padding med i bredden */
+    }
 
-      #soegefelt {
-          width: 60%;
-          height: 67px; /* Søgefeltets højde stemmer overens med knappernes højde */
-          border: 1px solid var(--sekundaerFarve);
-          background-color: var(--primaerFarve);
-          padding: 0 20px;
-          font-size: 20px;
-          margin-right: 20px;
-          background-color: var(--knapfarve);
-      }
-
-      #soegeikon {
-          width: 40px;
-          vertical-align: middle; /* Placerer søgeikonet i midten i den lodrette akse */
-      }
+    #soegefelt::-webkit-search-cancel-button {
+      display: none; /* Fjern krydset i webkit-browsere (Chrome, Safari) */
+    }
+  
+    #soegefelt::-moz-search-cancel-button {
+      display: none; /* Fjern krydset i Firefox */
+    }
+    
+    #soegeikon {
+        position: absolute; /* Absolut placering inden i søgefeltet */
+        right: 20px; /* Lidt afstand fra højre kant af søgefeltet */
+        top: 50%; /* Centrerer ikonet lodret */
+        transform: translateY(-50%); /* Justerer ikonet vertikalt */
+        width: 40px;
+        cursor: pointer;
+        background-color: transparent; /* Gør sådan, at der ikke er en baggrundsfarve på ikonet */
+    }
+    
 
       #nulstilFiltrer {
         display: none; /* skal være skjult, så længe der ikke er angivet et filter*/
         text-align: left; /* Placerer elementet*/
-        margin-left: 240px; /*Definerer afstanden til kant, og derned placeringen af funktionen*/
         cursor: pointer;
       }
 
@@ -653,8 +675,8 @@ h3 { /**/
           display: none;
           background-color: var(--sekundaerKnapfarve);
           border: 1px solid var(--sekundaerFarve);
-          margin: 0 287px 0 auto;
-          width: 196px;  /* Samme bredde som knapperne */
+          margin: -1px 277px 0 auto; /* margin-top er -1px for at placere de to borders oven på hinanden */
+          width: 227.5px;  /* Samme bredde som knapperne */
       } 
 
       @media (max-width: 1435px) {
