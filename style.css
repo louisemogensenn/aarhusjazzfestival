@@ -528,6 +528,10 @@ ul { /**/
   display: none;
 }
 
+.aaretsPlakatStyling {
+    border: 1px solid #313F88;
+}
+
   /* ------------------------------------- STYLING AF FILTRÉR-SIDEN ------------------------------------- */ 
   
       #filtreringsmuligheder {
@@ -703,11 +707,11 @@ ul { /**/
         font-weight: 400;
       }
 
-      #kunstnerNavn, #underoverskriftFraBegyndelsen {
+      #kunstnerNavn, #underoverskriftFraBegyndelsen, #omPlakatOverskrift {
         font-size: 30px;
       }
 
-      #kunstnerNavn, #beskrivelseAfKunstnerOverskrift, #underoverskriftFraBegyndelsen {
+      #kunstnerNavn, #beskrivelseAfKunstnerOverskrift, #underoverskriftFraBegyndelsen, #omPlakatOverskrift {
           font-weight: bold;
           margin-bottom: 40px;
       }
@@ -751,10 +755,6 @@ ul { /**/
           border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
           z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
           text-align: center;
-      }
-
-      #bestilPlakatKnap {
-        margin-bottom: 300px;
       }
 
 
