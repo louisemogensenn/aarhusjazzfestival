@@ -674,7 +674,7 @@ ul { /**/
       .koncertInformation, #plakatinformation, #fraBegyndelsenInformation {
           display: flex;
           flex-direction: column;
-          justify-content: space-between;
+          justify-content: space-around;
       }
 
       .koncertInformation h3, #plakatinformation h3, #fraBegyndelsenInformation h3 {
