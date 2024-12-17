@@ -676,7 +676,9 @@ h3 { /**/
 
       #filtreredeKoncerter { /* Styling af de gratis koncerter, der vises i filtreringsfunktionen */
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-around;
+        margin: 0 300px 200px
       }
 
       .gratisKoncertFiltrer {

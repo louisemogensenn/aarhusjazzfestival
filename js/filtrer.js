@@ -71,16 +71,15 @@
 
     prisMuligheder.forEach(function (mulighed) {
         mulighed.addEventListener('click', function () {
+
+                // Tøm tidligere viste koncerter
+                filtreredeKoncerter.innerHTML = '';
+                
             if (mulighed.innerHTML === 'GRATIS') {
                 prisKnap.innerHTML = 'GRATIS'; // Opdater knapteksten
                 dropdownPris.style.display = 'none'; // Skjul dropdownen
                 nulstilFiltrer.style.display = 'block'; // Vis "nulstil"-knappen
                 angivSoegekriterierTekst.style.display = 'none'; /* Teksten om at angive søgekriterier ønskes ikke vist, når der er angivet søgekriterier */
-                filtreredeKoncerter.style.justifyContent = 'center';
-                filtreredeKoncerter.style.margin = '0 300px 200px';
-                
-                // Tøm tidligere viste koncerter
-                filtreredeKoncerter.innerHTML = '';
     
                 // Gå gennem alle gratis koncerter og vis dem
                 for (let i = 0; i < gratisKoncerter.length; i++) {
