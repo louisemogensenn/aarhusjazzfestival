@@ -139,6 +139,50 @@ ul { /**/
   justify-content: space-between; /* Placerer logo og navigation med plads imellem */
   }
 
+  /* ------------------------------------- STYLING AF BAGGRUNDE ------------------------------------- */
+
+
+#bodyProgram{
+  background-image: url('/images/baggrundsbilledeProgram.webp');
+  background-size: cover;
+} 
+
+#bodyPraktisk {
+  background-image: url('images/baggrundsbilledePraktisk.webp');
+}
+
+#bodyOmPlakat {
+  background-image: url('images/baggrundsbilledeOmPlakat.webp');
+}
+
+#bodyOmKunstner {
+  background-image: url('images/baggrundsbilledeOmKunstner.webp');
+}
+
+#bodyOmKoncerten {
+  background-image: url('images/baggrundsbilledeOmKoncerterne.webp');
+}
+
+#bodyFraBegyndelsen {
+  background-image: url('images/baggrundsbilledeFraBegyndelsen.webp');
+}
+
+#bodyFiltrer {
+  background-image: url('images/baggrundsbilledeFiltrer.webp');
+}
+
+#bodyFestivalen {
+  background-image: url('images/baggrundsbilledeFestivalen.webp');
+}
+
+#bodyArkiv {
+  background-image: url('images/baggrundsbilledeArkiv.webp');
+}
+
+#errorSide, #indexSide {
+  background-color: var(--primaerFarve);
+}
+
 /* ------------------------------------  GENERELT - NAVIGATIONSBAR ------------------------------------ */
   /* Stling af logo */
   .logo-navigationsbar img {
@@ -497,42 +541,6 @@ ul { /**/
     margin-left: 277px;
 }
 
-#bodyProgram{
-  background-image: url('/images/baggrundsbilledeProgram.webp');
-  background-size: cover;
-} 
-
-#bodyPraktisk {
-  background-image: url('images/baggrundsbilledePraktisk.webp');
-}
-
-#bodyOmPlakat {
-  background-image: url('images/baggrundsbilledeOmPlakat.webp');
-}
-
-#bodyOmKunstner {
-  background-image: url('images/baggrundsbilledeOmKunstner.webp');
-}
-
-#bodyOmKoncerten {
-  background-image: url('images/baggrundsbilledeOmKoncerterne.webp');
-}
-
-#bodyFraBegyndelsen {
-  background-image: url('images/baggrundsbilledeFraBegyndelsen.webp');
-}
-
-#bodyFiltrer {
-  background-image: url('images/baggrundsbilledeFiltrer.webp');
-}
-
-#bodyFestivalen {
-  background-image: url('images/baggrundsbilledeFestivalen.webp');
-}
-
-#bodyArkiv {
-  background-image: url('images/baggrundsbilledeArkiv.webp');
-}
 /* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
 
 .plakater {
