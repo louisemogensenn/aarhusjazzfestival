@@ -293,7 +293,7 @@ ul { /**/
   .forside-animation {
     display: flex; /*Giver plads til alle elementer i flexboksen*/
     justify-content: center; /*Placering vandret*/
-    align-items: top; /*Placering lodret*/
+    /* align-items: top; /* Placering lodret*/
     margin: 0; /*Fjener luft omkring*/
   }
 
@@ -729,10 +729,8 @@ ul { /**/
       }
 
 
-  /* ------------------------------------ STYLING AF ... ------------------------------------  */
+  /* ------------------------------------ STYLING AF 404-SIDE ------------------------------------  */
   
-/* Error side */
-
 #gå-til-program { /*gå til program knappen*/
   background-color: var(--sekundaerKnapfarve);
   padding: 5% 7%;
@@ -756,4 +754,106 @@ ul { /**/
   display: block; /*Sikrer placeringen af elementerne*/
   padding-right: 10%; 
   margin-top: 15%;
+}
+
+  /* ------------------------------------ STYLING AF PRAKTISK-SIDEN ------------------------------------  */
+
+/* Styling af navigationsbjælken med kategorier */
+.kategori-navigation {
+    display: flex; /* Placerer knapper i samme linje */
+    justify-content: center; /* Centrerer knapper horisontalt */
+    margin-bottom: 2rem; /* Tilføjer mellemrum under navigationen */
+    gap: 20px; /* Skaber mellemrum mellem knapperne */
+}
+
+/* Grundlæggende styling for kategori-knapper */
+.kategori-knap {
+    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
+    border: none; /* Fjerner kantlinjer */
+    font-size: 160%; /* Relativt stor skriftstørrelse */
+    color: #313F88; /* Mørkeblå tekstfarve */
+    padding: 10px 20px; /* Indvendig padding */
+    cursor: pointer; /* Ændrer markør ved hover */
+    font-weight: normal; /* Normal skrifttykkelse */
+}
+
+/* Styling for den aktive kategori-knap */
+.kategori-knap.aktiv {
+    border-bottom-color: #313F88; /* Bundlinje i mørkeblå */
+    font-weight: bold; /* Fed skrifttype */
+}
+
+/* Container til hver FAQ-sektion */
+.praktisk-beholder {
+    max-width: 800px; /* Maksimal bredde */
+    margin: 1rem auto; /* Centreret med margin */
+    padding: 0 20px; /* Indvendig padding */
+    border-top: solid #313F88; /* Øverste kant i mørkeblå */
+}
+
+/* Styling for spørgsmål */
+.praktisk-sporgsmål {
+    display: flex; /* Fleksibel visning */
+    font-size: 120%; /* Lidt større skrift */
+    justify-content: space-between; /* Fordeler indhold */
+    align-items: center; /* Centrerer vertikalt */
+    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
+    cursor: pointer; /* Ændrer markør ved hover */
+    position: relative; /* Til positionering af '+'/'-' tegn */
+}
+
+
+/* Styling for svar-sektionen */
+.praktisk-svar {
+    max-height: 0; /* Skjuler svar som standard */
+    overflow: hidden; /* Gemmer indhold der overskrider højden */
+    padding: 0 20px; /* Indvendig padding */
+    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
+    transition: all 0.3s ease; /* Blød overgang ved ændringer */
+    opacity: 0; /* Fuld gennemsigtighed som standard */
+    line-height: 1.6; /* Øget linjeafstand */
+    color: #333; /* Mørkegrå tekstfarve */
+    text-align: left; /* Venstrestillet tekst */
+    hyphens: auto; /* Automatisk orddeling */
+    word-wrap: break-word; /* Bryder lange ord */
+}
+
+/* Styling når svar vises */
+.praktisk-svar.show {
+    max-height: 1000px; /* Tillader fuld visning */
+    padding: 15px 20px; /* Indvendig padding */
+    opacity: 1; /* Fuld synlighed */
+}
+
+/* Responsivt design til mindre skærme */
+@media (max-width: 768px) {
+    .praktisk-beholder {
+        padding: 0 10px; /* Reduceret padding på små skærme */
+    }
+}
+
+/* Margin for hele FAQ-sektionen */
+#faq-sektion {
+    margin-bottom: 4rem; /* Tilføjer plads efter sektionen */
+}
+
+.praktisk-action-knap {
+    background-color: #EDE1D0;
+    color: #313F88;
+    border: solid #313F88;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+.praktisk-action-knap:hover {
+    background-color: #F0D1A5;
+    transition: 0.3s;
+    font-weight: bold;
+    color: #313F88;
+    border: solid #313F88;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 100%;
 }

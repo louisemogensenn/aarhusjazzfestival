@@ -62,167 +62,66 @@
 <div id="faq-sektion">
 </div>
 </body>
-<footer>
-    <div class="footer-indhold">
+    <footer>
+        <div class="footer-indhold">
 
-        <div class="venstre-sektion">
-            <section class="tilmeld-email-tekst"><h1>Tilmeld dig vores nyhedsbrev</h1></section>
-            <form aria-label="Nyhedsbrev tilmelding">
-                <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" required />
-                <button class="tilmeld-knap" type="submit">Tilmeld</button>
-            </form>
+            <div class="venstre-sektion">
+                <section class="tilmeld-email-tekst"><h1>Tilmeld dig vores nyhedsbrev</h1></section>
+                <form aria-label="Nyhedsbrev tilmelding">
+                    <input class="email-tilmeld" type="email" placeholder="Skriv din e-mail her" required />
+                    <button class="tilmeld-knap" type="submit">Tilmeld</button>
+                </form>
+            </div>
+
+            <div class="hojre-sektion">
+
+                <nav class="sektion-beholder">
+                    <h3>Program</h3>
+                    <ul>
+                        <li><a href="program.html">— Program</a></li>
+                        <li><a href="program.html">— Filtrer efter behov</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="sektion-beholder">
+                    <h3>Praktisk</h3>
+                    <ul>
+                        <li><a href="praktisk.html">— Publikum</a></li>
+                        <li><a href="praktisk.html">— Arrangører</a></li>
+                        <li><a href="praktisk.html">— Musikere</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="sektion-beholder">
+                    <h3>Reportager</h3>
+                    <ul>
+                        <li><a href="festivalen.html">— Festivalen</a></li>
+                        <li><a href="arkiv.html">— Arkiv</a></li>
+                    </ul>
+                </nav>
+
+            </div>
         </div>
 
-        <div class="hojre-sektion">
+        <div class="bund-beholder">
 
-            <nav class="sektion-beholder">
-                <h3>Program</h3>
-                <ul>
-                    <li><a href="program.html">— Program</a></li>
-                    <li><a href="program.html">— Filtrer efter behov</a></li>
-                </ul>
-            </nav>
-
-            <nav class="sektion-beholder">
-                <h3>Praktisk</h3>
-                <ul>
-                    <li><a href="praktisk.html">— Publikum</a></li>
-                    <li><a href="praktisk.html">— Arrangører</a></li>
-                    <li><a href="praktisk.html">— Musikere</a></li>
-                </ul>
-            </nav>
-
-            <nav class="sektion-beholder">
-                <h3>Reportager</h3>
-                <ul>
-                    <li><a href="festivalen.html">— Festivalen</a></li>
-                    <li><a href="arkiv.html">— Arkiv</a></li>
-                </ul>
-            </nav>
-
+            <div class="bund-sektion-socials">
+                <a href="https://www.instagram.com" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com" target="_blank">Facebook</a>
+                <a href="https://www.youtube.com" target="_blank">YouTube</a>
+                <a href="https://www.spotify.com" target="_blank">Spotify</a>
+            </div>
+            
+            <div class="bund-sektion">
+                <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
+            </div>
         </div>
-    </div>
 
-    <div class="bund-beholder">
-
-        <div class="bund-sektion-socials">
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>
-            <a href="https://www.youtube.com" target="_blank">YouTube</a>
-            <a href="https://www.spotify.com" target="_blank">Spotify</a>
-        </div>
+        <aside class="popupTilmeldt">
+            <p class="indholdPopupTilmeldt"></p>
+        </aside>
         
-        <div class="bund-sektion">
-            <p>Privatlivspolitik | Alle rettigheder forbeholdt Aarhus Jazz Festival</p>
-        </div>
-    </div>
-
-    <aside class="popupTilmeldt">
-        <p class="indholdPopupTilmeldt"></p>
-    </aside>
+    </footer>
     
-</footer>
 </html>
-
-<style>
-/* Styling af navigationsbjælken med kategorier */
-.kategori-navigation {
-    display: flex; /* Placerer knapper i samme linje */
-    justify-content: center; /* Centrerer knapper horisontalt */
-    margin-bottom: 2rem; /* Tilføjer mellemrum under navigationen */
-    gap: 20px; /* Skaber mellemrum mellem knapperne */
-}
-
-/* Grundlæggende styling for kategori-knapper */
-.kategori-knap {
-    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
-    border: none; /* Fjerner kantlinjer */
-    font-size: 160%; /* Relativt stor skriftstørrelse */
-    color: #313F88; /* Mørkeblå tekstfarve */
-    padding: 10px 20px; /* Indvendig padding */
-    cursor: pointer; /* Ændrer markør ved hover */
-    font-weight: normal; /* Normal skrifttykkelse */
-}
-
-/* Styling for den aktive kategori-knap */
-.kategori-knap.aktiv {
-    border-bottom-color: #313F88; /* Bundlinje i mørkeblå */
-    font-weight: bold; /* Fed skrifttype */
-}
-
-/* Container til hver FAQ-sektion */
-.praktisk-beholder {
-    max-width: 800px; /* Maksimal bredde */
-    margin: 1rem auto; /* Centreret med margin */
-    padding: 0 20px; /* Indvendig padding */
-    border-top: solid #313F88; /* Øverste kant i mørkeblå */
-}
-
-/* Styling for spørgsmål */
-.praktisk-sporgsmål {
-    display: flex; /* Fleksibel visning */
-    font-size: 120%; /* Lidt større skrift */
-    justify-content: space-between; /* Fordeler indhold */
-    align-items: center; /* Centrerer vertikalt */
-    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
-    cursor: pointer; /* Ændrer markør ved hover */
-    position: relative; /* Til positionering af '+'/'-' tegn */
-}
-
-
-/* Styling for svar-sektionen */
-.praktisk-svar {
-    max-height: 0; /* Skjuler svar som standard */
-    overflow: hidden; /* Gemmer indhold der overskrider højden */
-    padding: 0 20px; /* Indvendig padding */
-    background-color: #EDE1D0; /* Lys beige baggrundsfarve */
-    transition: all 0.3s ease; /* Blød overgang ved ændringer */
-    opacity: 0; /* Fuld gennemsigtighed som standard */
-    line-height: 1.6; /* Øget linjeafstand */
-    color: #333; /* Mørkegrå tekstfarve */
-    text-align: left; /* Venstrestillet tekst */
-    hyphens: auto; /* Automatisk orddeling */
-    word-wrap: break-word; /* Bryder lange ord */
-}
-
-/* Styling når svar vises */
-.praktisk-svar.show {
-    max-height: 1000px; /* Tillader fuld visning */
-    padding: 15px 20px; /* Indvendig padding */
-    opacity: 1; /* Fuld synlighed */
-}
-
-/* Responsivt design til mindre skærme */
-@media (max-width: 768px) {
-    .praktisk-beholder {
-        padding: 0 10px; /* Reduceret padding på små skærme */
-    }
-}
-
-/* Margin for hele FAQ-sektionen */
-#faq-sektion {
-    margin-bottom: 4rem; /* Tilføjer plads efter sektionen */
-}
-
-.praktisk-action-knap {
-    background-color: #EDE1D0;
-    color: #313F88;
-    border: solid #313F88;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    width: 100%;
-}
-.praktisk-action-knap:hover {
-    background-color: #F0D1A5;
-    transition: 0.3s;
-    font-weight: bold;
-    color: #313F88;
-    border: solid #313F88;
-    padding: 10px 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    width: 100%;
-}
-</style>
 
