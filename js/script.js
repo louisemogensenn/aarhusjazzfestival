@@ -51,3 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
+//Popup popup-tilmeldNyhedsbrev
+
+const tilmeldKnap = document.getElementsByClassName('tilmeld-knap');
+
+const popupTilmeldt = document.getElementsByClassName('popupTilmeldt');
+
+const indholdPopupTilmeldt = document.getElementsByClassName('indholdPopupTilmeldt');
+
+tilmeldKnap.addEventListener('click', () => { // Når brugeren klikker direkte på søgeikonet (luppen)
+        popupTilmeldt.style.display = 'block'; // ... vises popup-vinduet... 
+        indholdPopupTilmeldt.innerHTML = "Tak for din tilmelding"; // ... og i popup-vinduet vises denne besked (indsat i et p-tag med id'et indholdPopupProgram).
+        setTimeout(() => { popupTilmeldt.style.display= 'none'; }, 2000); // ... og efter 2 sekunder sendes brugeren videre til 404-siden
+});

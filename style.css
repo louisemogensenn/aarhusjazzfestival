@@ -37,7 +37,7 @@ footer {
   border: solid #313F88; /* Kantfarven på boksen og stregtypen */
 }
 
-#tilmeld-knap { /*Instillinger for email tilmeld knap*/
+.tilmeld-knap { /*Instillinger for email tilmeld knap*/
   background-color: var(--sekundaerKnapfarve); /* Giver knappen en baggrundsfarve */
   padding: 12px 25px; /* Sætter størrelsen på tilmeldknappen */
   text-align: center; /* Placerer teksten i midten af knappen */
@@ -716,7 +716,7 @@ ul { /**/
       }
 
       /* Besked, der vises, når man trykker på søg-ikonet */
-      #popup-reserverBillet, #popup-bestilPlakat {
+      #popup-reserverBillet, #popup-bestilPlakat, #popupTilmeldt {
           display: none;
           position: fixed;
           top: 50%;
