@@ -105,7 +105,7 @@ if (spoergsmaal === "Hvad er parkeringsmulighederne?") {
     // Tilføjer klik-hændelse til knappen
     viderstilKnap.addEventListener('click', () => {
         // Åbner et nyt tomt vindue (eller specifik side)
-        window.open('404.html', '_blank'); /* Vi har ikke lavet et parkeringskort? */
+        window.open('404.html', '_blank'); /* Vi har ikke lavet et parkeringskort */
     });
     
     // Tilføjer knappen til svar-elementet
