@@ -52,54 +52,53 @@
 
     /*----------------------- SCRIPT FOR DROP DOWN MED PRISER ------------------------*/
 
-    const dropdownPris = document.getElementById('dropdownPris');
+    const dropdownPris = document.getElementById('dropdownPris'); // Henter elementet med id'et dropdownPris og gemmer i konstanten
 
-    const prisMuligheder = document.querySelectorAll('.dropdownPrisMulighed');
+    const prisMuligheder = document.querySelectorAll('.dropdownPrisMulighed'); // Henter alle elementer med klassen dropdownPrisMulighed og gemmer i konstanten. querySelectorAll returnerer en nodeList(https://www.w3schools.com/jsref/met_document_queryselectorall.asp) (en samling af HTML-elementer) og består derfor af flere noder.
 
-    const nulstilFiltrer = document.getElementById('nulstilFiltrer');
+    const nulstilFiltrer = document.getElementById('nulstilFiltrer'); // Henter elementet med id'et nulstilFiltrer og gemmer i konstanten
 
-    const filtreredeKoncerter = document.getElementById('filtreredeKoncerter');
+    const filtreredeKoncerter = document.getElementById('filtreredeKoncerter'); // Henter elementet med id'et filtreredeKoncerter og gemmer i konstanten
 
-    const gratisKoncerter = document.querySelectorAll('.gratisKoncertFiltrer');
+    const gratisKoncerter = document.querySelectorAll('.gratisKoncertFiltrer'); // Henter alle elementer med klassen gratisKoncertFiltrer og gemmer i konstanten
 
-    const filtreringsmuligheder = document.getElementById('filtreringsmuligheder');
+    const filtreringsmuligheder = document.getElementById('filtreringsmuligheder'); // Henter elementet med id'et filtreringsmuligheder og gemmer i konstanten
 
-    prisKnap.addEventListener('click', () => {
-        if(dropdownPris.style.display === 'block') {
-            dropdownPris.style.display = 'none';
+    prisKnap.addEventListener('click', () => { // Når filtreringsknappen om priser trykkes på...
+        if(dropdownPris.style.display === 'block') { //... og hvis dropdownen med prisniveauer allerede vises...
+            dropdownPris.style.display = 'none'; // fjernes dropdownen med prisniveauer...
         } else {
-            dropdownPris.style.display = 'block';
+            dropdownPris.style.display = 'block'; // ... ellers vises dropdownen
         }
     });
 
-    prisMuligheder.forEach(function (mulighed) {
-        mulighed.addEventListener('click', function () {
+    prisMuligheder.forEach(function (mulighed) { // prisMuligheder.forEach() itererer over alle prisMuligheder (gratis, under 100, over 100) - parameteren mulighed repræsenterer hver af disse prismuligheder
+        mulighed.addEventListener('click', function () { //eventListeneren tilføjes til hver mulighedd
 
                 // Tøm tidligere viste koncerter
-                filtreredeKoncerter.innerHTML = '';
+                filtreredeKoncerter.innerHTML = ''; // De elementer, der måtte være placeret i sektionen filtreredeKoncerter i forvejen fjernes
                 
-            if (mulighed.innerHTML === 'GRATIS') {
-                prisKnap.innerHTML = 'GRATIS'; // Opdater knapteksten
-                dropdownPris.style.display = 'none'; // Skjul dropdownen
-                nulstilFiltrer.style.display = 'block'; // Vis "nulstil"-knappen
-                angivSoegekriterierTekst.style.display = 'none'; /* Teksten om at angive søgekriterier ønskes ikke vist, når der er angivet søgekriterier */
+            if (mulighed.innerHTML === 'GRATIS') { // hvis mulighed (repræsenterer prismuligheder) er gratis
+                prisKnap.innerHTML = 'GRATIS'; // Opdateres knapteksten til gratis
+                dropdownPris.style.display = 'none'; // dropdownen med prismuligheerne skjules
+                nulstilFiltrer.style.display = 'block'; // nulstilknappen vises
+                angivSoegekriterierTekst.style.display = 'none'; /* og teksten om at angive søgekriterier fjernes, når der nu er angivet søgekriterier */
     
                 // Gå gennem alle gratis koncerter og vis dem
-                gratisKoncerter.forEach(koncert => {
-                    // Clone the element to avoid moving the original from the DOM
-                    const koncertKopi = koncert.cloneNode(true);
-                    koncertKopi.style.display = 'block';
-                    filtreredeKoncerter.appendChild(koncertKopi);
+                gratisKoncerter.forEach(koncert => { // der itereres gennem alle gratisKoncerter og hver af disse er repræsenteret ved parameteren koncert
+                    const koncertKopi = koncert.cloneNode(true); // der oprettes en kopi af elementet(noden) koncert - så den ikke "stjæles" fra en anden HTML-side (https://www.w3schools.com/jsref/met_node_clonenode.asp)
+                    koncertKopi.style.display = 'block'; // kopien af koncerten vises i ...
+                    filtreredeKoncerter.appendChild(koncertKopi); // ...  sektionen filtreredeKoncerter med appendChild (https://www.w3schools.com/jsref/met_node_appendchild.asp) appendchild fungerer kun med dom-noder og koncertkopien er en node, da den element er hentet med queryselectorAll
                 });
             }
         });
     });
 
-    nulstilFiltrer.addEventListener('click', () => {
-        prisKnap.innerHTML = 'PRIS';
-        prisKnap.style.backgroundColor = 'var(--knapfarve)';
-        nulstilFiltrer.style.display = 'none';
-        prisKnap.style.border = 'none';
-        filtreredeKoncerter.innerHTML = '';
-        angivSoegekriterierTekst.style.display = 'block';
+    nulstilFiltrer.addEventListener('click', () => { // klik på nulstilfiltre
+        prisKnap.innerHTML = 'PRIS'; // og prisknappens indhold ændres
+        prisKnap.style.backgroundColor = 'var(--knapfarve)'; //baggurndsfarven i knappen pris ændres
+        nulstilFiltrer.style.display = 'none'; // nulstil filtre vises ikke længere, da der ikke er valgt nogen filtre
+        prisKnap.style.border = 'none'; // der er ikke nogen kant på knappen, der førhen synliggjorde, at den var valgt
+        filtreredeKoncerter.innerHTML = ''; // indholdet i sektionen filtreredeKoncerter fjernes
+        angivSoegekriterierTekst.style.display = 'block'; // angiv søgekritereier vises igen
     });
