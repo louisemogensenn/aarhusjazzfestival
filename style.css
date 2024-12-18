@@ -792,16 +792,21 @@ ul { /**/
 }
 
 #error-figure{
-  width: 40%;
-  padding-left: 22%;
+  width: 36%;
+  padding-left: 300px;
 }
 
 #error-tekst{
   display: block; /*Sikrer placeringen af elementerne*/
-  padding-right: 10%; 
-  margin-top: 15%;
+  padding-right: 8%; 
+  margin-top: 3%;
+  width: 350px;
 }
 
+#error-tekst p {
+  line-height: 1.6;
+  font-size: 20px;
+}
   /* ------------------------------------ STYLING AF PRAKTISK-SIDEN ------------------------------------  */
 
 /* Styling af navigationsbjælken med kategorier */
