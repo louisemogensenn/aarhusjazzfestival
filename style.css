@@ -469,8 +469,8 @@ ul { /**/
       margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
   }
 
-  .valgtOverskrift {
-    font-weight: 500; /* Giver den valgte overskrift en federe skrift */
+  .ikkeValgteOverskrift {
+    opacity: 20%; /* den overskrift, der ikke er valgt i reportage-siden og program-siden er med lav opacitet for at synliggøre, hvor brugeren er*/
   }
 
   .horisontal-linje {
