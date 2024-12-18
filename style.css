@@ -460,12 +460,12 @@ ul { /**/
   }
 
   .overskrifterPaaSider h2:hover {
-    font-weight: 500;
+    font-weight: 500; /* ved hover gøres vægten for teksten større*/
   }
 
   .overskrifterPaaSider {
-      display: flex;
-      justify-content: center;
+      display: flex; /* placeres på linje*/
+      justify-content: center; /* containeren centreres*/
       margin-top: 50px; /* Denne margin er afstanden fra toppen af skærmen og ikke afstanden til headeren - FØLG OP PÅ DETTE */
   }
 
@@ -485,7 +485,7 @@ ul { /**/
   .koncertFraDag {
     display: flex;
     justify-content: space-between;  /* Placerer elementerne med lige meget plads mellem */
-    margin: 30px 277px;
+    margin: 30px 277px; /* afstand mellem omkringliggende elementer*/
     position: relative;  /* Sørger for at pilen kan placeres absolut i forhold til denne container */
 }
 
@@ -497,7 +497,7 @@ ul { /**/
 }
 
 .enkeltKoncert img, .enkeltPlakat img {
-  width: 100%;
+  width: 100%; /* lade billederne fylde hele bredden */
   height: auto;
 }
 
@@ -511,17 +511,19 @@ ul { /**/
 }
 
 .pilTilbage {
-  position: absolute; /* Pilen placeres uden for den normale flow */
-  left: -60px;  /* Juster denne værdi for at flytte pilen længere ud til højre */
-  top: 50%;  /* Juster pilen til at være centreret i højden i dens container */
-  transform: translateY(-50%);  /* Juster pilen til præcist at være centreret */
-  width: 30px; /* Juster pilens størrelse */
-  height: auto;
+  position: absolute; /* gør at placeringen kan styres */
+  left: -60px;  /* afstand fra venstre side */
+  top: 50%;  /*  pilen centreres i højden i dens container */
+  transform: translateY(-50%);  /* placerer pilen på 50% af containerens højde */
+  width: 30px; /* bredden på pilen */
+  height: auto; /* højden defineres */
 }
 
+/*
 .pilTilTekst {
   display: block;
 }
+  */
 
 .pilTilTekst img {
     width: 20px; /* Juster ikonets bredde */
@@ -536,18 +538,18 @@ ul { /**/
 }
 
 .datoForKoncerter, .overskriftIArkivet {
-    margin-top: 70px;
-    font-weight: 700;
-    margin-left: 277px;
+    margin-top: 70px; /* afstand til elementer over */
+    font-weight: 700; /* vægten på fonten*/
+    margin-left: 277px; /* afstand til elementer til venstre*/
 }
 
 /* ------------------------------------- STYLING AF ARKIVSIDEN ------------------------------------- */
 
 .plakater {
-  display: flex;
-  justify-content: space-between;
-  margin: 30px 277px;
-  position: relative;
+  display: flex; /* vises på række*/
+  justify-content: space-between; /* fylder hele deres container med lige meget luft imellem sig */
+  margin: 30px 277px; /* containerens afstand til det omkringliggende*/
+  position: relative; 
 }
 
 .enkeltPlakat img {
@@ -556,9 +558,9 @@ ul { /**/
 }
 
 .enkeltPlakat p {
-  margin-top: 10px;
-  font-size: 14px;
-  text-align: left;
+  margin-top: 10px; /* afstand til elementer over */
+  font-size: 14px; /* størrelsen på teksten */
+  text-align: left; /* teksten placeres til venstre */
 }
 
 .pilTilTekst img {
@@ -589,28 +591,28 @@ ul { /**/
       #filtreringsmuligheder button {
           flex: 1; /* Sørger for, at knapperne fylder lige meget */
           text-align: center; /* Centrerer teksten i knappen */
-          height: 67px;
-          width: 219px;
-          background-color: var(--knapfarve);
-          font-size: 20px;
-          border: none;
-          padding: 0;
+          height: 67px; /* sætter højden på knapperne*/
+          width: 219px; /*sætter bredden på knapperne */
+          background-color: var(--knapfarve); /* giver knapperne en baggrundsfarve*/
+          font-size: 20px; /* størrelsen på teksten inde i knapperne */
+          border: none; /* fjerner kanter fra knapper */
+          padding: 0; /* nulstiller al padding */
       }
 
       #spillestedKnap {
-        margin: 0 10px;
+        margin: 0 10px; /* sikrer lige afstand mellem alle fire knapper sammen med nedstående styling */
       }
 
       #genreKnap {
-        margin-right: 10px;
+        margin-right: 10px; /* sikrer lige afstand mellem alle fire knapper sammen med ovenstående styling */
       }
 
       /* Popup-besked */
       #angivSoegekriterierTekst {
-          text-align: center;
-          margin: 50px 0 250px;
-          font-weight: 300;
-          font-size: 25px;
+          text-align: center; /* placerer teksten i midten af skærmen */
+          margin: 50px 0 250px; /* angiver afstand fra top og bund*/
+          font-weight: 300; /* vægten på fonten - altså tykkelsen */
+          font-size: 25px; /* angiver fontens størrelse */
       }
 
       #soegefeltOgIkon {
@@ -624,27 +626,23 @@ ul { /**/
         width: 100%; /* Søgefeltet fylder hele containeren */
         height: 100%; /* Fylder højden af containeren */
         padding: 0 40px; /* Skaber plads til ikonet til højre */
-        font-size: 20px;
-        border: 1px solid var(--sekundaerFarve);
-        background-color: var(--knapfarve);
+        font-size: 20px; /* størrelsen på teksten i søgefeltet*/
+        border: 1px solid var(--sekundaerFarve); /* laver kant på søgefeltet*/
+        background-color: var(--knapfarve); /* feltets farve */
         box-sizing: border-box; /* Tager padding med i bredden */
     }
 
-    #soegefelt::-webkit-search-cancel-button {
-      display: none; /* Fjern krydset i webkit-browsere (Chrome, Safari) */
+    #soegefelt::-webkit-search-cancel-button, #soegefelt::-moz-search-cancel-button { /* https://stackoverflow.com/questions/9421551/how-do-i-remove-all-default-webkit-search-field-styling */
+      display: none; /* Fjern krydset i webkit-browsere (Chrome, Safari, Firefox) */
     }
-  
-    #soegefelt::-moz-search-cancel-button {
-      display: none; /* Fjern krydset i Firefox */
-    }
-    
+
     #soegeikon {
-        position: absolute; /* Absolut placering inden i søgefeltet */
+        position: absolute; /* gør at ikon kan positioneres i den relative container (se soegefeltOgIkon) */
         right: 20px; /* Lidt afstand fra højre kant af søgefeltet */
         top: 50%; /* Centrerer ikonet lodret */
-        transform: translateY(-50%); /* Justerer ikonet vertikalt */
-        width: 40px;
-        cursor: pointer;
+        transform: translateY(-50%); /* justerer ikonet lodret med 50% af dets egen højde (y-aksen) - det placerer altså ikonet i midten af boksen lodret */
+        width: 40px; /* bredden på ikonet */
+        cursor: pointer; /* ved hover */
         background-color: transparent; /* Gør sådan, at der ikke er en baggrundsfarve på ikonet */
     }
     
@@ -652,65 +650,61 @@ ul { /**/
       #nulstilFiltrer {
         display: none; /* skal være skjult, så længe der ikke er angivet et filter*/
         text-align: left; /* Placerer elementet*/
-        cursor: pointer;
+        cursor: pointer; /* ved hover */
       }
 
-      /* Besked, der vises, når man trykker på søg-ikonet */
-      #popup-soegning, .popupTilmeldt {
+      /* Popup */
+      #popup-soegning, .popupTilmeldt, #popup-reserverBillet, #popup-bestilPlakat, #popupTilmeldt {
           display: none; /* Skjult som standard */
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%); 
-          width: 300px;
-          padding: 60px;
-          background-color: var(--primaerFarve);
-          border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
+          position: fixed; /* popuppen vises samme sted på skærmen, selvom brugeren scroller */
+          top: 50%; /* placerer elementet på placeringen, der er 50% af skærmens lodrette størrelse */
+          left: 50%; /* placerer elementet på placeringen, der er 50% af skærmens vandrette størrelse */
+          transform: translate(-50%, -50%); /* bruges sammen med ovenstående for at placere elementer i midten */
+          width: 300px; /* bredden af popuppen */
+          padding: 60px; /* plads omkring tekst ud til kanter af popup */
+          background-color: var(--primaerFarve); /* baggrundsfarve for popuppen */
+          border: 2px solid var(--sekundaerFarve); /* giver kant til popuppen */
           z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
-          text-align: center;
+          text-align: center; /* teksten placeres i midten */
       }
 
       #lukSoegningPopUp {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          background: none;
-          border: none;
-          font-size: 20px;
-          cursor: pointer;
-          color: #555;
+          position: absolute; /* gør det muligt at placere præcis, hvor vi ønsker med nedstående*/
+          top: 10px; /* 10px fra toppen af popuppen */
+          right: 10px; /* 10px fra højre side af popuppen */
+          background: none; /* fjerner baggrundsfarven for krydset - default */
+          border: none; /* fjerner kanten fra krydset - default */
+          font-size: 20px; /* størrelsen på krydset */
+          cursor: pointer; /* ved hover */
       }
   
-      #dropdownPris {
-          display: none;
-          background-color: var(--sekundaerKnapfarve);
-          border: 1px solid var(--sekundaerFarve);
-          margin: -1px 277px 0 auto; /* margin-top er -1px for at placere de to borders oven på hinanden */
+      #dropdownPris { /* den dropdown, der indeholder prisniveauer, når man trykker på knappen pris*/
+          display: none; /* vises ikke i default - ændres med JS - se filtrer.js */
+          background-color: var(--sekundaerKnapfarve); /* giver baggrundsfarven */
+          border: 1px solid var(--sekundaerFarve); /* giver kant */
+          margin: -1px 277px 0 auto; /* margin-top er -1px for at placere de to borders oven på hinanden, så der ikke opstår en tyk border imellem knap og dropdown */
           width: 227.5px;  /* Samme bredde som knapperne */
       } 
 
       @media (max-width: 1435px) {
         #dropdownPris {
-          display: none; /* Dropdown flytter sig, og bliver fjernet ved mindre skærm*/
+          display: none; /* Dropdown flytter sig, og bliver fjernet ved mindre skærm */
         }
       }
 
       .dropdownPrisMulighed {
-        background-color: transparent;
-        padding: 20px;
-        text-align: left;
-        cursor: pointer;
+        padding: 20px; /* skaber afstand mellem hvert prisniveau */
+        cursor: pointer; /* ved hover*/
       }
 
       .dropdownPrisMulighed:hover {
-          font-weight: bolder;
+          font-weight: bolder; /* prisniveauet gøres mere fed ved hover */
       }
 
       #filtreredeKoncerter { /* Styling af de gratis koncerter, der vises i filtreringsfunktionen */
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 50px 277px;
+        display: flex; /* vises på linje */
+        justify-content: space-around; /* skaber afstand mellem billederne */
+        margin: 50px 277px; /* containerens afstand til top og sider */
       }
 
       .gratisKoncertFiltrer {
@@ -727,42 +721,37 @@ ul { /**/
       }
 
       .billedeOgInfoKoncert, #billedeOgInfoPlakat, #billedeOgInfoFraBegyndelsen {
-          display: flex;
-          justify-content: left;
-          margin: 0 239px;
+          display: flex; /* stilles på linje */
+          justify-content: left; /* placeres i venstre side*/
+          margin: 0 239px; /* placeres 239px fra kanterne*/
       }
 
-      .billedeOgInfoKoncert img, .billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
+      .billedeOgInfoKoncert img, #billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
           height: 428px; /* Angiver højden på billedet - billede er kvadratisk af oprindelse og derfor 'følger' bredden på det 'efter' */
       }
 
-      #billedeOgInfoPlakat img, #billedeOgInfoFraBegyndelsen img {
-          width: 420px;
-          height: auto;
-      }
-
       .koncertInformation, #plakatinformation, #fraBegyndelsenInformation {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          margin-left: 100px;
+          display: flex; /* stilles informationen på linje*/
+          flex-direction: column; /* placerer det i en kolonne */
+          justify-content: space-around; /* skaber afstand imellem*/
+          margin-left: 100px; /* placerer teksten 100px fra elementer til venstre */
       }
 
       .koncertInformation h3, #plakatinformation h3, #fraBegyndelsenInformation h3 {
-        font-weight: 400;
+        font-weight: 400; /* tykkelsen på overskrifterne */
       }
 
       #kunstnerNavn, #underoverskriftFraBegyndelsen, #omPlakatOverskrift {
-        font-size: 30px;
+        font-size: 30px; /* størrelsen på fonten */
       }
 
       #kunstnerNavn, #beskrivelseAfKunstnerOverskrift, #underoverskriftFraBegyndelsen, #omPlakatOverskrift {
-          font-weight: bold;
-          margin-bottom: 40px;
+          font-weight: bold; /* vægtena af fonten */
+          margin-bottom: 40px; /* afstand til elementer under */
       }
 
       #beskrivelseAfKunstner {
-          margin: 0 277px;
+          margin: 0 277px; /* afstand fra kanter */
       }
 
       #beskrivelseAfKunstner p {
@@ -770,38 +759,22 @@ ul { /**/
       }
 
       #forfatterafReportage {
-        font-weight: lighter;
+        font-weight: lighter; /* mindre tydelig skrift */
       }
 
       #reserverBilletKnap, #bestilPlakatKnap {
-          background-color: var(--sekundaerKnapfarve);
-          font-weight: bold;
-          width: 259px;
-          height: 71px;
-          font-size: 20px;
-          margin: 47px 277px 47px auto;
+          background-color: var(--sekundaerKnapfarve); /* farven for baggrunden */
+          font-weight: bold; /* tekstens vægt inde i knappen */
+          width: 259px; /* bredden på knappen */
+          height: 71px; /* højden på knappen*/
+          font-size: 20px; /* teksten i knappens størrelsen*/
+          margin: 47px 277px 47px auto; /* afstand til det omkringliggende*/
           display: block; /* Sikrer at margin-left: auto virker korrekt */
       }
 
       #reserverBilletKnap:hover, #bestilPlakatKnap:hover {
           cursor: pointer;
       }
-
-      /* Besked, der vises, når man trykker på søg-ikonet */
-      #popup-reserverBillet, #popup-bestilPlakat, #popupTilmeldt {
-          display: none;
-          position: fixed;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%); 
-          width: 300px;
-          padding: 60px;
-          background-color: var(--primaerFarve);
-          border: 2px solid var(--sekundaerFarve); /* Brug standard farve, hvis variablen ikke er defineret */
-          z-index: 1000; /* Placerer popuppen øverst på skærmen (altså foran andre elementer) */
-          text-align: center;
-      }
-
 
   /* ------------------------------------ STYLING AF 404-SIDE ------------------------------------  */
   
