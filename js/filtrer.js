@@ -13,6 +13,23 @@
 
     const carloId = document.getElementById('carloId'); // Henter elementet med id'et carloId og gemmer i konstanten
 
+    // NEDSTÅENDE KONSTANTER BRUGES TIL DROPDOWN MED PRISER, HVOR SCRIPTET DERTIL ER PLACERET LÆNGERE NEDE PÅ DENNE SIDE
+
+    const dropdownPris = document.getElementById('dropdownPris'); // Henter elementet med id'et dropdownPris og gemmer i konstanten
+
+    const prisMuligheder = document.querySelectorAll('.dropdownPrisMulighed'); // Henter alle elementer med klassen dropdownPrisMulighed og gemmer i konstanten. querySelectorAll returnerer en nodeList(https://www.w3schools.com/jsref/met_document_queryselectorall.asp) (en samling af HTML-elementer) og består derfor af flere noder.
+
+    const nulstilFiltrer = document.getElementById('nulstilFiltrer'); // Henter elementet med id'et nulstilFiltrer og gemmer i konstanten
+
+    const filtreredeKoncerter = document.getElementById('filtreredeKoncerter'); // Henter elementet med id'et filtreredeKoncerter og gemmer i konstanten
+
+    const gratisKoncerter = document.querySelectorAll('.gratisKoncertFiltrer'); // Henter alle elementer med klassen gratisKoncertFiltrer og gemmer i konstanten
+
+    const filtreringsmuligheder = document.getElementById('filtreringsmuligheder'); // Henter elementet med id'et filtreringsmuligheder og gemmer i konstanten
+
+
+    /*----------------------- SCRIPT FOR POPUP VED SØGNING ------------------------*/
+
     // Denne funktion åbnes pop-uppen, når man trukker på luppen.
     soegeikon.addEventListener('click', () => { // Når brugeren klikker direkte på søgeikonet (luppen)
         if(soegeFelt.value.trim() === '') { // ...og hvis det indtastede i søgefeltet (trimmet ned, så uden mellemrum) er tomt...
@@ -51,18 +68,6 @@
     });
 
     /*----------------------- SCRIPT FOR DROP DOWN MED PRISER ------------------------*/
-
-    const dropdownPris = document.getElementById('dropdownPris'); // Henter elementet med id'et dropdownPris og gemmer i konstanten
-
-    const prisMuligheder = document.querySelectorAll('.dropdownPrisMulighed'); // Henter alle elementer med klassen dropdownPrisMulighed og gemmer i konstanten. querySelectorAll returnerer en nodeList(https://www.w3schools.com/jsref/met_document_queryselectorall.asp) (en samling af HTML-elementer) og består derfor af flere noder.
-
-    const nulstilFiltrer = document.getElementById('nulstilFiltrer'); // Henter elementet med id'et nulstilFiltrer og gemmer i konstanten
-
-    const filtreredeKoncerter = document.getElementById('filtreredeKoncerter'); // Henter elementet med id'et filtreredeKoncerter og gemmer i konstanten
-
-    const gratisKoncerter = document.querySelectorAll('.gratisKoncertFiltrer'); // Henter alle elementer med klassen gratisKoncertFiltrer og gemmer i konstanten
-
-    const filtreringsmuligheder = document.getElementById('filtreringsmuligheder'); // Henter elementet med id'et filtreringsmuligheder og gemmer i konstanten
 
     prisKnap.addEventListener('click', () => { // Når filtreringsknappen om priser trykkes på...
         if(dropdownPris.style.display === 'block') { //... og hvis dropdownen med prisniveauer allerede vises...
