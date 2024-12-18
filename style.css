@@ -143,7 +143,6 @@ ul { /**/
 
 #bodyProgram{
   background-image: url('/images/baggrundsbilledeProgram.webp');
-  background-size: cover;
 } 
 
 #bodyPraktisk {
@@ -170,12 +169,8 @@ ul { /**/
   background-image: url('images/baggrundsbilledeFiltrer.webp');
 }
 
-#bodyFestivalen {
+#bodyFestivalen, #bodyArkiv {
   background-image: url('images/baggrundsbilledeFestivalen.webp');
-}
-
-#bodyArkiv {
-  background-image: url('images/baggrundsbilledeArkiv.webp');
 }
 
 #errorSide, #indexSide {
