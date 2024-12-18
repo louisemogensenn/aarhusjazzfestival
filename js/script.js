@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lægger en event listener på alle elementer med denne klasse
     for (let i = 0; i < gaaTilbagePil.length; i++) {
         gaaTilbagePil[i].addEventListener("click", () => {
-            window.history.back();
+            window.history.back(); // Tilbage til forrige side
         });
     }
 
