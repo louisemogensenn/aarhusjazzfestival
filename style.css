@@ -257,7 +257,7 @@ ul { /**/
   }
  
 
-/* ------------------------------------  RESPONSIVT - sikrer dropdown ved hover på desktop ------------------------------------ */
+/* ------------------------------------  RESPONSIVT - sikrer dropdown ved hover kun på desktop ------------------------------------ */
   @media (min-width: 391px) {
       .navigationsbar > li:hover .drop-down {
           display: block;

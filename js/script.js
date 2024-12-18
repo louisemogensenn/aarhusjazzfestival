@@ -62,7 +62,7 @@ const indholdPopupTilmeldt = document.querySelectorAll('.indholdPopupTilmeldt');
 
     for(let i = 0; i < tilmeldKnap.length; i++) {
         tilmeldKnap[i].addEventListener('click', () => {
-            event.preventDefault();
+            event.preventDefault(); // Stopper den event, der vil forekomme i default, når man klikker på knappen (https://www.w3schools.com/jsref/event_preventdefault.asp)
             popupTilmeldt[i].style.display = 'block';
             indholdPopupTilmeldt[i].innerHTML = 'Tak for din tilmelding!';
             setTimeout(() => { popupTilmeldt[i].style.display = 'none'; }, 2000);
