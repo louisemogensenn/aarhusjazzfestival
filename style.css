@@ -293,6 +293,7 @@ ul { /**/
       align-items: center;
       z-index: 999; /* Ligger lige under burgermenu-ikonet */
       padding: 0; /* Fjern eksisterende padding */
+      background-color: var(--primaerFarve);
   }
 
   /* Styling af burgermenu */
