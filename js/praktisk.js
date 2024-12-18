@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Gennemgår hvert spørgsmål i den valgte kategori
         faqData[kategori].forEach(([spoergsmaal, svar]) => {
             // Opretter containere og elementer for hvert spørgsmål
-            const beholder = document.createElement('div');
+            const beholder = document.createElement('section');
             beholder.classList.add('praktisk-beholder');
 
             const artikel = document.createElement('article');
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
             spoergsmaalElement.appendChild(plusIcon);
 
             // Opretter svars-elementet
-            const svarElement = document.createElement('div');
+            const svarElement = document.createElement('section');
             svarElement.classList.add('praktisk-svar');
 
             const svarTekst = document.createElement('p');
